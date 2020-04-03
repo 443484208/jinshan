@@ -121,6 +121,7 @@
   width: 90rpx;
   border: 1px #DCDCDC solid;
   border-radius: 90rpx;
+  margin-right: 19rpx;
 }
 
 .index-news-image {

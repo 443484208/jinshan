@@ -31,13 +31,16 @@ Page({
       title:'预留'
     },{
       src:'./../../image/Installationandconstruction.png',
-      title:'安装施工'
+      title:'安装施工',
+      url:'install'
     },{
       src:'./../../image/Logisticsservice.png',
-      title:'物流服务'
+      title:'物流服务',
+      url:'logisticsservice'
     },{
       src:'./../../image/legaladvice.png',
-      title:'法律咨询'
+      title:'法律咨询',
+      url:'legaladvice'
     },{
       src:'./../../image/Reserve.png',
       title:'预留'

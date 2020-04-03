@@ -1,0 +1,23 @@
+<view class="index-bk"></view>
+<view class="index-center index-flex index-margin" style="padding:30rpx 0 ;">
+	<view class="index-news-icon"></view>
+	<view style="">
+		<view class="legaladvice-h1">广胜机电13800001111</view>
+		<view class=" legaladvice-h2">1分钟前</view>
+	</view>
+</view>
+
+<view class="tabr index-flex index-flex-between index-center">
+		<view class="index-flex index-center">
+			<view class="tar-list" bindtap="jump">
+				<image src="../../image/home-index.png"></image>
+				<view class="tar-h1">首页</view>
+			</view>
+			<view class="tar-list" bindtap="start">
+				<image src="../../image/start.png"></image>
+				<view class="tar-h1">收藏</view>
+			</view>
+		</view>
+    <view class="tar-h4">￥668.00</view>
+		<image class="tar-bottom-image" src="../../image/Immediatepurchase.png"></image>
+	</view>

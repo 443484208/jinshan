@@ -1,21 +1,23 @@
 <!--index.wxml-->
 <!-- 侧导航 -->
 <view class="index-flex">
-	<view>
+	<view class="sideBar-list">
+	<view class="sideBar-list-abslotue">
 		<view wx:for="{{sideBarList}}" class="sideBar-list {{sideBarI==index?'sideBar-active':''}}" data-index="{{index}}" wx:key="*this" bindtap="sideBar">
 			{{item.name}}
 		</view>
-	</view>
-	<view>
-		<view class="sideBar-content">
-			<text>主机事业部</text>
-			<text>这是主机事业部1简介这是主机事业部 1简介这是主机事业部1简介</text>
-			<view>
-				<image></image>
-				<image></image>
-				<image></image>
-				<image></image>
-			</view>
 		</view>
 	</view>
+		<view style="height: 100%;">
+			<view class="sideBar-content" wx:for="{{sideBarList}}" wx:key="*this" data-item="{{item}}"  bindtap="jump">
+				<view class="sideBar-h1">主机事业部</view>
+				<view class="sideBar-h2">这是主机事业部1简介这是主机事业部 1简介这是主机事业部1简介</view>
+				<view class="index-flex index-center">
+					<view class="sideBar-view sideBar-view-right"></view>
+					<view class="sideBar-view sideBar-view-right"></view>
+					<view class="sideBar-view sideBar-view-right"></view>
+					<view class="sideBar-view"></view>
+				</view>
+			</view>
+		</view>
 </view>

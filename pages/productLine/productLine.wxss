@@ -14,8 +14,35 @@
   border-left:#028FFB 6rpx solid ;
 }
 .sideBar-content{
-  margin:20rpx 23rpx 20rpx 37rpx;
-  width:calc(100% - 230rpx);
-  min-height:320rpx;
+  margin:20rpx 23rpx 20rpx 100rpx;
+  width:calc(100% - 120rpx);
+  height:320rpx;
   border:1px #BBBBBB solid;
+  border-radius: 22.5px;
+  padding: 34rpx;
+  box-sizing: border-box;
+}
+.sideBar-h1{
+color: #333333;
+font-size: 30rpx;
+text-align: center;
+margin-bottom: 15rpx;
+}
+.sideBar-h2{
+  color:#333333;
+  font-size: 28rpx;
+  margin-bottom: 25rpx;
+}
+.sideBar-view{
+  border:#DCDCDC 1px solid;
+  height: 100rpx;
+  width: 100rpx;
+}
+.sideBar-view-right{
+  margin-right: 20rpx;
+}
+.sideBar-list-abslotue{
+  position: fixed;
+  left: 0 ;
+  top: 0;
 }

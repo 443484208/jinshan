@@ -9,7 +9,14 @@
     "pages/tendering/tendering",
     "pages/tendering/details",
     "pages/activity/activity",
-    "pages/productLine/productLine"
+    "pages/productLine/productLine",
+    "pages/productLine/details",
+    "pages/install/install",
+    "pages/install/details",
+    "pages/logisticsservice/logisticsservice",
+    "pages/logisticsservice/details",
+    "pages/legaladvice/legaladvice"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -53,10 +53,12 @@
 		</view>
 		<view class="index-news" wx:for="{{[1,2,3,4]}}" wx:key="*this">
 			<view class="index-news-top index-center index-flex">
-				<view class="index-news-icon"></view>
-				<view style="">
-					<view class="index-news-h1">广胜机电13800001111</view>
-					<view class="index-news-h2">1分钟前</view>
+				<view class="index-flex">
+					<view class="index-news-icon"></view>
+					<view style="width:calc(100% - 100rpx);">
+						<view class="index-news-h1">广胜机电13800001111</view>
+						<view class="index-news-h2">1分钟前</view>
+					</view>
 				</view>
 				<image mode="scaleToFill" class="index-news-image" src="./../../image/dial.png"></image>
 			</view>

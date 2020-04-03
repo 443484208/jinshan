@@ -1,53 +1,25 @@
-// pages/productLine/productLine.js
+// pages/install/install.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-	  sideBarI:0,
-	  sideBarList:[{
-		  id:0,
-		  name:'制冷主机', 
-	  },{
-		  id:1,
-		  name:'冷却塔',  
-	  },{
-		  id:2,
-		  name:'风机',    
-	  },{
-		  id:3,
-		  name:'风阀', 
-	  },{
-		  id:4,
-		  name:'风口', 
-	  },{
-		  id:5,
-		  name:'消声器',
-	  },{
-		  id:6,
-		  name:'风管', 
-	  },{
-		  id:7,
-		  name:'水箱',
-	  },{
-		  id:8,
-		  name:'机房配件',
-	  }]
-  },
-  //导航处理
-  sideBar(e){
-	  this.setData({
-		  sideBarI:e.currentTarget.dataset['index']
-	  })
+    swiperData:[{
+      src:'./../../image/banner@2x.png'
+    },{
+      src:'./../../image/banner@2x.png'
+    },{
+      src:'./../../image/banner@2x.png'
+    }],
   },
   jump(e){
+    // var url=this.data.list[e.currentTarget.dataset['index']].url;
     wx.navigateTo({
       url: 'details'
     })
-    
+   console.log(e.currentTarget.dataset['index'])
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

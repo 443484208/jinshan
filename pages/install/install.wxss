@@ -1,0 +1,27 @@
+/* pages/install/install.wxss */
+.install{
+  padding: 30rpx ;
+  
+  
+}
+.install-list{
+width:100%;
+border-radius: 22.5px;
+background: white;
+padding: 50rpx 30rpx 50rpx 60rpx ;
+box-sizing: border-box;
+margin-bottom: 30rpx;
+}
+.install-h1{
+color: #333333;
+font-size: 30rpx;
+margin-top: 20rpx;
+}
+
+.install-image{
+  width: 24rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 60rpx;
+  margin-top: -100rpx;
+}

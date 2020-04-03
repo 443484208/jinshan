@@ -1,0 +1,17 @@
+<image src="../../image/sss.png" mode="widthFix" style="width:100%"></image>
+<view class="tabr index-flex index-flex-between index-center">
+	<view class="index-flex index-center">
+		<view class="tar-list" bindtap="jump">
+			<image src="../../image/home-index.png"></image>
+			<view class="tar-h1">首页</view>
+		</view>
+		<view class="tar-list">
+			<image src="../../image/customerservice.png"></image>
+			<view class="tar-h1">联系客服</view>
+		</view>
+	</view>
+	<view  class="index-flex">
+		<view class="tar-bottom">立即购买</view>
+		<view class="tar-bottoms">在线咨询</view>
+	</view>
+</view>

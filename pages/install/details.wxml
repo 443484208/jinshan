@@ -1,0 +1,47 @@
+	<!-- 轮播 -->
+	<view style="background: #F8F6F9;height:100%;padding-bottom:100rpx;">
+		<swiper class="swiper" autoplay="true" interval="5000">
+			<block wx:for="{{swiperData}}" wx:key="*this">
+				<swiper-item>
+					<image mode="scaleToFill" src="{{item.src}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class=" install">
+			<view class="install-list">
+				<view class="install-h1">联系电话：13811110000 </view>
+				<view class="install-h1">工作时间：8:00 - 17:00 </view>
+			</view>
+			<view class="install-list">
+				<view class="install-h1">文字介绍：文字介绍文字介绍文字介绍文字介 绍文字介绍文字介绍文字介绍文字介绍文字介 绍文字介绍文字介绍文字介绍</view>
+			</view>
+		</view>
+
+		<view class="index-margin index-flex details">
+			<view class="details-list {{index%2==0?'':'details-left'}}" wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
+				<image class=""></image>
+				<view class="index-flex index-center index-flex-between" style="margin: 0 14rpx;">
+					<view>
+						<view class="details-list-h2">大件搬运</view>
+						<view class="details-list-h3">￥669</view>
+					</view>
+					<view class="details-list-h1">购买
+					</view>
+				</view>
+
+			</view>
+		</view>
+	</view>
+	<!-- <view class="tabr index-flex index-flex-between index-center">
+		<view class="index-flex index-center">
+			<view class="tar-list" bindtap="jump">
+				<image src="../../image/home-index.png"></image>
+				<view class="tar-h1">首页</view>
+			</view>
+			<view class="tar-list" bindtap="start">
+				<image src="../../image/start.png"></image>
+				<view class="tar-h1">收藏</view>
+			</view>
+		</view>
+		<image class="tar-bottom-image" src="../../image/Onlineconsultation.png"></image>
+	</view> -->

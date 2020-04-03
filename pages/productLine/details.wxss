@@ -1,0 +1,44 @@
+/* pages/productLine/details.wxss */
+.tabr{
+  position: fixed;
+  bottom: 0;
+  padding: 10rpx 0;
+  background: white;
+  width: 100%;
+}
+.tabr image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.tar-h1{
+  color:#666666;
+  font-size:24rpx;
+  
+}
+.tar-list{
+  width: 100rpx;
+  margin-left: 30rpx;
+  text-align: center;
+}
+.tar-bottom{
+  width: 200rpx;
+  height: 78rpx;
+  background: linear-gradient(to right,#68BAFF, #0060FF);
+  font-size: 31rpx;
+  color: white;
+  text-align: center;
+  line-height: 78rpx;
+  border-radius: 19px 0  0 19px ;
+}
+.tar-bottoms{
+  width: 200rpx;
+  height: 78rpx;
+  font-size: 31rpx;
+  color: white;
+  background: #028FFB;
+text-align: center;
+  line-height: 78rpx;
+  border-radius: 0  19px 19px 0 ;
+margin-right: 30rpx;
+
+}
