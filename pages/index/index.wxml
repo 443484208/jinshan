@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="container">
+	<!-- 轮播 -->
+	<swiper class="swiper" autoplay="true" interval="5000">
+		<block wx:for="{{swiperData}}" wx:key="*this">
+			<swiper-item>
+				<image mode="scaleToFill" src="{{item.src}}"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+	<!-- 搜索 -->
+
+	<view class="index-search">
+		<image class="index-search-left" src="./../../image/searchs.png"></image>
+		<input placeholder="搜索">
+
+		</input>
+		<image class="index-search-right" src="./../../image/search.png"></image>
+	</view>
+
+	<!-- 列表 -->
+	<view class="index-list index-flex">
+		<view class="index-list-view" wx:for="{{list}}" wx:key="*this">
+			<view class="index-flex index-center index-list-icon">
+				<image mode="scaleToFill" src="{{item.src}}"></image>
+			</view>
+			<view class="index-list-text">{{item.title}}</view>
+		</view>
+	</view>
+	<view class="index-bk"></view>
+	<!-- 统计 -->
+	<view class="index-statistics">
+		<view class="index-statistics-header index-flex index-center">
+			<image mode="scaleToFill" src="../../image/Statistics.png"></image>
+			<view>浏览统计</view>
+		</view>
+		<view class="index-statistics-bottom index-flex">
+			<view class="index-statistics-view index-statistics-border">
+				<view class="index-statistics-h1">1089</view>
+				<view class="index-statistics-h2">今日浏览数</view>
+			</view>
+			<view class="index-statistics-view">
+				<view class="index-statistics-h3">12390</view>
+				<view class="index-statistics-h2">总浏览数</view>
+			</view>
+		</view>
+	</view>
+	<view class="index-bk"></view>
+	<view>
+		<view class="index-statistics-header index-flex index-center">
+			<image mode="scaleToFill" src="./../../image/news.png"></image>
+			<view>最新消息</view>
+		</view>
+		<view class="index-news" wx:for="{{[1,2,3,4]}}" wx:key="*this">
+			<view class="index-news-top index-center index-flex">
+				<view class="index-news-icon"></view>
+				<view style="">
+					<view class="index-news-h1">广胜机电13800001111</view>
+					<view class="index-news-h2">1分钟前</view>
+				</view>
+				<image mode="scaleToFill" class="index-news-image" src="./../../image/dial.png"></image>
+			</view>
+			<view class="index-news-h3">
+				机翼型叶轮，防爆风机，最大30号，最小2号，角度可以调整，风量风压随时改变，手机微信同步：13800001111
+			</view>
+			<view class="index-news-content index-center index-flex">
+				<image mode="scaleToFill" src="./../../image/add.png"></image>
+				<image mode="scaleToFill" class="index-news-left" src="./../../image/add.png"></image>
+				<image mode="scaleToFill" class="index-news-left" src="./../../image/add.png"></image>
+			</view>
+			<view class="index-news-footer  index-flex">
+				<view class="index-news-h4">浏览次数1115次</view>
+				<view class="index-flex index-center">
+					<view class="index-flex index-center">
+						<image mode="scaleToFill" src="./../../image/Fabulous.png"></image>
+						<view class="index-news-h4">21</view>
+					</view>
+					<view class="index-flex index-center">
+						<image mode="scaleToFill" src="./../../image/Forward.png"></image>
+						<view class="index-news-h4">21</view>
+					</view>
+				</view>
+			</view>
+			<view class="index-bk"></view>
+		</view>
+	</view>
+</view>
