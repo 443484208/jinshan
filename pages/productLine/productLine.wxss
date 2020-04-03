@@ -13,3 +13,9 @@
   box-sizing: border-box;
   border-left:#028FFB 6rpx solid ;
 }
+.sideBar-content{
+  margin:20rpx 23rpx 20rpx 37rpx;
+  width:calc(100% - 230rpx);
+  min-height:320rpx;
+  border:1px #BBBBBB solid;
+}
