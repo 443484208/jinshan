@@ -1,0 +1,22 @@
+/* pages/tendering/details.wxss */
+.details-h1{
+  color: #333333;
+  font-size: 30rpx;
+  margin-top: 4rpx;
+}
+.details-h1-bottom{
+  margin-bottom: 20rpx;
+}
+.details-h2{
+  color: #FF4343;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.details-h3{
+  color: #333333;
+  font-size: 24rpx;
+}
+.details-bottom{
+  margin:  36rpx 0;
+  border-bottom: 1px dashed  ;
+}

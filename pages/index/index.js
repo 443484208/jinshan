@@ -13,13 +13,16 @@ Page({
     }],
     list:[{
       src:'./../../image/biddinginformation.png',
-      title:'招标信息'
+      title:'招标信息',
+      url:'tendering'
     },{
       src:'./../../image/activity.png',
-      title:'活动'
+      title:'活动',
+      url:'activity'
     },{
       src:'./../../image/ProductLine.png',
-      title:'产品系列'
+      title:'产品系列',
+      url:'productLine'
     },{
       src:'./../../image/Reserve.png',
       title:'预留'
@@ -42,6 +45,13 @@ Page({
       src:'./../../image/Reserve.png',
       title:'预留'
     }]
+  },
+  jump(e){
+    var url=this.data.list[e.currentTarget.dataset['index']].url;
+    wx.navigateTo({
+      url: '../'+url+'/'+url
+    })
+   console.log(e.currentTarget.dataset['index'])
   },
   //事件处理函数
   bindViewTap: function() {

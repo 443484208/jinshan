@@ -1,0 +1,32 @@
+<!-- 轮播 -->
+<view style="background:#F8F6F9;padding-bottom:50px;">
+
+	<!-- 轮播 -->
+	<swiper class="swiper" autoplay="true" interval="5000">
+		<block wx:for="{{swiperData}}" wx:key="*this">
+			<swiper-item>
+				<image mode="scaleToFill" src="{{item.src}}"></image>
+			</swiper-item>
+		</block>
+	</swiper>
+	<!-- 选项 -->
+	<view class="index-flex index-center index-margin index-flex-between activity">
+		<view bindtap="jump" data-index='0' class="activity-view  activity-right {{activityI==0?'activity-view-active':''}}">全部</view>
+		<view bindtap="jump" data-index='1' class="activity-view activity-right  {{activityI==1?'activity-view-active':''}}">进行中</view>
+		<view bindtap="jump" data-index='2' class="activity-view  {{activityI==2?'activity-view-active':''}}">待举办</view>
+	</view>
+	<!-- 列表 -->
+	<view class=" index-margin activity-list"  wx:for="{{list}}" wx:key="*this"  bindtap="jumpTo" data-index="{{index}}" >
+		<view class="index-margin index-flex index-center">
+			<view  class="{{item.i==0?'activity-list-h3':'activity-list-h4'}}">{{item.i==0?'进行中':'待举办'}}</view>
+			<view class="activity-list-h1">第一届金光线上采销大会</view>
+		</view>
+    <view class="activity-list-h2 index-margin">时间：2020-03-15 至 2020-04-15   18:00 </view>
+    <view class="activity-list-h2 index-margin">动态：企业300 | 需求20089 | 供应商1890</view>
+    <view class="activity-list-h2 index-margin">规模：689家企业</view>
+	</view>
+
+
+
+
+</view>

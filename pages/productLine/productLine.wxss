@@ -1,0 +1,15 @@
+/* pages/productLine/productLine.wxss */
+.sideBar-list{
+  width: 160rpx;
+  height: 100rpx;
+  background: #F8F6F9;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.sideBar-active{
+ color: #51B4FF!important;
+  background: white!important;
+  box-sizing: border-box;
+  border-left:#028FFB 6rpx solid ;
+}

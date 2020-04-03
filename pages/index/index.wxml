@@ -20,7 +20,7 @@
 
 	<!-- 列表 -->
 	<view class="index-list index-flex">
-		<view class="index-list-view" wx:for="{{list}}" wx:key="*this">
+		<view class="index-list-view" bindtap="jump" data-index="{{index}}" wx:for="{{list}}" wx:key="*this">
 			<view class="index-flex index-center index-list-icon">
 				<image mode="scaleToFill" src="{{item.src}}"></image>
 			</view>
@@ -31,7 +31,7 @@
 	<!-- 统计 -->
 	<view class="index-statistics">
 		<view class="index-statistics-header index-flex index-center">
-			<image mode="scaleToFill" src="../../image/Statistics.png"></image>
+			<image class="index-statistics-header-image" mode="scaleToFill" src="../../image/Statistics.png"></image>
 			<view>浏览统计</view>
 		</view>
 		<view class="index-statistics-bottom index-flex">
@@ -48,7 +48,7 @@
 	<view class="index-bk"></view>
 	<view>
 		<view class="index-statistics-header index-flex index-center">
-			<image mode="scaleToFill" src="./../../image/news.png"></image>
+			<image class="index-statistics-header-image" mode="scaleToFill" src="./../../image/news.png"></image>
 			<view>最新消息</view>
 		</view>
 		<view class="index-news" wx:for="{{[1,2,3,4]}}" wx:key="*this">

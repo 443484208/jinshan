@@ -1,0 +1,57 @@
+/* pages/activity/activity.wxss */
+.activity-view{
+  width: calc(33% - 20rpx);
+  height: 90rpx;
+  border-radius: 40px;
+  font-size: 36rpx;
+  color: #028FFB;
+  line-height: 90rpx;
+  text-align: center;
+  background: white;
+}
+.activity-view-active{
+  background: #028FFB;
+color: white;
+}
+.activity-right{
+  margin-right: 30rpx;
+}
+.activity{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.activity-list{
+  min-height: 330rpx;
+  width: calc(100% - 60rpx);
+  background: white;
+  border-radius: 22.5px;
+  margin-bottom: 20rpx;
+}
+.activity-list-h1{
+font-size: 30rpx;
+color: #333333;
+font-weight: 600;
+}
+.activity-list-h2{
+  font-size: 30rpx;
+  color: #333333;
+  margin-bottom: 10rpx;
+}
+.activity-list-h3{
+  margin: 30rpx 0;
+background: #028FFB;
+padding: 10rpx 30rpx;
+text-align: center;
+color: white;
+border-radius:40px;
+margin-right: 28rpx;
+}
+.activity-list-h4{
+  margin: 30rpx 0;
+  background: #79C5FF;
+  padding: 10rpx 30rpx;
+  text-align: center;
+  color: white;
+  border-radius:40px;
+  margin-right: 28rpx;
+  }

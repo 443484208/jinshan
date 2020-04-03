@@ -1,0 +1,15 @@
+/* pages/tendering/tendering.wxss */
+.tendering-title{
+  padding: 27rpx 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+.tendering-title view{
+color: #333333;
+font-size: 24rpx;
+}
+.tendering-title-h1{
+  color:#999999!important;
+}
+.tendering-title-view{
+  max-width: 440rpx;
+}

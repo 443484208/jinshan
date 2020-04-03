@@ -5,7 +5,11 @@
     "pages/purchase/purchase",
     "pages/release/release",
     "pages/tool/tool",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/tendering/tendering",
+    "pages/tendering/details",
+    "pages/activity/activity",
+    "pages/productLine/productLine"
   ],
   "window": {
     "backgroundTextStyle": "light",
