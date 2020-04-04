@@ -6,6 +6,42 @@ Page({
    */
   data: {
 
+    tabbar: {
+      value: {
+        "backgroundColor": "#ffffff",
+        "color": "#979795",
+        "selectedColor": "#1c1c1b",
+        "list": [
+          {
+            "pagePath": "../../pages/index/index",
+            "text": "首页",
+            "iconPath":"icon/homes.png",
+            "selectedIconPath":"icon/homes.png"
+          }, {
+            "pagePath": "../../pages/purchase/purchase",
+            "text": "采购",
+            "iconPath":"icon/caigou.png",
+            "selectedIconPath":"icon/caigou.png"
+          }, {
+            "pagePath": "../../pages/release/release",
+            "text": "发布",
+            "iconPath":"icon/fabu.png",
+            "selectedIconPath":"icon/fabu.png",
+            "isSpecial": true,
+          }, {
+            "pagePath": "../../pages/tool/tool",
+            "text": "工具",
+            "iconPath":"icon/gongju.png",
+            "selectedIconPath":"icon/gongju.png"
+          }, {
+            "pagePath": "../../pages/mine/mine",
+            "text": "我的",
+            "iconPath":"icon/mines.png",
+            "selectedIconPath":"icon/mines.png"
+          }
+        ]
+      }
+    }
   },
 
   /**

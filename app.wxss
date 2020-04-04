@@ -206,3 +206,6 @@
 .index-flex-between{
   justify-content: space-between;
 }
+.index-white{
+  background: white;
+}

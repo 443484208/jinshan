@@ -6,11 +6,13 @@ Page({
    */
   data: {
     swiperData:[{
-      src:'./../../image/banner@2x.png'
+      src:'./../../image/bk-1.jpg'
     },{
-      src:'./../../image/banner@2x.png'
+      src:'./../../image/bk-2.jpg'
     },{
-      src:'./../../image/banner@2x.png'
+      src:'./../../image/bk-3.jpg'
+    },{
+      src:'./../../image/bk-4.jpg'
     }],
   },
   start(){

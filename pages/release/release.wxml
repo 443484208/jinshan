@@ -1,2 +1,3 @@
 <!--pages/release/release.wxml-->
 <text>pages/release/release.wxml</text>
+<tabbar tabbar="{{tabbar}}"></tabbar>

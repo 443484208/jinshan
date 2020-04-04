@@ -1,10 +1,10 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    //隐藏系统tabbar
+    wx.hideTabBar();
+    //获取设备信息
+    this.getSystemInfo();
 
     // 登录
     wx.login({
@@ -33,7 +33,68 @@ App({
       }
     })
   },
+  onShow: function () {
+    //隐藏系统tabbar
+    wx.hideTabBar();
+  },
+  getSystemInfo: function () {
+    let t = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        t.globalData.systemInfo = res;
+      }
+    });
+  },
+  editTabbar: function () {
+    let tabbar = this.globalData.tabBar;
+    let currentPages = getCurrentPages();
+    let _this = currentPages[currentPages.length - 1];
+    let pagePath = _this.route;
+    (pagePath.indexOf('/') != 0) && (pagePath = '/' + pagePath);
+    for (let i in tabbar.list) {
+      tabbar.list[i].selected = false;
+      (tabbar.list[i].pagePath == pagePath) && (tabbar.list[i].selected = true);
+    }
+    _this.setData({
+      tabbar: tabbar
+    });
+  },
   globalData: {
-    userInfo: null
+    systemInfo: null,//客户端设备信息
+    userInfo: null,
+    tabBar: {
+      "backgroundColor": "#ffffff",
+      "color": "#979795",
+      "selectedColor": "#1c1c1b",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath":"icon/采购@2x.png",
+          "selectedIconPath":"icon/首页 (1)@2x.png"
+        }, {
+          "pagePath": "pages/purchase/purchase",
+          "text": "采购",
+          "iconPath":"icon/采购@2x.png",
+          "selectedIconPath":" icon/首页 (1)@2x.png"
+        }, {
+          "pagePath": "pages/release/release",
+          "text": "发布",
+          "iconPath":"icon/发布 (6)@2x.png",
+          "selectedIconPath":"icon/发布 (6)@2x.png",
+           "isSpecial": true
+        }, {
+          "pagePath": "pages/tool/tool",
+          "text": "工具",
+          "iconPath":"icon/工具 (3)@2x.png",
+          "selectedIconPath":"icon/首页 (1)@2x.png"
+        }, {
+          "pagePath": "pages/mine/mine",
+          "text": "我的",
+          "iconPath":"icon/我 的@2x.png",
+          "selectedIconPath":"icon//首页 (1)@2x.png"
+        }
+      ]
+    }
   }
 })

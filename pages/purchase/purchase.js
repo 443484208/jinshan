@@ -5,11 +5,13 @@ const app = getApp()
 Page({
   data: {
     swiperData:[{
-      src:'./../../image/banner@2x.png'
+      src:'./../../image/bk-1.jpg'
     },{
-      src:'./../../image/banner@2x.png'
+      src:'./../../image/bk-2.jpg'
     },{
-      src:'./../../image/banner@2x.png'
+      src:'./../../image/bk-3.jpg'
+    },{
+      src:'./../../image/bk-4.jpg'
     }],
     list:[{
       src:'./../../image/biddinginformation.png',
@@ -29,7 +31,56 @@ Page({
     },{
       src:'./../../image/Installationandconstruction.png',
       title:'其他产品'
-    }]
+    }],
+    tabbar: {
+      value: {
+        "backgroundColor": "#ffffff",
+        "color": "#979795",
+        "selectedColor": "#1c1c1b",
+        "list": [
+          {
+            "pagePath": "../../pages/index/index",
+            "text": "首页",
+            "iconPath":"icon/homes.png",
+            "selectedIconPath":"icon/homes.png"
+          }, {
+            "pagePath": "../../pages/purchase/purchase",
+            "text": "采购",
+            "iconPath":"icon/cagou2.png",
+            "selectedIconPath":"icon/cagou2.png"
+          }, {
+            "pagePath": "../../pages/release/release",
+            "text": "发布",
+            "iconPath":"icon/fabu.png",
+            "selectedIconPath":"icon/fabu.png",
+            "isSpecial": true,
+          }, {
+            "pagePath": "../../pages/tool/tool",
+            "text": "工具",
+            "iconPath":"icon/gongju.png",
+            "selectedIconPath":"icon/gongju.png"
+          }, {
+            "pagePath": "../../pages/mine/mine",
+            "text": "我的",
+            "iconPath":"icon/mine.png",
+            "selectedIconPath":"icon/mine.png"
+          }
+        ]
+      }
+    }
+  },
+  jumpTo(e){
+    wx.navigateTo({
+      url: '../productLine/details'
+    })
+    // e.currentTarget.dataset['index']
+  },
+  jumpTolist(e){
+    wx.navigateTo({
+
+    url: '../productLine/details'
+    })
+    // e.currentTarget.dataset['index']
   },
   //事件处理函数
   bindViewTap: function() {

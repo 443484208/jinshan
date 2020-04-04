@@ -1,1 +1,185 @@
 /* pages/tool/tool.wxss */
+
+.tool {
+  background: #f8f6f9;
+}
+.container{
+  padding-bottom:150rpx;
+}
+
+/* 公告 */
+
+.bulletin {
+  width: 100%;
+  height: 160rpx;
+  margin: 20rpx 0;
+  background: #fff;
+}
+
+.bulletin_left {
+  width: 152rpx;
+  height: 100%;
+  /* background: red; */
+  padding-top: 28rpx;
+  float: left;
+}
+
+.bulletin_left_word {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.bulletin_left_btn {
+  width: 96rpx;
+  height: 50rpx;
+  margin: 8rpx auto;
+  background: #028ffb;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+}
+
+.bulletin_line {
+  width: 2rpx;
+  height: 100rpx;
+  margin-top: 30rpx;
+  background: #dcdcdc;
+  float: left;
+}
+
+.bulletin_right {
+  width: calc(100% - 154rpx);
+  float: left;
+  padding-top: 11rpx;
+  height: calc(100% - 11rpx);
+  overflow: hidden;
+}
+
+.bulletin_right_view {
+  width: calc(100% - 80rpx);
+  height: 40rpx;
+  padding: 0 60rpx 0 20rpx;
+}
+
+.news_view {
+  width: 100%;
+  height: 60rpx;
+}
+
+.bulletin_right_view_frame {
+  width: 80rpx;
+  height: 40rpx;
+  border: 2rpx solid #028ffb;
+  font-size: 30rpx;
+  color: #028ffb;
+  line-height: 40rpx;
+  text-align: center;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  float: left;
+}
+
+.bulletin_right_marg {
+  margin-top: 19rpx;
+}
+
+.bulletin_right_view_word {
+  display: block;
+  width: calc(100 - 100rpx);
+  font-size: 30rpx;
+  color: #333;
+  line-height: 40rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* //系统 */
+
+.tool_system {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.tool_system_ul {
+  width: 100%;
+  height: 180rpx;
+  padding-top: 30rpx;
+}
+
+.tool_system_ul_word {
+  overflow: auto;
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 35rpx 0 30rpx;
+  margin-bottom: 32rpx;
+}
+
+.tool_system_ul_wen {
+  width: 456rpx;
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tool_system_ul_time {
+  width: 166rpx;
+  color: #999;
+  float: right;
+}
+
+/* 每日推荐 */
+
+.tool_promote {
+  width: 100%;
+  background: #fff;
+}
+
+.tool_promote_line {
+  padding: 20rpx 30rpx;
+  width: calc(100% - 60rpx);
+  height: 200rpx;
+  background-color:#fff;
+  margin-bottom: 20rpx; 
+}
+
+.tool_promote_line_left {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  background-color: #eee;
+  margin-right: 13rpx;
+  float: left;
+}
+
+.tool_promote_line_right {
+  width: calc(100% - 213rpx);
+  height: 100%;
+  float: left;
+}
+
+.tool_promote_title {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.tool_promote_price{
+  margin-top:35rpx;
+  color:  #FF4343;
+  font-size: 30rpx;
+}
+.tool_promote_fu{
+  font-size: 20rpx;
+}

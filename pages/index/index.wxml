@@ -86,4 +86,6 @@
 			<view class="index-bk"></view>
 		</view>
 	</view>
+<tabbar tabbar="{{tabbar}}"></tabbar>
+
 </view>
