@@ -27,7 +27,7 @@ Page({
             "selectedIconPath":"icon/homes.png"
           }, {
             "pagePath": "../../pages/purchase/purchase",
-            "text": "采购",
+            "text": "采购需求",
             "iconPath":"icon/caigou.png",
             "selectedIconPath":"icon/caigou.png"
           }, {

@@ -5,54 +5,145 @@ Page({
    * 页面的初始数据
    */
   data: {
-	  sideBarI:0,
-	  sideBarList:[{
-		  id:0,
-		  name:'制冷主机', 
-	  },{
-		  id:1,
-		  name:'冷却塔',  
-	  },{
-		  id:2,
-		  name:'风机',    
-	  },{
-		  id:3,
-		  name:'风阀', 
-	  },{
-		  id:4,
-		  name:'风口', 
-	  },{
-		  id:5,
-		  name:'消声器',
-	  },{
-		  id:6,
-		  name:'风管', 
-	  },{
-		  id:7,
-		  name:'水箱',
-	  },{
-		  id:8,
-		  name:'机房配件',
-	  }]
+    sideBarI: 0,
+    sideI: 0,
+    sideBarList: [{
+      key: 0,
+      list: [{
+        id: 0,
+        name: '主机',
+      }, {
+        id: 1,
+        name: ' 风机盘管 ',
+      }, {
+        id: 2,
+        name: '空调机组',
+      }, {
+        id: 3,
+        name: '冷却塔',
+      }, {
+        id: 4,
+        name: '水箱',
+      }, {
+        id: 5,
+        name: ' 水处理设备 ',
+      }, {
+        id: 6,
+        name: '无负压阀',
+      }]
+    },
+    {
+      key: 1,
+      list: [{
+        id: 0,
+        name: '风机',
+      }, {
+        id: 1,
+        name: ' 风阀',
+      }, {
+        id: 2,
+        name: '风口',
+      }, {
+        id: 3,
+        name: ' 风管',
+      }, {
+        id: 4,
+        name: '抗震支架',
+      }, {
+        id: 5,
+        name: '防火门',
+      }, {
+        id: 6,
+        name: '消声静压箱',
+      }]
+    },{
+      key: 0,
+      list: [{
+        id: 0,
+        name: '组合式风阀',
+      }, {
+        id: 1,
+        name: ' 地铁风机',
+      }, {
+        id: 2,
+        name: ' 地铁消声器',
+      }, {
+        id: 3,
+        name: ' 电缆支架 ',
+      }, {
+        id: 4,
+        name: '声屏障',
+      }]
+    },{
+      key: 0,
+      list: [{
+        id: 0,
+        name: '控制柜 ',
+      }, {
+        id: 1,
+        name: '桥架',
+      }]
+    },{
+      key: 0,
+      list: [{
+        id: 0,
+        name: '汽车配件',
+      }, {
+        id: 1,
+        name: ' 高压管',
+      }, {
+        id: 2,
+        name: ' SMC化粪池',
+      }, {
+        id: 3,
+        name: ' 加砂缠绕利品',
+      }, {
+        id: 4,
+        name: ' GRC/GRP ',
+      }, {
+        id: 5,
+        name: '3D打印',
+      }]},{
+        key: 0,
+        list: [{
+          id: 0,
+          name: '环保',
+        }, {
+          id: 1,
+          name: ' 净化',
+        }, {
+          id: 2,
+          name: ' 通风格',
+        }, {
+          id: 3,
+          name: ' 实验台',
+        }]
+    }]
   },
   //导航处理
-  sideBar(e){
-	  this.setData({
-		  sideBarI:e.currentTarget.dataset['index']
-	  })
+  sideBar(e) {
+    this.setData({
+      sideBarI: e.currentTarget.dataset['index']
+    })
   },
-  jump(e){
+  jump(e) {
     wx.navigateTo({
       url: 'details'
     })
-    
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    wx.setNavigationBarTitle({
+      title: options.url+'分类'
+    })
+    this.setData({
+      sideI:options.key
+    })
   },
 
   /**

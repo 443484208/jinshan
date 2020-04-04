@@ -1,15 +1,20 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/details",
     "pages/logs/logs",
     "pages/purchase/purchase",
+    "pages/purchase/details",
     "pages/release/release",
     "pages/tool/tool",
     "pages/mine/mine",
     "pages/tendering/tendering",
     "pages/tendering/details",
     "pages/activity/activity",
+    "pages/activity/details",
+    "pages/activity/index",
     "pages/productLine/productLine",
+    "pages/productLine/index",
     "pages/productLine/details",
     "pages/install/install",
     "pages/install/details",
@@ -21,7 +26,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "金光小程序",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -32,15 +37,10 @@
       "selectedIconPath":"/image/首页(1)@2x.png"
     }, {
       "pagePath": "pages/purchase/purchase",
-      "text": "采购",
+      "text": "采购需求",
       "iconPath":"/image/采购@2x.png",
       "selectedIconPath":"/image/首页(1)@2x.png"
-    }, {
-      "pagePath": "pages/release/release",
-      "text": "发布",
-      "iconPath":"/image/add.png",
-      "selectedIconPath":"/image/add.png"
-    }, {
+    },{
       "pagePath": "pages/tool/tool",
       "text": "工具",
       "iconPath":"/image/工具(3)@2x.png",

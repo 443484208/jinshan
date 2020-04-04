@@ -1,0 +1,119 @@
+/* pages/activity/details.wxss */
+.details-header{
+    height: 368rpx;
+    width: 100%;
+    padding: 60rpx 30rpx;
+    position: relative;
+    box-sizing: border-box;
+    /* background: url('../../image/gongyingshang.png'); */
+}
+.details-header-image {
+  height: 368rpx;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index:-1
+}
+.details-header-h1{
+font-size: 30rpx;
+color: #FFFFFF;
+padding-bottom: 20rpx ;
+}
+.details-header-h2{
+height: 68rpx;
+width: 164rpx;
+position: absolute;
+bottom: 60rpx;
+right: 30rpx;
+}
+page{
+  background: #F8F6F9;
+}
+.details-bt{
+  width: 370rpx;
+  height: 88rpx;
+  margin-left:calc(50% - 185rpx) ;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  background: white;
+  border-radius:90rpx ;
+}
+.details-bt-view {
+  width: 50%;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  color: #028FFB;
+  text-align: center;
+}
+
+.details-avtive {
+  font-size: 30rpx;
+  color: #FFFFFF;
+  border-radius: 90rpx;
+  background: linear-gradient(to right,#68BAFF,#0060FF);
+}
+
+.details-search-h1{
+  font-size: 30rpx;
+color: #333333;
+}
+.details-search-h2{
+  font-size: 30rpx;
+  color: #028FFB;
+}
+.details-search-h3{
+  font-size: 30rpx;
+  color: #028FFB;
+  width: 260rpx;
+  line-height: 60rpx;
+}
+.details-search-icon{
+height: 26rpx;
+width: 24.5rpx;
+margin: 17rpx 14rpx;
+}
+.details-search-image{
+  height:45rpx ;
+  width: 89.8rpx;
+  margin: 7rpx 0;
+ 
+}
+.details-search-border{
+  width: 409rpx;
+  border: 1px solid #BBBBBB;
+  border-radius: 10px;
+}
+
+.search-list{
+  width: calc(50% - 30rpx);
+  height: 340rpx;
+  background: white;
+  border-radius: 22.5px;
+  margin-top: 80rpx;
+}
+.search-list-right{
+  margin-left: 30rpx;
+}
+.search-list-icon{
+margin-top: -60rpx;
+margin-bottom: 27rpx;
+height: 120rpx;
+width: 120rpx;
+margin-left:calc(50% - 60rpx);
+border-radius: 50%;
+border: 1px solid #DCDCDC;
+}
+.search-list-h1{
+  color: #333333;
+  font-size: 28rpx;
+}
+.search-list-h2{
+padding: 20rpx 26rpx;
+margin-top: 15rpx;
+background: #028FFB;
+color: white;
+font-size: 28rpx;
+border-radius: 26px;
+}

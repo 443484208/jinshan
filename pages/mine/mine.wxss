@@ -1,1 +1,100 @@
 /* pages/mine/mine.wxss */
+
+.user_mine {
+  padding-bottom: 150rpx;
+  background-color: #f8f6f9;
+}
+
+.user_mine_head {
+  width: 100%;
+  height: 289rpx;
+  position: relative;
+}
+
+.user_mine_head_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.user_mine_nav {
+  padding: 80rpx 0 0 40rpx;
+  position: absolute;
+  z-index: 2;
+}
+
+.user_mine_avac {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 26rpx;
+  overflow: hidden;
+  float: left;
+}
+
+.user_mine_avac image {
+  width: 100%;
+  height: 100%;
+}
+
+.user_mine_name {
+  float: left;
+  font-size: 36rpx;
+  color: #fff;
+  margin-top: 20rpx;
+}
+
+.user_mine_username {
+  margin-bottom: 10rpx;
+}
+
+.user_mine_Character {
+  font-size: 30rpx;
+}
+
+.user_mine_center {
+  height: 584rpx;
+  margin: 20rpx 35rpx;
+  background: #fff;
+  border-radius:25rpx; 
+}
+.user_mine_foot{
+  height: 280rpx;
+  margin: 20rpx 35rpx;
+  background: #fff;
+  border-radius:25rpx; 
+}
+.user_mine_center_title{
+   padding-top: 40rpx;
+  font-size: 26rpx;
+  color: #333333;
+  /* line-height:75rpx; */
+  padding-left:37rpx;
+}
+.user_mine_center_na{
+  height: 96rpx;
+  padding: 0 36rpx; 
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.user_mine_center_na_bo{
+border-bottom:2rpx solid #EEEEEE;
+}
+.user_mine_center_img{
+  width: 48rpx;  
+  display: block;
+  margin-right: 20rpx;
+  height: 0;
+}
+.user_mine_center_word{
+  font-size: 28rpx;
+  color: #666666;
+}
+.user_mine_center_rightimg{
+  display: block;
+  width: 12rpx;
+  height: 22rpx;
+  margin-left: auto;
+}

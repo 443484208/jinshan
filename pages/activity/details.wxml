@@ -1,0 +1,35 @@
+<!--pages/activity/details.wxml-->
+<view class="details-header">
+	<image class="details-header-image" src="../../image/gongyingshang.png"></image>
+	<view class="details-header-h1">时间：2020-03-15 至 2020-04-15 18:00</view>
+	<view class="details-header-h1"> 动态：企业300 | 需求20089 | 供应商1890</view>
+	<view class="details-header-h1">
+		规模：689家企业 </view>
+	<image class="details-header-h2" src="../../image/activity-search.png"  bindtap="jumpTo"></image>
+</view>
+<!-- 选择 -->
+<view class="details-bt index-flex">
+	<view bindtap="jumpI" data-index="0" class="details-bt-view {{detailsI==0?'details-avtive':''}} ">供应商</view>
+	<view bindtap="jumpI" data-index="1" class="details-bt-view {{detailsI==1?'details-avtive':''}}">业务员</view>
+</view>
+<!-- 搜索 -->
+<view class="details-search index-flex index-margin index-flex-between index-center">
+	<view class="index-flex">
+		<view class="details-search-h1">在线{{detailsI==0?'供应商':'业务员'}}</view>
+		<view class="details-search-h2">(25)</view>
+	</view>
+	<view class="index-flex details-search-border ">
+		<image class="details-search-icon" src="../../image/activity-details.png"></image>
+		<input class="details-search-h3"></input>
+		<image class="details-search-image" src="../../image/search.png"> </image>
+	</view>
+</view>
+<view class="index-margin index-flex index-wrap">
+	<view class="search-list {{index%2==0?'':'search-list-right'}}" wx:for="{{[1,2,3,4,56,5,2,5]}}" wx:key="*this" bindtap="jumpTo" data-index="{{index}}">
+		<image class="search-list-icon"></image>
+		<view class="search-list-h1 index-margin">XXX集团业务李先旺 专注于与暖风系统 系统</view>
+		<view class="index-flex index-center-center">
+			<view class="search-list-h2">马上了解</view>
+		</view>
+	</view>
+</view>

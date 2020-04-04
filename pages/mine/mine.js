@@ -5,7 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list:[{
+      icon:'./../../image/release.png',
+      name:'我的发布',
+      url:'',
+    },{
+      icon:'./../../image/Order.png',
+      name:'我的订单',
+      url:'',
+    },{
+      icon:'./../../image/wallet.png',
+      name:'我的钱包',
+      url:'',
+    },{
+      icon:'./../../image/integral.png',
+      name:'我的积分',
+      url:'',
+    },{
+      icon:'./../../image/Favorite.png',
+      name:'我的收藏',
+      url:'',
+    }],
     tabbar: {
       value: {
         "backgroundColor": "#ffffff",
@@ -19,7 +39,7 @@ Page({
             "selectedIconPath":"icon/homes.png"
           }, {
             "pagePath": "../../pages/purchase/purchase",
-            "text": "采购",
+            "text": "采购需求",
             "iconPath":"icon/caigou.png",
             "selectedIconPath":"icon/caigou.png"
           }, {
@@ -43,7 +63,12 @@ Page({
       }
     }
   },
-
+  jump(e){
+    var url=e.currentTarget.dataset['index'];
+    wx.navigateTo({
+      url: '../'+url
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

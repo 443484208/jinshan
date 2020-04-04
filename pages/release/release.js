@@ -5,44 +5,81 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabbar: {
-      value: {
-        "backgroundColor": "#ffffff",
-        "color": "#979795",
-        "selectedColor": "#1c1c1b",
-        "list": [
-          {
-            "pagePath": "../../pages/index/index",
-            "text": "首页",
-            "iconPath":"icon/homes.png",
-            "selectedIconPath":"icon/homes.png"
-          }, {
-            "pagePath": "../../pages/purchase/purchase",
-            "text": "采购",
-            "iconPath":"icon/caigou.png",
-            "selectedIconPath":"icon/caigou.png"
-          }, {
-            "pagePath": "../../pages/release/release",
-            "text": "发布",
-            "iconPath":"icon/fabu.png",
-            "selectedIconPath":"icon/fabu.png",
-            "isSpecial": true,
-          }, {
-            "pagePath": "../../pages/tool/tool",
-            "text": "工具",
-            "iconPath":"icon/gongju.png",
-            "selectedIconPath":"icon/gongju.png"
-          }, {
-            "pagePath": "../../pages/mine/mine",
-            "text": "我的",
-            "iconPath":"icon/mine.png",
-            "selectedIconPath":"icon/mine.png"
-          }
-        ]
+    title: null,
+    content: null,
+    name: null,
+    phone: null,
+  },
+  jumpPhone(e) {
+    var type = e.currentTarget.dataset['type'];
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: [type],
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        const tempFilePaths = res.tempFilePaths
       }
+    })
+  },
+  jumpUp() {
+    if (!this.data.title) {
+      wx.showToast({
+        title: '请输入标题!', //标题
+        icon: 'none',
+        duration: 2000
+      })
+    }else if(!this.data.content){
+      wx.showToast({
+        title: '请输入通告内容!', //标题
+        icon: 'none',
+        duration: 2000
+      })
+    }else if(!this.data.name){
+      wx.showToast({
+        title: '请输入联系人姓名!', //标题
+        icon: 'none',
+        duration: 2000
+      })
+    }else if(!this.data.phone){
+      wx.showToast({
+        title: '请输入联系人的联系方式!', //标题
+        icon: 'none',
+        duration: 2000
+      })
+    }else{
+      wx.showToast({
+        title: '发布成功',
+        icon: 'success',
+        duration: 2000,
+      });
+      setTimeout(() => {
+        wx.switchTab({
+          url: '../index/index'
+        })
+      }, 2000)
     }
   },
-
+  formName(e){
+    this.setData({
+      name:e.detail.value
+    })
+  },
+  formContent(e){
+    this.setData({
+      content:e.detail.value
+    })
+  },
+  formTitle(e){
+    this.setData({
+      title:e.detail.value
+    })
+  },
+  formPhone(e){
+    this.setData({
+      phone:e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

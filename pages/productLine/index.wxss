@@ -9,8 +9,7 @@
 .index-list,
 .index-statistics-header,
 .index-news-h3,
-.index-news-footer,
-.index-margin {
+.index-news-footer {
   margin: 0 30rpx;
 }
 
@@ -35,7 +34,7 @@
 }
 
 .index-list-view {
-  width: 20%;
+  width: 33%;
 }
 
 .index-list-icon {
@@ -67,13 +66,13 @@
   border-bottom: #DCDCDC solid 1px;
 }
 
-.index-statistics-header-image {
+.index-statistics-header image {
   height: 36rpx;
   width: 36rpx;
   margin-right: 13rpx;
 }
 
-.index-statistics-header-view {
+.index-statistics-header view {
   font-size: 30rpx;
 
 }
@@ -181,7 +180,7 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
-  margin: 20rpx 30rpx;
+  margin: 0 30rpx;
 }
 
 .index-search input {
@@ -190,6 +189,7 @@
   line-height: 80rpx;
   padding: 0 22rpx;
   box-sizing: border-box;
+  
 }
 
 .index-search-right {
@@ -203,15 +203,42 @@
   height: 34rpx;
   margin: 0 0 0 20rpx;
 }
-.index-flex-between{
-  justify-content: space-between;
-}
-.index-white{
-  background: white;
-}
-.index-wrap{
+
+.purchase-list {
   flex-wrap: wrap;
+  background: #F7F7F7;
+  padding: 30rpx;
 }
-.index-center-center{
-  justify-content: center;
+
+.purchase-list-view {
+  height: 290rpx;
+  width: calc(33% - 20rpx);
+  background: white;
+  margin-bottom: 20rpx;
+  border-radius: 10px;
+}
+
+.purchase-list-right {
+  margin-right: 30rpx
+}
+
+.purchase-list-view image {
+  height: 196rpx;
+  width: 100%;
+}
+
+.purchase-list-h2 {
+  font-size: 24rpx;
+  color: #333333;
+  padding:0 15rpx;
+}
+
+.purchase-list-h3 {
+  font-size: 24rpx;
+  color: #FF4343;
+  padding:0 15rpx;
+}
+.container{
+  padding-bottom: 144rpx;
+  background: #F7F7F7;
 }

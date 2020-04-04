@@ -15,40 +15,22 @@ Page({
     }],
     list:[{
       src:'./../../image/biddinginformation.png',
-      title:'招标信息',
-      url:'tendering/tendering'
+      title:'中央空调'
     },{
       src:'./../../image/activity.png',
-      title:'活动',
-      url:'activity/activity'
+      title:'通风排烟'
     },{
       src:'./../../image/ProductLine.png',
-      title:'产品系列',
-      url:'productLine/index'
+      title:'电气设备'
     },{
       src:'./../../image/Reserve.png',
-      title:'预留'
+      title:'轨道交通'
     },{
       src:'./../../image/Reserve.png',
-      title:'预留'
+      title:'复合材料'
     },{
       src:'./../../image/Installationandconstruction.png',
-      title:'安装施工',
-      url:'install/install'
-    },{
-      src:'./../../image/Logisticsservice.png',
-      title:'物流服务',
-      url:'logisticsservice/logisticsservice'
-    },{
-      src:'./../../image/legaladvice.png',
-      title:'法律咨询',
-      url:'legaladvice/legaladvice'
-    },{
-      src:'./../../image/Reserve.png',
-      title:'预留'
-    },{
-      src:'./../../image/Reserve.png',
-      title:'预留'
+      title:'其他产品'
     }],
     tabbar: {
       value: {
@@ -59,13 +41,13 @@ Page({
           {
             "pagePath": "../../pages/index/index",
             "text": "首页",
-            "iconPath":"icon/home.png",
-            "selectedIconPath":"icon/home.png"
+            "iconPath":"icon/homes.png",
+            "selectedIconPath":"icon/homes.png"
           }, {
             "pagePath": "../../pages/purchase/purchase",
             "text": "采购需求",
-            "iconPath":"icon/caigou.png",
-            "selectedIconPath":"icon/caigou.png"
+            "iconPath":"icon/cagou2.png",
+            "selectedIconPath":"icon/cagou2.png"
           }, {
             "pagePath": "../../pages/release/release",
             "text": "发布",
@@ -87,31 +69,18 @@ Page({
       }
     }
   },
-  jumpPhone(e){
-    wx.makePhoneCall({
-      phoneNumber: '13800001111' //仅为示例，并非真实的电话号码
-    })
-  },
-  jumpFabulous(e){
-    wx.showToast({
-      title: '点赞成功',
-      icon: 'success',
-      duration: 2000
-    })
-  },
-  jumpForwarde(e){
-    wx.showToast({
-      title: '转发成功',
-      icon: 'success',
-      duration: 2000
-    })
-  },
-  jump(e){
-    var url=this.data.list[e.currentTarget.dataset['index']].url;
+  jumpTo(e){
     wx.navigateTo({
-      url: '../'+url
+      url: 'productLine?url='+this.data.list[e.currentTarget.dataset['index']].title+'&key='+e.currentTarget.dataset['index']
     })
-   console.log(e.currentTarget.dataset['index'])
+    // e.currentTarget.dataset['index']
+  },
+  jumpTolist(e){
+    wx.navigateTo({
+
+    url: '../productLine/details'
+    })
+    // e.currentTarget.dataset['index']
   },
   //事件处理函数
   bindViewTap: function() {
@@ -119,19 +88,6 @@ Page({
       url: '../logs/logs'
     })
   },
-  jumpDetails(e) {
-    wx.navigateTo({
-      url: 'details'
-    })
-  },
-  previewImage (e) {
-    var current = e.currentTarget.dataset['index'];//获取data-src
-    var imglist = [e.currentTarget.dataset['index']];//获取data-list
-    wx.previewImage({
-      current: current, // 当前显示图片的http链接  
-      urls:imglist // 需要预览的图片http链接列表  
-    })
-  } , 
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

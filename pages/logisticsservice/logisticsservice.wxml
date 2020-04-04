@@ -8,12 +8,11 @@
 			</block>
 		</swiper>
 		<view class=" install">
-			<view class="install-list"  wx:for="{{swiperData}}" wx:key="*this">
+			<view class="install-list"  wx:for="{{swiperData}}" wx:key="*this"  bindtap="jump" data-index="{{index}}">
 				<view class="install-h1">物流公司一 联系电话：13811110000</view>
 				<view class="install-h1">文字介绍：************** </view>
 				<view class="install-h1">工作时间：8:00 - 17:0</view>
-      <image bindtap="jump" data-index="{{index}}" class="install-image" src="../../image/back-right.png"></image>
-
+      <image class="install-image" src="../../image/back-right.png"></image>
 			</view>
 		</view>
 	</view>

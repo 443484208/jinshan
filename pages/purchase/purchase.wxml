@@ -1,42 +1,22 @@
-<!--index.wxml-->
-<view class="container">
+
 	<!-- 轮播 -->
-	<swiper class="swiper" autoplay="true" interval="5000">
-		<block wx:for="{{swiperData}}" wx:key="*this">
-			<swiper-item>
-				<image mode="scaleToFill" src="{{item.src}}"></image>
-			</swiper-item>
-		</block>
-	</swiper>
-	<!-- 搜索 -->
-	<view class=" index-white" style="padding:20rpx 0;">
-		<view class="index-search ">
-			<image class="index-search-left" src="./../../image/searchs.png"></image>
-			<input placeholder="搜索">
-
-			</input>
-			<image class="index-search-right" src="./../../image/search.png"></image>
-		</view>
-	</view>
-	<!-- 列表 -->
-	<view class="index-white">
-		<view class="index-list index-flex  ">
-			<view class="index-list-view" wx:for="{{list}}" data-index="{{index}}" wx:key="*this" bindtap="jumpTo">
-				<view class="index-flex index-center index-list-icon">
+	<view style="background: #F8F6F9;height:100%;">
+		<swiper class="swiper" autoplay="true" interval="5000">
+			<block wx:for="{{swiperData}}" wx:key="*this">
+				<swiper-item>
 					<image mode="scaleToFill" src="{{item.src}}"></image>
-				</view>
-				<view class="index-list-text">{{item.title}}</view>
-			</view>
-		</view>
+				</swiper-item>
+			</block>
+		</swiper>
 	</view>
-	<!-- 统计 -->
-	<view class="index-flex purchase-list">
-
-		<view class="purchase-list-view {{(index+1)%3!=0?'purchase-list-right':''}}" bindtap="jumpTolist" data-index="{{index}}" wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
-			<image class="" src="../../image/caigou-bk.png"></image>
-			<view class="purchase-list-h2">大件搬运</view>
-			<view class="purchase-list-h3">￥669</view>
-		</view>
-	</view>
+<!-- 选择 -->
+<view class="details-bt index-flex">
+	<view bindtap="jumpI" data-index="0" class="details-bt-view {{detailsI==0?'details-avtive':''}} ">供应商需求</view>
+	<view bindtap="jumpI" data-index="1" class="details-bt-view {{detailsI==1?'details-avtive':''}}">业务员需求</view>
 </view>
+
+<view class="purchase-list" wx:for="{{[1,2,3,4,5,2]}}" wx:key="*this"  dada-index="{{index}}" bindtap="jump">
+XXX集团业务李先旺求购1000台暖风系统 要求机翼型叶轮，防爆风机，最大30号，最小2 号，角度可以调整，风量风压随时改变 
+</view>
+
 <tabbar tabbar="{{tabbar}}"></tabbar>

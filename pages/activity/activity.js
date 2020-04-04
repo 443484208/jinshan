@@ -6,11 +6,13 @@ Page({
    */
   data: {
     swiperData:[{
-      src:'./../../image/banner@2x.png'
+      src:'./../../image/bk-1.jpg'
     },{
-      src:'./../../image/banner@2x.png'
+      src:'./../../image/bk-2.jpg'
     },{
-      src:'./../../image/banner@2x.png'
+      src:'./../../image/bk-3.jpg'
+    },{
+      src:'./../../image/bk-4.jpg'
     }],
     activityI:0,
     list:[{
@@ -29,7 +31,10 @@ Page({
     })
   },
   jumpTo(e){
-
+    wx.navigateTo({
+      url: 'details?url=第一届金光线上采销大会&key='+this.data.list[e.currentTarget.dataset['index']].i
+    })
+    
   },
   /**
    * 生命周期函数--监听页面加载

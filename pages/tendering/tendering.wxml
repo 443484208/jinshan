@@ -24,7 +24,7 @@
 			<view class="index-statistics-header-view">标题</view>
 		</view>
 		<view class="index-flex index-center">
-			<image class="index-statistics-header-image" mode="scaleToFill" src="../../image/tongzhi.png"></image>
+			<image class="index-statistics-header-images" mode="scaleToFill" src="../../image/tongzhi.png"></image>
 			<view class="index-statistics-header-view">截止时间</view>
 		</view>
 	</view>

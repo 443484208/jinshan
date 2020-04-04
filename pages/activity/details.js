@@ -1,28 +1,43 @@
-// pages/install/details.js
+// pages/activity/details.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    sideI:null,
+    detailsI:0,
+    swiperData:[{
+      src:'./../../image/bk-1.jpg'
+    },{
+      src:'./../../image/bk-2.jpg'
+    },{
+      src:'./../../image/bk-3.jpg'
+    },{
+      src:'./../../image/bk-4.jpg'
+    }],
   },
-  start(){
-    wx.showToast({
-      title: '收藏成功！', // 标题
-      icon: 'success',  // 图标类型，默认success
-      duration: 3000  // 提示窗停留时间，默认1500ms
+  jumpI(e){
+    this.setData({
+      detailsI:e.currentTarget.dataset['index']
     })
   },
-  jump(){
-    wx.switchTab({
-      url: '../index/index'
+  jumpTo(e){
+    wx.navigateTo({
+      url: 'index'
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    wx.setNavigationBarTitle({
+      title: options.url
+    })
+    this.setData({
+      sideI:options.key
+    })
   },
 
   /**
