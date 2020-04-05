@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "swipers": "../swiper/tabbar"
+  },
   "navigationBarTitleText": "物流详情"
 }

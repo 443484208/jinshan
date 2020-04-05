@@ -108,7 +108,7 @@
 .index-bk {
   height: 20rpx;
   width: 100%;
-  background: #DCDCDC;
+  background: #f0f2f5;
 }
 
 .index-news-top {

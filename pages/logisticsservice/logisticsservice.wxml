@@ -1,14 +1,8 @@
 	<!-- 轮播 -->
 	<view style="background: #F8F6F9;height:100%;">
-		<swiper class="swiper" autoplay="true" interval="5000">
-			<block wx:for="{{swiperData}}" wx:key="*this">
-				<swiper-item>
-					<image mode="scaleToFill" src="{{item.src}}"></image>
-				</swiper-item>
-			</block>
-		</swiper>
+		<swipers swiperData="{{swiperData}}"></swipers>
 		<view class=" install">
-			<view class="install-list"  wx:for="{{swiperData}}" wx:key="*this"  bindtap="jump" data-index="{{index}}">
+			<view class="install-list"  wx:for="{{swiperData.list}}" wx:key="*this"  bindtap="jump" data-index="{{index}}">
 				<view class="install-h1">物流公司一 联系电话：13811110000</view>
 				<view class="install-h1">文字介绍：************** </view>
 				<view class="install-h1">工作时间：8:00 - 17:0</view>

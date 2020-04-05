@@ -1,0 +1,96 @@
+/* pages/install/install.wxss */
+.install{
+  padding: 30rpx ;
+  
+  
+}
+.install-list{
+width:100%;
+border-radius: 22.5px;
+background: white;
+padding: 50rpx 30rpx 50rpx 60rpx ;
+box-sizing: border-box;
+margin-bottom: 30rpx;
+}
+.install-h1{
+color: #333333;
+font-size: 30rpx;
+margin-top: 20rpx;
+}
+
+.install-image{
+  width: 24rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 60rpx;
+  margin-top: -100rpx;
+}
+
+.details{
+  flex-wrap: wrap;
+  width: calc(100% - 60rpx);
+
+}
+.details-list{
+  /* height: 420rpx; */
+  width: calc(50% - 16rpx);
+  border-radius: 22.5px;
+  background: white;
+  padding-bottom:20rpx ;
+  margin-bottom: 30rpx;
+}
+.details-list image{
+height: 294rpx;
+width: 100%;
+border-radius: 22.5px 22.5px 0 0;
+}
+.details-list-h1{
+  width: 140rpx;
+  height:60rpx;
+  background: #028FFB;
+  border-radius:15px ;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: white;
+}
+.details-list-h2{
+font-size: 28rpx;
+color: #FF4343;
+margin-top: 10rpx;
+}
+.details-list-h3{
+  font-size: 28rpx;
+  color: #333333;
+}
+.details-left{
+  margin-left: 30rpx;
+}
+/* pages/productLine/details.wxss */
+.tabr{
+  position: fixed;
+  bottom: 0;
+  padding: 10rpx 0;
+  background: white;
+  width: 100%;
+}
+.tar-list image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.tar-h1{
+  color:#666666;
+  font-size:24rpx;
+  
+}
+.tar-list{
+  width: 100rpx;
+  margin-left: 30rpx;
+  text-align: center;
+}
+
+.tar-bottom-image{
+  width: 306rpx;
+  height: 78rpx;
+  margin-right: 30rpx;
+}

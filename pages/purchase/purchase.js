@@ -7,15 +7,17 @@ Page({
   data: {
     sideI:null,
     detailsI:0,
-    swiperData:[{
-      src:'./../../image/bk-1.jpg'
-    },{
-      src:'./../../image/bk-2.jpg'
-    },{
-      src:'./../../image/bk-3.jpg'
-    },{
-      src:'./../../image/bk-4.jpg'
-    }],
+    swiperData:{
+      list:[{
+        src:'./../../image/bk-1.jpg'
+      },{
+        src:'./../../image/bk-2.jpg'
+      },{
+        src:'./../../image/bk-3.jpg'
+      },{
+        src:'./../../image/bk-4.jpg'
+      }]
+  } ,
     tabbar: {
       value: {
         "backgroundColor": "#ffffff",

@@ -1,12 +1,6 @@
 <view class="container">
 	<!-- 轮播 -->
-	<swiper class="swiper" autoplay="true" interval="5000">
-		<block wx:for="{{swiperData}}" wx:key="*this">
-			<swiper-item>
-				<image mode="scaleToFill" src="{{item.src}}"></image>
-			</swiper-item>
-		</block>
-	</swiper>
+	<swipers swiperData="{{swiperData}}"></swipers>
 	<!-- 搜索 -->
 
 	<view class="index-search">

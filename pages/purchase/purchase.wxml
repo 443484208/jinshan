@@ -1,18 +1,12 @@
 
 	<!-- 轮播 -->
 	<view style="background: #F8F6F9;height:100%;">
-		<swiper class="swiper" autoplay="true" interval="5000">
-			<block wx:for="{{swiperData}}" wx:key="*this">
-				<swiper-item>
-					<image mode="scaleToFill" src="{{item.src}}"></image>
-				</swiper-item>
-			</block>
-		</swiper>
+		<swipers swiperData="{{swiperData}}"></swipers>
 	</view>
 <!-- 选择 -->
 <view class="details-bt index-flex">
-	<view bindtap="jumpI" data-index="0" class="details-bt-view {{detailsI==0?'details-avtive':''}} ">供应商需求</view>
-	<view bindtap="jumpI" data-index="1" class="details-bt-view {{detailsI==1?'details-avtive':''}}">业务员需求</view>
+	<view bindtap="jumpI" data-index="0" class="details-bt-view {{detailsI==0?'details-avtive':''}} ">平台发布</view>
+	<view bindtap="jumpI" data-index="1" class="details-bt-view {{detailsI==1?'details-avtive':''}}">个人发布</view>
 </view>
 
 <view class="purchase-list" wx:for="{{[1,2,3,4,5,2]}}" wx:key="*this"  dada-index="{{index}}" bindtap="jump">

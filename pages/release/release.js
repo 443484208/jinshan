@@ -49,7 +49,7 @@ Page({
       })
     }else{
       wx.showToast({
-        title: '发布成功',
+        title: '发布成功，等待审核通过',
         icon: 'success',
         duration: 2000,
       });

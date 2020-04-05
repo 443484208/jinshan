@@ -1,0 +1,143 @@
+/* pages/writeorder/writeorder.wxss */
+.writer-header-h1{
+font-size: 30rpx;
+margin-bottom: 20rpx;
+}
+.writer-header-h2{
+color: #FF5C5B;
+font-size: 24rpx;
+border: 1px #FF5C5B solid;
+padding:0 4px;
+margin-left: 4px;
+}
+.writer-header-h3{
+color: #999999;
+font-size: 24rpx;
+}
+.writer-header-icon{
+width: 22rpx;
+height: 28rpx;
+margin-right: 8rpx;
+}
+.writer-header-right{
+  width: 12rpx;
+  height: 22rpx;
+}
+
+.writer-header-left{
+  width: calc(100% - 60rpx);
+}
+.writer-header {
+  padding: 30rpx;
+}
+.write-padding{
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+.write-content-h1{
+
+}
+.write-content-h2{
+font-size: 24rpx;
+padding-bottom: 10rpx;
+
+}
+.write-content-h3{
+font-size:20rpx;
+color:#999999;
+}
+.write-content-h4{
+font-size: 24rpx;
+color: #999999;
+}
+.write-content-h5{
+font-size: 20rpx;
+color: #FF5C5B;
+padding-top: 10rpx;
+position: absolute;
+bottom: 0;
+}
+.write-content-view{
+width: calc(100%  - 190rpx);
+margin-left: 20rpx;
+}
+.write-content-icon{
+height: 160rpx;
+width: 160rpx;
+border-radius: 5px;
+background: #CCCCCC;
+}
+.write-content-list{
+  padding: 30rpx 0;
+  align-items: flex-start;
+}
+.write-content-view{
+  position: relative;
+  min-height:160rpx
+}
+.write-input{
+  padding:28rpx 30rpx;
+  background: white;
+}
+.write-input-left{
+font-size: 30rpx;
+}
+.write-input-right{
+font-size: 24rpx;
+}
+.write-input-border{
+border-bottom: 1px solid #EEEEEE;
+}
+.write-input-red{
+  color:#FF5C5B;
+  font-size:24rpx;
+}
+.write-input-bao{
+  color:#FF5C5B;
+  border: 1px solid #FF5C5B;
+  border-radius: 5px;
+  font-size:24rpx;
+  padding:1px 10rpx ;
+  margin-right:16rpx;
+}
+.write-input-money{
+  color:#999999;
+}
+.write-te{
+  padding: 30rpx;
+  width: calc(100% - 60rpx);
+  min-height:150rpx;
+  font-size: 30rpx;
+}
+.write-white{
+  background: white;
+}
+page{
+  background: #f0f2f5;
+  padding-bottom: 150rpx;
+}
+.input-fiexd{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 60rpx);
+  height:100rpx;
+  padding:0 30rpx;
+  z-index: 99;
+}
+.input-fiexd-h1{
+font-size: 30rpx;
+}
+.input-fiexd-h2{
+font-size: 30rpx;
+color: #FF5C5B;
+}
+.input-fiexd-bt{
+  height: 70rpx;
+  padding: 0 20rpx;
+  border-radius: 5px;
+  background: #028FFB;
+  color:white;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}

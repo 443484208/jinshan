@@ -5,24 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperData:[{
-      src:'./../../image/bk-1.jpg'
-    },{
-      src:'./../../image/bk-2.jpg'
-    },{
-      src:'./../../image/bk-3.jpg'
-    },{
-      src:'./../../image/bk-4.jpg'
-    }],
+    swiperData: {
+      list: [{
+        src: './../../image/bk-1.jpg'
+      }, {
+        src: './../../image/bk-2.jpg'
+      }, {
+        src: './../../image/bk-3.jpg'
+      }, {
+        src: './../../image/bk-4.jpg'
+      }]
+    }
   },
-  start(){
+  start() {
     wx.showToast({
       title: '收藏成功！', // 标题
-      icon: 'success',  // 图标类型，默认success
-      duration: 3000  // 提示窗停留时间，默认1500ms
+      icon: 'success', // 图标类型，默认success
+      duration: 3000 // 提示窗停留时间，默认1500ms
     })
   },
-  jump(){
+  jump() {
     wx.switchTab({
       url: '../index/index'
     })

@@ -5,15 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperData:[{
-      src:'./../../image/bk-1.jpg'
-    },{
-      src:'./../../image/bk-2.jpg'
-    },{
-      src:'./../../image/bk-3.jpg'
-    },{
-      src:'./../../image/bk-4.jpg'
-    }],
+    swiperData:{
+      list:[{
+        src:'./../../image/bk-1.jpg'
+      },{
+        src:'./../../image/bk-2.jpg'
+      },{
+        src:'./../../image/bk-3.jpg'
+      },{
+        src:'./../../image/bk-4.jpg'
+      }]
+  } ,
     activityI:0,
     list:[{
       i:0,
@@ -24,6 +26,11 @@ Page({
     {
       i:0,
     }]
+  },
+  jumpSwiper(){
+    wx.navigateTo({
+      url: '../productLine/details'
+    })
   },
   jump(e){
     this.setData({

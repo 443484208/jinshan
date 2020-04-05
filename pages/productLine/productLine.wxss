@@ -14,9 +14,8 @@
   border-left:#028FFB 6rpx solid ;
 }
 .sideBar-content{
-  margin:20rpx 23rpx 20rpx 100rpx;
-  width:calc(100% - 120rpx);
-  height:320rpx;
+  margin:20rpx 23rpx 20rpx 180rpx;
+  width:calc(100% - 210rpx);
   border:1px #BBBBBB solid;
   border-radius: 22.5px;
   padding: 34rpx;

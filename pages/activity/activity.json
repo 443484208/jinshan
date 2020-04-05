@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "活动"
+  "usingComponents": {
+    "swipers": "../swiper/tabbar"
+  },
+  "navigationBarTitleText": "在线活动"
 }

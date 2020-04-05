@@ -1,0 +1,68 @@
+<!-- 信息 -->
+<view class="index-flex index-center writer-header index-flex-between write-white" bindtap="jumpAddress">
+	<view class="writer-header-left">
+		<view class="writer-header-h1">陈某某 156*****4791<text class="writer-header-h2">默认</text> </view>
+		<view class="index-flex index-center">
+			<image src="../../image/position.png" class="writer-header-icon"></image>
+			<view class="writer-header-h3">湖中国现代森对面</view>
+		</view>
+	</view>
+	<image src="../../image/right.png" class="writer-header-right"></image>
+</view>
+<view class="index-bk"></view>
+<!-- 信息 -->
+<view class="write-padding write-content write-white">
+	<view class="write-content-h1">商品信息</view>
+	<view class="index-flex index-center  write-content-list">
+		<image class="write-content-icon"></image>
+		<view class="write-content-view">
+			<view class="write-content-h2">儿童大块积木桶装1-2-3-6周岁益智早教婴儿宝宝男女孩木头玩具 </view>
+			<view class="index-flex index-center index-flex-between">
+				<view class="write-content-h3">全部套装【68块】</view>
+				<view class="write-content-h4">×1</view>
+			</view>
+			<view class="write-content-h5">￥128.00 </view>
+		</view>
+	</view>
+</view>
+<view class="index-bk"></view>
+<!-- <view class="write-input index-flex index-center index-flex-between">
+	<view class="write-input-left">优惠券</view>
+	<view class="index-flex index-center ">
+		<view class="write-input-right">请选择</view>
+		<image src="../../image/right.png" style="margin-left:20rpx;" class="writer-header-right"></image>
+	</view>
+</view>
+<view class="index-bk"></view> -->
+
+<view class="write-input index-flex index-center index-flex-between write-input-border">
+	<view class="write-input-left">商品金额</view>
+	<view class="write-input-right write-input-red">￥188.00</view>
+</view>
+<view class="write-input index-flex index-center index-flex-between write-input-border">
+	<view class="write-input-left">运费</view>
+	<view class="index-flex index-center ">
+		<view class="write-input-right write-input-bao"> 满88包邮</view>
+		<view class="write-input-right write-input-money"> ￥0.00</view>
+	</view>
+</view>
+<view class="write-input index-flex index-center index-flex-between">
+	<view class="write-input-left">可获积分</view>
+	<view class="write-input-right write-input-money"> 994分</view>
+</view>
+<view class="index-bk"></view>
+<view class="write-input index-flex index-center index-flex-between write-input-border">
+	<view class="write-input-left">备注：</view>
+</view>
+<textarea class="write-te  write-white" placeholder="若您需对订单有特殊需求，请留言。"></textarea>
+
+
+<view class="input-fiexd index-flex index-center index-flex-between write-white ">
+	<view class="input-fiexd-h1">
+		实际付款：
+		<text class="input-fiexd-h2" >￥188.00</text>
+	</view>
+	<view class="input-fiexd-bt" bindtap="jumpBt">
+		提交订单
+	</view>
+</view>

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "swipers": "../swiper/tabbar"
+  },
   "navigationBarTitleText": "招标信息"
 }

@@ -5,13 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperData: [{
-      src: './../../image/banner@2x.png'
-    }, {
-      src: './../../image/banner@2x.png'
-    }, {
-      src: './../../image/banner@2x.png'
-    }],
+    swiperData:{
+      list:[{
+        src:'./../../image/bk-1.jpg'
+      },{
+        src:'./../../image/bk-2.jpg'
+      },{
+        src:'./../../image/bk-3.jpg'
+      },{
+        src:'./../../image/bk-4.jpg'
+      }]
+  } ,
     background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
     indicatorDots:true,
     tabbar: {

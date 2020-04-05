@@ -1,0 +1,43 @@
+	<!-- 轮播 -->
+	<view style="background: #F8F6F9;height:100%;padding-bottom:100rpx;">
+				<swipers swiperData="{{swiperData}}"></swipers>
+		<view class=" install">
+			<view class="install-list">
+				<view class="install-h1">联系人：张健  联系电话：0534-5019999</view>
+				<view class="install-h1">工作时间：8:00 - 17:00 </view>
+			</view>
+			<view class="install-list">
+				<view class="install-h1">主机事业部部产品涵盖空调主机全系列产品，拥有第三方认证的超低温实验室。
+   主要产品有：超低温空气源热泵、小型水地源热泵机组、模块化地源热泵机组、空气源热水机组、风冷螺杆机组、食用菌空调一体机等。
+   </view>
+			</view>
+		</view>
+
+		<view class="index-margin index-flex details">
+			<view class="details-list {{index%2==0?'':'details-left'}}" bindtap="jumpDetails" data-index="{{index}}" wx:for="{{list}}" wx:key="*this">
+				<image src="../../image/{{index+1}}.jpg"></image>
+				<view class="index-flex index-center index-flex-between" style="margin: 0 14rpx;">
+					<view >
+						<view class="details-list-h3">{{item.name}}</view>
+						<view class="details-list-h2">￥{{index+1}}669</view>
+					</view>
+					<!-- <view class="details-list-h1">购买
+					</view> -->
+				</view>
+
+			</view>
+		</view>
+	</view>
+	<view class="tabr index-flex index-flex-between index-center">
+		<view class="index-flex index-center">
+			<view class="tar-list" bindtap="jump">
+				<image src="../../image/home-index.png"></image>
+				<view class="tar-h1">首页</view>
+			</view>
+			<view class="tar-list" bindtap="start">
+				<image src="../../image/start.png"></image>
+				<view class="tar-h1">收藏</view>
+			</view>
+		</view>
+		<image class="tar-bottom-image" src="../../image/Onlineconsultation.png"></image>
+	</view>

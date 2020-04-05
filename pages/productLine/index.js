@@ -4,15 +4,17 @@ const app = getApp()
 
 Page({
   data: {
-    swiperData:[{
-      src:'./../../image/bk-1.jpg'
-    },{
-      src:'./../../image/bk-2.jpg'
-    },{
-      src:'./../../image/bk-3.jpg'
-    },{
-      src:'./../../image/bk-4.jpg'
-    }],
+    swiperData:{
+      list:[{
+        src:'./../../image/bk-1.jpg'
+      },{
+        src:'./../../image/bk-2.jpg'
+      },{
+        src:'./../../image/bk-3.jpg'
+      },{
+        src:'./../../image/bk-4.jpg'
+      }]
+  } ,
     list:[{
       src:'./../../image/biddinginformation.png',
       title:'中央空调'
@@ -32,42 +34,43 @@ Page({
       src:'./../../image/Installationandconstruction.png',
       title:'其他产品'
     }],
-    tabbar: {
-      value: {
-        "backgroundColor": "#ffffff",
-        "color": "#979795",
-        "selectedColor": "#1c1c1b",
-        "list": [
-          {
-            "pagePath": "../../pages/index/index",
-            "text": "首页",
-            "iconPath":"icon/homes.png",
-            "selectedIconPath":"icon/homes.png"
-          }, {
-            "pagePath": "../../pages/purchase/purchase",
-            "text": "采购需求",
-            "iconPath":"icon/cagou2.png",
-            "selectedIconPath":"icon/cagou2.png"
-          }, {
-            "pagePath": "../../pages/release/release",
-            "text": "发布",
-            "iconPath":"icon/fabu.png",
-            "selectedIconPath":"icon/fabu.png",
-            "isSpecial": true,
-          }, {
-            "pagePath": "../../pages/tool/tool",
-            "text": "工具",
-            "iconPath":"icon/gongju.png",
-            "selectedIconPath":"icon/gongju.png"
-          }, {
-            "pagePath": "../../pages/mine/mine",
-            "text": "我的",
-            "iconPath":"icon/mine.png",
-            "selectedIconPath":"icon/mine.png"
-          }
-        ]
-      }
-    }
+    lists:[{
+      url:'../../image/dikongqi.jpg',
+      name:'低温空气源热泵'
+    },{
+      url:'../../image/fengleng.jpg',
+      name:'风冷螺杆机组'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'风冷模块机组'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'降膜式水冷冷水机组'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'降膜式水源热泵机组'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'满液式水冷冷水机组'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'满液式水源热泵机组'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'模块化水（地）源热泵机组'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'食用菌空调一体机'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'水（地）源热泵机组'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'水冷冷水机组'
+    },{
+      url:'../../image/fenglengmokuai.jpg',
+      name:'小型水（地）源热泵机组'
+    }]
   },
   jumpTo(e){
     wx.navigateTo({
@@ -75,11 +78,18 @@ Page({
     })
     // e.currentTarget.dataset['index']
   },
-  jumpTolist(e){
+  jumpSwiper(){
     wx.navigateTo({
-
-    url: '../productLine/details'
+      url: '../productLine/details'
     })
+  },
+  jumpTolist(e){
+    var list=this.data.list[e.currentTarget.dataset['index']];
+    list.i=e.currentTarget.dataset['index'];
+    wx.navigateTo({
+      url: '../productLine/details?list='+JSON.stringify(list)
+    })
+  
     // e.currentTarget.dataset['index']
   },
   //事件处理函数

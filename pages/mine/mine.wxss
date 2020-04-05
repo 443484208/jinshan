@@ -54,7 +54,6 @@
 }
 
 .user_mine_center {
-  height: 584rpx;
   margin: 20rpx 35rpx;
   background: #fff;
   border-radius:25rpx; 
@@ -62,12 +61,13 @@
 .user_mine_foot{
   height: 280rpx;
   margin: 20rpx 35rpx;
-  background: #fff;
+  background: white;
   border-radius:25rpx; 
 }
 .user_mine_center_title{
    padding-top: 40rpx;
-  font-size: 26rpx;
+   padding-bottom: 20rpx;
+  font-size: 30rpx;
   color: #333333;
   /* line-height:75rpx; */
   padding-left:37rpx;

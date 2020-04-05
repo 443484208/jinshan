@@ -1,13 +1,7 @@
 <!--pages/tool/tool.wxml-->
 <view class="container tool">
   <!-- 轮播 -->
-  <swiper class="swiper" autoplay="true" interval="5000">
-    <block wx:for="{{swiperData}}" wx:key="*this">
-      <swiper-item>
-        <image mode="scaleToFill" src="{{item.src}}"></image>
-      </swiper-item>
-    </block>
-  </swiper>
+  <swipers swiperData="{{swiperData}}"></swipers>
   <!-- // 活动 -->
   <view class="bulletin">
     <view class="bulletin_left">

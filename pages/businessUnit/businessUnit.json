@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "swipers": "../swiper/tabbar"
+  },
+  "navigationBarTitleText": "主机事业部"
+}

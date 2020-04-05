@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list:null,
   },
   jump(){
     console.log("??")
@@ -13,11 +13,35 @@ Page({
       url: '../index/index'
     })
   },
+  jumpWriteorder(){
+    wx.navigateTo({
+      url: '../writeorder/writeorder'
+    })
+  },
+  zhuanfa(e){
+    wx.showToast({
+      title: '分享成功！', // 标题
+      icon: 'success',  // 图标类型，默认success
+      duration: 3000  // 提示窗停留时间，默认1500ms
+    })
+  },
+  start(e){
+    wx.showToast({
+      title: '收藏成功！', // 标题
+      icon: 'success',  // 图标类型，默认success
+      duration: 3000  // 提示窗停留时间，默认1500ms
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.list)
+    if(options.list){
+      this.setData({
+        list:JSON.parse(options.list)
+      })
+    }
   },
 
   /**

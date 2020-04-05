@@ -7,15 +7,6 @@ Page({
   data: {
     sideI:null,
     detailsI:0,
-    swiperData:[{
-      src:'./../../image/bk-1.jpg'
-    },{
-      src:'./../../image/bk-2.jpg'
-    },{
-      src:'./../../image/bk-3.jpg'
-    },{
-      src:'./../../image/bk-4.jpg'
-    }],
   },
   jumpI(e){
     this.setData({

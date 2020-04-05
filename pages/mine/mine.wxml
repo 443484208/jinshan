@@ -1,38 +1,24 @@
 <!--pages/mine/mine.wxml-->
 <view class="user_mine">
-  <view class="user_mine_head">
-    <image class="user_mine_head_img" mode="scaleToFill" src="./../../image/user_mine.png"></image>
-    <view class="user_mine_nav">
-      <view class="user_mine_avac">
-        <image src="https://pic1.zhimg.com/50/v2-fe28c2ec4751fc25627642c845c2b48e_hd.jpg"></image>
-      </view>
-      <view class="user_mine_name">
-        <view class="user_mine_username">用户昵称</view>
-        <view class="user_mine_Character">业务员</view>
-      </view>
-    </view>
-  </view>
-  <view class="user_mine_center">
-    <view class="user_mine_center_title">我的服务</view>
-    <view class="user_mine_center_na user_mine_center_na_bo"  wx:for="{{list}}" wx:key="*this" data-index="{{item.url}}" bindtap="jump">
-      <image class="user_mine_center_img" mode="widthFix" src="{{item.icon}}"></image>
-      <view class="user_mine_center_word">{{item.name}}</view>
-      <image class="user_mine_center_rightimg" mode="scaleToFill" src="./../../image/right.png"></image>
-    </view>
-    
-  </view>
-   <view class="user_mine_foot">
-    <view class="user_mine_center_title">供应商服务</view>
-    <view class="user_mine_center_na user_mine_center_na_bo"  data-index="456" bindtap="jump">
-      <image class="user_mine_center_img" mode="widthFix" src="./../../image/Settlein.png"></image>
-      <view class="user_mine_center_word">我的发布</view>
-      <image class="user_mine_center_rightimg" mode="widthFix" src="./../../image/right.png"></image>
-    </view>
-    <view class="user_mine_center_na "  data-index="123" bindtap="jump">
-      <image class="user_mine_center_img" mode="widthFix" src="./../../image/sz.png"></image>
-      <view class="user_mine_center_word">我的订单</view>
-      <image class="user_mine_center_rightimg" mode="scaleToFill" src="./../../image/right.png"></image>
-    </view>
-  </view>
+	<view class="user_mine_head">
+		<image class="user_mine_head_img" mode="scaleToFill" src="./../../image/user_mine.png"></image>
+		<view class="user_mine_nav">
+			<view class="user_mine_avac">
+				<image src="https://pic1.zhimg.com/50/v2-fe28c2ec4751fc25627642c845c2b48e_hd.jpg"></image>
+			</view>
+			<view class="user_mine_name">
+				<view class="user_mine_username">用户昵称</view>
+				<view class="user_mine_Character">业务员</view>
+			</view>
+		</view>
+	</view>
+	<view class="user_mine_center" wx:for="{{list}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemList">
+		<view class="user_mine_center_title">{{itemList.name}}</view>
+		<view class="user_mine_center_na user_mine_center_na_bo" wx:for="{{itemList.list}}" wx:key="*this" data-index="{{item}}" bindtap="jump">
+			<image class="user_mine_center_img" mode="widthFix" src="{{item.icon}}"></image>
+			<view class="user_mine_center_word">{{item.name}}</view>
+			<image class="user_mine_center_rightimg" mode="scaleToFill" src="./../../image/right.png"></image>
+		</view>
+	</view>
 </view>
 <tabbar tabbar="{{tabbar}}"></tabbar>

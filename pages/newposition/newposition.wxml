@@ -1,0 +1,36 @@
+<!--pages/newposition/newposition.wxml-->
+<view class="new-list">
+	<view class="new-border index-flex index-center ">
+		<view class="new-h1">收货人</view>
+		<input class="new-input" placeholder="请输入收货人姓名"></input>
+	</view>
+</view>
+<view class="new-list">
+	<view class="new-border index-flex index-center ">
+		<view class="new-h1">手机号码</view>
+		<input class="new-input" placeholder="请输入手机号码"></input>
+	</view>
+</view>
+<view class="index-bk"></view>
+<view class="new-list">
+	<view class="new-border index-flex index-center ">
+		<view class="new-h1">选择地址</view>
+    <picker class="picker" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+  	<input disabled  class="picker-input" value="{{regionlist}}" placeholder="选中省份-选择市区-选择地区"></input>
+  </picker>
+	</view>
+</view>
+<view class="new-list">
+	<view class="new-te index-flex">
+		<view class="new-h1">详情地址</view>
+		<textarea class="new-text" placeholder="请输入手机号码"></textarea>
+	</view>
+</view>
+<view class="index-bk"></view>
+<view class="new-list">
+	<view class="new-border index-flex index-center  index-flex-between">
+		<view  class="new-h1">设置默认地址</view>
+		<view><switch style="height:20rpx;" color="#028FFB" checked="{{switch1Checked}}" bindchange="switch1Change"/></view>
+	</view>
+</view>
+<view class="input-bt" bindtap="jumpTo">保存</view>

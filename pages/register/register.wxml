@@ -1,0 +1,21 @@
+<view class="release">
+
+		<view class="release-list index-flex index-white release-radius-top">
+			<view class="release-list-h1">姓名：</view>
+			<input bindinput='formName' value="{{name}}" class="release-list-input" placeholder="请输入姓名"></input>
+		</view>
+		<view class="release-list index-flex index-white release-list-border  release-radius-bottom ">
+			<view class="release-list-h1">公司：</view>
+			<input bindinput='formtitle'  value="{{title}}" class="release-list-input" placeholder="请输入公司名"></input>
+		</view>
+    <view class="release-list index-flex index-white release-list-border  release-radius-bottom ">
+			<view class="release-list-h1">职务：</view>
+			<input bindinput='formjob'  value="{{job}}" class="release-list-input" placeholder="请输入您的职务"></input>
+		</view>
+    <view class="release-list index-flex index-white release-list-border  release-radius-bottom ">
+			<view class="release-list-h1">邮箱：</view>
+			<input bindinput='formemail'  value="{{email}}" class="release-list-input" placeholder="请输入您的邮箱（选填）"></input>
+		</view>
+    <view class="release-bt" bindtap="jumpUp">提交</view>
+
+</view>

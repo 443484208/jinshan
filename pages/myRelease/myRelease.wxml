@@ -1,0 +1,33 @@
+<view class="container">
+	<!-- 轮播 -->
+	<swipers swiperData="{{swiperData}}"></swipers>
+	<!-- 搜索 -->
+
+	<view class="index-search">
+		<image class="index-search-left" src="./../../image/searchs.png"></image>
+		<input placeholder="搜索">
+
+		</input>
+		<image class="index-search-right" src="./../../image/search.png"></image>
+	</view>
+	<view class="index-bk"></view>
+	<!-- 标题 -->
+	<view class="index-flex index-margin index-flex-between tendering-title">
+		<view class="index-flex index-center">
+			<image class="index-statistics-header-image" mode="scaleToFill" src="../../image/biaoqian.png"></image>
+			<view class="index-statistics-header-view">标题</view>
+		</view>
+		<view class="index-flex index-center">
+			<image class="index-statistics-header-images" mode="scaleToFill" src="../../image/tongzhi.png"></image>
+			<view class="index-statistics-header-view">时间</view>
+		</view>
+	</view>
+	<!-- 列表 -->
+	<view bindtap="jump" data-index="{{index}}" class="index-flex index-center index-margin index-flex-between tendering-title"  wx:for="{{list}}" wx:key="*this">
+		<view class="tendering-title-view">
+			<view>{{item.name}}</view>
+			<view> （{{item.tips}}）</view>
+		</view>
+		<view class="tendering-title-h1">{{item.date}}</view>
+	</view>
+</view>

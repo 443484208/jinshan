@@ -4,26 +4,28 @@ const app = getApp()
 
 Page({
   data: {
-    swiperData:[{
-      src:'./../../image/bk-1.jpg'
-    },{
-      src:'./../../image/bk-2.jpg'
-    },{
-      src:'./../../image/bk-3.jpg'
-    },{
-      src:'./../../image/bk-4.jpg'
-    }],
+    swiperData:{
+        list:[{
+          src:'./../../image/bk-1.jpg'
+        },{
+          src:'./../../image/bk-2.jpg'
+        },{
+          src:'./../../image/bk-3.jpg'
+        },{
+          src:'./../../image/bk-4.jpg'
+        }]
+    } ,
     list:[{
       src:'./../../image/biddinginformation.png',
       title:'招标信息',
       url:'tendering/tendering'
     },{
       src:'./../../image/activity.png',
-      title:'活动',
+      title:'在线活动',
       url:'activity/activity'
     },{
       src:'./../../image/ProductLine.png',
-      title:'产品系列',
+      title:'系列产品',
       url:'productLine/index'
     },{
       src:'./../../image/Reserve.png',
@@ -92,6 +94,7 @@ Page({
       phoneNumber: '13800001111' //仅为示例，并非真实的电话号码
     })
   },
+ 
   jumpFabulous(e){
     wx.showToast({
       title: '点赞成功',

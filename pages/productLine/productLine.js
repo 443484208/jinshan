@@ -60,6 +60,15 @@ Page({
       key: 0,
       list: [{
         id: 0,
+        name: '控制柜 ',
+      }, {
+        id: 1,
+        name: '桥架',
+      }]
+    },{
+      key: 0,
+      list: [{
+        id: 0,
         name: '组合式风阀',
       }, {
         id: 1,
@@ -73,15 +82,6 @@ Page({
       }, {
         id: 4,
         name: '声屏障',
-      }]
-    },{
-      key: 0,
-      list: [{
-        id: 0,
-        name: '控制柜 ',
-      }, {
-        id: 1,
-        name: '桥架',
       }]
     },{
       key: 0,
@@ -118,6 +118,13 @@ Page({
           id: 3,
           name: ' 实验台',
         }]
+    }],
+    list:[{
+      url:'../../image/1.jpg',
+    },{
+      url:'../../image/2.jpg',
+    },{
+      url:'../../image/3.jpg',
     }]
   },
   //导航处理
@@ -127,10 +134,12 @@ Page({
     })
   },
   jump(e) {
-    wx.navigateTo({
-      url: 'details'
+    // wx.navigateTo({
+    //   url: 'details'
+    // })
+wx.navigateTo({
+      url: '../businessUnit/businessUnit?name='+e.currentTarget.dataset['item']
     })
-
   },
 
   /**

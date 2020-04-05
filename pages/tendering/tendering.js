@@ -5,15 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperData:[{
-      src:'./../../image/bk-1.jpg'
-    },{
-      src:'./../../image/bk-2.jpg'
-    },{
-      src:'./../../image/bk-3.jpg'
-    },{
-      src:'./../../image/bk-4.jpg'
-    }],
+    swiperData:{
+      list:[{
+        src:'./../../image/bk-1.jpg'
+      },{
+        src:'./../../image/bk-2.jpg'
+      },{
+        src:'./../../image/bk-3.jpg'
+      },{
+        src:'./../../image/bk-4.jpg'
+      }]
+  } ,
     list:[{
       name:'石家庄北海山城中村改造项目',
       tips:'回迁楼项目',
@@ -39,6 +41,11 @@ Page({
       tips:'回迁楼项目',
       date:'2010-03-12'
     }]
+  },
+  jumpSwiper(){
+    wx.navigateTo({
+      url: '../productLine/details'
+    })
   },
   jump(e){
     var url=this.data.list[e.currentTarget.dataset['index']].url;

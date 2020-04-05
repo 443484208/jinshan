@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "tabbar": "../../tabbarComponent/tabbar"
+    "tabbar": "../../tabbarComponent/tabbar",
+    "swipers": "../swiper/tabbar"
   },
   "navigationBarTitleText": "采购需求"
 }

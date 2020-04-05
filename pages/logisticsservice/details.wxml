@@ -1,12 +1,6 @@
 	<!-- 轮播 -->
 	<view style="background: #F8F6F9;height:100%;padding-bottom:100rpx;">
-		<swiper class="swiper" autoplay="true" interval="5000">
-			<block wx:for="{{swiperData}}" wx:key="*this">
-				<swiper-item>
-					<image mode="scaleToFill" src="{{item.src}}"></image>
-				</swiper-item>
-			</block>
-		</swiper>
+		<swipers swiperData="{{swiperData}}"></swipers>
 		<view class=" install">
 			<view class="install-list">
 				<view class="install-h1">联系电话：13811110000 </view>
@@ -18,7 +12,7 @@
 		</view>
 
 		<view class="index-margin index-flex details">
-			<view class="details-list {{index%2==0?'':'details-left'}}" wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
+			<view bindtap="jump" class="details-list {{index%2==0?'':'details-left'}}" wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
 				<image class=""></image>
 				<view class="index-flex index-center index-flex-between" style="margin: 0 14rpx;">
 					<view>

@@ -1,0 +1,9 @@
+/**index.wxss**/
+
+
+.swiper,
+.swiper-image {
+  height: 368rpx;
+  width: 100%;
+}
+

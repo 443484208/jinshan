@@ -1,0 +1,43 @@
+/* pages/release/release.wxss */
+
+.release-radius{
+  border-radius: 5px;
+}
+.release-list-h1{
+width: 166rpx;
+padding: 30rpx 0 30rpx 30rpx ;
+font-size: 30rpx ;
+color: #333333;
+}
+.release-list-input{
+max-width:80%;
+height: 90rpx;
+line-height: 90rpx;
+font-size: 30rpx ;
+padding: 0;
+}
+.release-list-border{
+  border-top: 1px #DCDCDC solid;
+}
+.release-radius-top{
+  border-radius: 5px 5px 0 0;
+}
+.release-radius-bottom{
+  border-radius:0 0 5px 5px ;
+}
+.release-bt{
+  width: calc(100% - 96rpx);
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background: #028FFB;
+  color: white;
+  font-size: 34rpx;
+  border-radius: 10px;
+  margin-left: 48rpx;
+  margin-top: 110rpx;
+}
+page{
+  background: #F7F6F9;
+
+}

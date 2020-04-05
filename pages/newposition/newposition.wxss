@@ -1,0 +1,49 @@
+/* pages/newposition/newposition.wxss */
+.new-list {
+  padding: 0 30rpx;
+}
+
+.new-h1 {
+  width: 30%;
+  font-size: 30rpx;
+}
+
+.new-input {
+  width: 70%;
+  font-size: 30rpx;
+}
+
+.picker {
+  width: 70%;
+}
+
+.picker-input {
+  width: 430rpx;
+  font-size: 30rpx;
+}
+
+.new-text {
+  width: 70%;
+  font-size: 30rpx;
+  height: 154rpx;
+}
+.new-te{
+  padding: 40rpx 0;
+}
+
+.new-border {
+  border-bottom: 1px solid #EEEEEE;
+  padding: 40rpx 0;
+}
+.input-bt{
+  position: fixed;
+  bottom: 44rpx;
+  left: 50rpx;
+  width: calc(100% - 100rpx);
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: white;
+  background: #028FFB;
+  border-radius: 5px;
+}

@@ -6,25 +6,28 @@ Page({
    */
   data: {
     list:[{
-      icon:'./../../image/release.png',
-      name:'我的发布',
-      url:'',
-    },{
-      icon:'./../../image/Order.png',
-      name:'我的订单',
-      url:'',
-    },{
-      icon:'./../../image/wallet.png',
-      name:'我的钱包',
-      url:'',
-    },{
-      icon:'./../../image/integral.png',
-      name:'我的积分',
-      url:'',
-    },{
-      icon:'./../../image/Favorite.png',
-      name:'我的收藏',
-      url:'',
+      name:'我的服务',
+      list:[{
+        icon:'./../../image/release.png',
+        name:'我的发布',
+        url:'myRelease',
+      },{
+        icon:'./../../image/Order.png',
+        name:'我的订单',
+        url:'myorder',
+      },{
+        icon:'./../../image/integral.png',
+        name:'我的积分',
+        url:'integral',
+      },{
+        icon:'./../../image/Favorite.png',
+        name:'我的收藏',
+        url:'',
+      },{
+        icon:'./../../image/sz.png',
+        name:'设置',
+        url:'',
+      }]
     }],
     tabbar: {
       value: {
@@ -64,9 +67,9 @@ Page({
     }
   },
   jump(e){
-    var url=e.currentTarget.dataset['index'];
+    var url=e.currentTarget.dataset['index'].url;
     wx.navigateTo({
-      url: '../'+url
+      url: '../'+url+'/'+url
     })
   },
   /**
