@@ -2,5 +2,5 @@
   "usingComponents": {
     "swipers": "../swiper/tabbar"
   },
-  "navigationBarTitleText": "法律咨询"
+  "navigationBarTitleText": "业务员详情"
 }

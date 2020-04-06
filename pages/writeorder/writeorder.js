@@ -18,16 +18,9 @@ Page({
       content: '确定提交吗',
       success (res) {
         if (res.confirm) {
-          wx.showToast({
-            title: '成功',
-            icon: 'success',
-            duration: 2000
-          })
-          setTimeout(()=>{
-            wx.redirectTo({
-              url: '../myorder/myorder'
+            wx.navigateTo({
+              url: '../payment/payment'
             })
-          },2000)
         } else if (res.cancel) {
           console.log('用户点击取消')
         }

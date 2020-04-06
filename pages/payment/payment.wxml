@@ -1,0 +1,32 @@
+<view class="payment-header index-white">
+	<view class="payment-header-h1">{{hour>0?hour+'小时':''}}{{min>0?min+'分':''}}{{second>0?second+'秒':''}}</view>
+	<view class="payment-header-h2">请尽快支付，订单超时会自动取消</view>
+</view>
+<view class="index-bk"></view>
+<view class="write-input index-flex index-center index-flex-between write-input-border">
+	<view class="write-input-left">订单编号</view>
+	<view class="write-input-right "> 24158517660984</view>
+</view>
+<view class="write-input index-flex index-center index-flex-between">
+	<view class="write-input-left">订单总额</view>
+	<view class="write-input-red ">￥34.50</view>
+</view>
+<view class="payment-bt" bindtap="jump">确认支付￥34.50
+</view>
+
+
+
+<view class="payment-fixed" wx-if="{{fxeid}}">
+	<view class="payment-fixed-content">
+		<view class="payment-fixed-header">
+			<view class="payment-h1">石家庄XXX集团有限公司</view>
+			<view class="payment-h2">(石家庄XXX支行)</view> 
+    </view> 
+    <view class="payment-h3">￥688888.00</view>
+		<view class=" index-flex index-center index-flex-between" style="padding:30rpx 42rpx">
+			<view class="payment-h4" data-index="0" bindtap="jumpPayment" >支付失败</view>
+			<view class="payment-h5" data-index="1"  bindtap="jumpPayment">支付成功</view>
+		</view>
+	</view>
+  <view class="payment-fixed-bk"></view>
+</view>

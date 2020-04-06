@@ -28,6 +28,9 @@
 			<view>{{item.name}}</view>
 			<view> （{{item.tips}}）</view>
 		</view>
-		<view class="tendering-title-h1">{{item.date}}</view>
+		<view class="tendering-title-view">
+			<view class="tendering-title-h1">{{item.date}}</view>
+			<view class="tendering-title-h1"> （{{item.bolam}}）</view>
+		</view>
 	</view>
 </view>

@@ -1,0 +1,137 @@
+/* pages/payment/payment.wxss */
+.payment-header {
+  padding: 30rpx;
+
+}
+
+.payment-header-h1 {
+  padding: 30rpx 0 60rpx 0;
+  color: #FF4343;
+  font-size: 36rpx;
+  text-align: center;
+}
+
+.payment-header-h2 {
+  font-size: 28rpx;
+  padding-bottom: 20rpx;
+  text-align: center;
+}
+
+.write-input {
+  padding: 28rpx 30rpx;
+  background: white;
+}
+
+.write-input-left {
+  font-size: 30rpx;
+}
+
+.write-input-right {
+  font-size: 30rpx;
+}
+
+.write-input-border {
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.write-input-red {
+  color: #FF5C5B;
+  font-size: 30rpx;
+}
+
+page {
+  background: #f5f5f5;
+}
+
+.payment-bt {
+  position: fixed;
+  bottom: 44rpx;
+  left: 50rpx;
+  height: 88rpx;
+  width: calc(100% - 100rpx);
+  text-align: center;
+  font-size: 36rpx;
+  color: white;
+  background: #028FFB;
+  border-radius: 5px;
+  line-height: 88rpx;
+  z-index: 1;
+}
+
+.payment-fixed {
+  position: fixed;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.payment-fixed-bk {
+  position: fixed;
+  z-index: 4;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: .2;
+  top: 0;
+  left: 0;
+}
+
+.payment-fixed-content {
+  top: 240rpx;
+  left: 65rpx;
+  position: fixed;
+  z-index: 5;
+  width: calc(100% - 130rpx);
+  background: white;
+  border-radius: 22.5px;
+}
+
+.payment-fixed-header {
+  background: linear-gradient(to right, #68BAFF, #0060FF);
+  border-radius: 22.5px 22.5px 0 0;
+  padding: 46rpx 0 40rpx 0;
+
+}
+
+.payment-h1 {
+  text-align: center;
+  color: white;
+  font-size: 30rpx;
+}
+
+.payment-h2 {
+  text-align: center;
+  color: white;
+  font-size: 24rpx;
+  margin-top: 4px;
+}
+
+.payment-h3 {
+  padding: 52rpx 0 80rpx 0;
+  text-align: center;
+  color: #FF4343;
+  font-size: 48rpx;
+}
+
+.payment-h4 {
+  width: 230rpx;
+  height: 88rpx;
+  color: #2272FF;
+  border: 1px #2272FF solid;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 22px;
+}
+
+.payment-h5 {
+  width: 230rpx;
+  height: 88rpx;
+  color: white;
+  background: #2272FF;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 22px;
+
+}

@@ -3,7 +3,9 @@
   height: 100%;
   width: 100%;
   color: #333333;
+  padding-bottom: 150rpx;
 }
+
 
 .index-news-content,
 .index-list,

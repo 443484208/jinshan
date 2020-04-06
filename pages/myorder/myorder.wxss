@@ -1,0 +1,76 @@
+.myorder-header{
+padding: 0 30rpx;
+background: white;
+}
+.myorder-header-active{
+  border-bottom: 3px #028FFB solid!important;
+  color: #028FFB!important;
+}
+.myorder-header-h1{
+  width: 25%;
+  display: flex;
+}
+.myorder-header-h2{
+  padding: 22rpx 0;
+  color: #999999;
+  font-size: 30rpx;
+  border-bottom: 3px white solid;
+}
+
+.myorder-content{
+  padding: 30rpx 30rpx 90rpx 30rpx;
+  margin-top: 20rpx;
+  background: white;
+}
+.myorder-content-head{
+  padding-bottom: 40rpx;
+}
+.myorder-content-h1{
+font-size: 30rpx;
+width: 80%;
+}
+.myorder-content-h2{
+  font-size: 24rpx;
+  color: #FF5C5B;
+}
+.myorder-content-icon{
+  background: #EEEEEE;
+  height: 150rpx;
+  width: 150rpx;
+  margin-right: 20rpx;
+}
+.index-center-right{
+  width: calc(100% - 175rpx);
+}
+.myorder-content-h3{
+  font-size: 30rpx;
+}
+.myorder-content-h4{
+  font-size: 24rpx;
+  color: #AAAAAA;
+}
+.myorder-content-h5{
+  font-size: 22rpx;
+  text-align: right;
+  padding-top: 60rpx;
+  padding-bottom: 55rpx;
+}
+.myorder-content-h6{
+  width: 140rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  border:#333333 1px solid;
+  border-radius: 5px;
+  float: right;
+  margin-left: 20rpx;
+}
+.myorder-content-h7{
+  border:#028FFB 1px solid;
+  color: white;
+  background: #028FFB;
+}
+page{
+  background: #f5f5f5;
+}

@@ -1,8 +1,9 @@
 /* pages/mine/mine.wxss */
-
+page{
+  background: #f5f5f5;
+}
 .user_mine {
   padding-bottom: 150rpx;
-  background-color: #f8f6f9;
 }
 
 .user_mine_head {

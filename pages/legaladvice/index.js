@@ -1,28 +1,22 @@
-// pages/install/install.js
+// pages/install/details.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    swiperData:{
-      list:[{
-        src:'./../../image/bk-1.jpg'
-      },{
-        src:'./../../image/bk-2.jpg'
-      },{
-        src:'./../../image/bk-3.jpg'
-      },{
-        src:'./../../image/bk-4.jpg'
-      }]
-  } ,
   },
-  jump(e){
-    // var url=this.data.list[e.currentTarget.dataset['index']].url;
-    wx.navigateTo({
-      url: 'index'
+  start(){
+    wx.showToast({
+      title: '收藏成功！', // 标题
+      icon: 'success',  // 图标类型，默认success
+      duration: 3000  // 提示窗停留时间，默认1500ms
     })
-   console.log(e.currentTarget.dataset['index'])
+  },
+  jump(){
+    wx.switchTab({
+      url: '../index/index'
+    })
   },
   /**
    * 生命周期函数--监听页面加载

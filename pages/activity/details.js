@@ -14,9 +14,16 @@ Page({
     })
   },
   jumpTo(e){
-    wx.navigateTo({
-      url: 'index'
-    })
+    if(this.data.detailsI==0){
+      wx.navigateTo({
+        url: 'index'
+      })
+    }else{
+      wx.navigateTo({
+        url: 'salesman'
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面加载

@@ -2,6 +2,12 @@
 <view class="container tool">
   <!-- 轮播 -->
   <swipers swiperData="{{swiperData}}"></swipers>
+
+
+
+
+
+
   <!-- // 活动 -->
   <view class="bulletin">
     <view class="bulletin_left">

@@ -1,0 +1,12 @@
+<view class="index-flex index-center index-flex-between collection-head">
+	<view class="index-center-center index-flex index-center  collection-head-list">
+		<view class="collection-head-h1 {{collection==0?'collection-head-active':''}} " bindtap="jumpColl" data-index="0">供应商收藏</view>
+	</view>
+	<view class="index-center-center index-flex index-center  collection-head-list">
+		<view class="collection-head-h1 {{collection==1?'collection-head-active':''}} " bindtap="jumpColl" data-index="1">业务员收藏</view>
+	</view>
+</view>
+<view class="collection-list index-flex index-center index-flex-between" bindtap="jump"  wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
+	<image class="collection-list-icon "></image>
+	<view class="collection-list-h1 ">XXX集团股份有限公司 专注于生产暖风系统生产与设计</view>
+</view>

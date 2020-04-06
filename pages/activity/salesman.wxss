@@ -1,0 +1,52 @@
+/* pages/activity/salesman.wxss */
+.salesman-list{
+  padding: 40rpx 30rpx;
+  background: white;
+  margin: 20rpx 0;
+
+}
+page{
+  background: #f5f5f5;
+}
+.salesman-liss-icon{
+  width: 166rpx;
+  height: 166rpx;
+  margin-right: 24rpx;
+}
+.salesman-list-view{
+  width: calc(100% - 190rpx);
+}
+.salesman-list-h1{
+font-size: 30rpx;
+margin-bottom: 2px;
+}
+.salesman-list-h2{
+  font-size: 24rpx;
+  color: #999999;
+  margin-bottom: 2px;
+
+}
+.salesman-list-h3{
+font-size: 30rpx;
+margin-bottom: 2px;
+  
+}
+.salesman-list-h4{
+  font-size: 24rpx;
+  color: #999999;
+}
+.salesman-view{
+padding: 40rpx 30rpx;
+background: white;
+}
+.salesman-border{
+border-bottom: 1px #EEEEEE solid;
+}
+.salesman-view-h1{
+  font-size: 30rpx;
+width: 172rpx;
+}
+.salesman-view-h2{
+color:#999999;
+font-size: 30rpx;
+}

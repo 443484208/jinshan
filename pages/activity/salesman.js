@@ -1,4 +1,4 @@
-// pages/install/install.js
+// pages/activity/salesman.js
 Page({
 
   /**
@@ -17,13 +17,7 @@ Page({
       }]
   } ,
   },
-  jump(e){
-    // var url=this.data.list[e.currentTarget.dataset['index']].url;
-    wx.navigateTo({
-      url: 'index'
-    })
-   console.log(e.currentTarget.dataset['index'])
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

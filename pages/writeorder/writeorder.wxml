@@ -39,13 +39,13 @@
 	<view class="write-input-left">商品金额</view>
 	<view class="write-input-right write-input-red">￥188.00</view>
 </view>
-<view class="write-input index-flex index-center index-flex-between write-input-border">
+<!-- <view class="write-input index-flex index-center index-flex-between write-input-border">
 	<view class="write-input-left">运费</view>
 	<view class="index-flex index-center ">
 		<view class="write-input-right write-input-bao"> 满88包邮</view>
 		<view class="write-input-right write-input-money"> ￥0.00</view>
 	</view>
-</view>
+</view> -->
 <view class="write-input index-flex index-center index-flex-between">
 	<view class="write-input-left">可获积分</view>
 	<view class="write-input-right write-input-money"> 994分</view>

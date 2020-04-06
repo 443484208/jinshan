@@ -1,28 +1,28 @@
-// pages/install/install.js
+// pages/collection/collection.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    swiperData:{
-      list:[{
-        src:'./../../image/bk-1.jpg'
-      },{
-        src:'./../../image/bk-2.jpg'
-      },{
-        src:'./../../image/bk-3.jpg'
-      },{
-        src:'./../../image/bk-4.jpg'
-      }]
-  } ,
+    collection:0,
+  },
+  jumpColl(e){
+    this.setData({
+      collection :e.currentTarget.dataset['index']
+    })
   },
   jump(e){
-    // var url=this.data.list[e.currentTarget.dataset['index']].url;
-    wx.navigateTo({
-      url: 'index'
-    })
-   console.log(e.currentTarget.dataset['index'])
+    if(this.data.collection==0){
+      wx.navigateTo({
+        url: '../activity/index'
+      })
+    }else{
+      wx.navigateTo({
+        url: '../activity/salesman'
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面加载

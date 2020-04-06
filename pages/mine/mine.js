@@ -22,7 +22,7 @@ Page({
       },{
         icon:'./../../image/Favorite.png',
         name:'我的收藏',
-        url:'',
+        url:'collection',
       },{
         icon:'./../../image/sz.png',
         name:'设置',

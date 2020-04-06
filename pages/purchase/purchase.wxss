@@ -108,7 +108,7 @@ page {
   background: white;
   margin:0 30rpx;
   font-size: 30rpx;
-  margin-bottom: 20rpx;
+  margin-bottom: 30rpx;
   line-height: 46rpx;
   border-radius: 22.5px;
 }

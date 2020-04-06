@@ -1,10 +1,14 @@
 {
-  "pages": [
-    "pages/index/index",
+  "pages": ["pages/index/index",
+    "pages/activity/salesman",
 
+    
+    
+    "pages/collection/collection",
+    "pages/myorder/myorder",
+    "pages/payment/payment",
     "pages/newposition/newposition",
     "pages/writeorder/writeorder",
-    "pages/myorder/myorder",
     "pages/integral/integral",
     "pages/myRelease/myRelease",
     "pages/mine/mine",
@@ -28,6 +32,7 @@
     "pages/logisticsservice/logisticsservice",
     "pages/logisticsservice/details",
     "pages/legaladvice/legaladvice",
+    "pages/legaladvice/index",
     "pages/businessUnit/businessUnit"
     
     
@@ -36,7 +41,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "金光小程序",
+    "navigationBarTitleText": "金光人",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

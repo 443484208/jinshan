@@ -5,12 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    region: ['山东省', '', ''],
+    headI:0
   },
-  bindRegionChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+
+  jumpHead(e){
     this.setData({
-      region: e.detail.value
+      headI:e.currentTarget.dataset['index']
     })
   },
   /**

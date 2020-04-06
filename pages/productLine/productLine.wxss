@@ -1,11 +1,11 @@
 /* pages/productLine/productLine.wxss */
 .sideBar-list{
   width: 160rpx;
-  height: 100rpx;
+  min-height: 28rpx;
   background: #F8F6F9;
   font-size: 28rpx;
   text-align: center;
-  line-height: 100rpx;
+  padding: 36rpx 0;
 }
 .sideBar-active{
  color: #51B4FF!important;
