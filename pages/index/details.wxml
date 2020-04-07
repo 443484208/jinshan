@@ -12,7 +12,7 @@
 		</view>
 
 		<view class="index-margin index-flex details">
-			<view class="details-list {{index%2==0?'':'details-left'}}" wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
+			<view class="details-list {{index%2==0?'':'details-left'}}" bindtap="jump" wx:for="{{[1,2,3,4,5,6]}}" wx:key="*this">
 				<image class=""></image>
 				<view class="index-flex index-center index-flex-between" style="margin: 0 14rpx;">
 					<view>
@@ -26,7 +26,10 @@
 			</view>
 		</view>
 	</view>
-	<view class="tabr index-flex index-flex-between index-center">
+<floatingwindow winData="winData"></floatingwindow>
+
+	<tabbar tarData="{{tarData}}"></tabbar>
+	<!-- <view class="tabr index-flex index-flex-between index-center">
 		<view class="index-flex index-center">
 			<view class="tar-list" bindtap="jump">
 				<image src="../../image/home-index.png"></image>
@@ -38,4 +41,4 @@
 			</view>
 		</view>
 		<image class="tar-bottom-image" src="../../image/Onlineconsultation.png"></image>
-	</view>
+	</view> -->

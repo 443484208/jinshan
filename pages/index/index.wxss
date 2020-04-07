@@ -3,7 +3,7 @@
   height: 100%;
   width: 100%;
   color: #333333;
-  padding-bottom: 150rpx;
+ margin-bottom: 150rpx;
 }
 
 
@@ -110,7 +110,7 @@
 .index-bk {
   height: 20rpx;
   width: 100%;
-  background: #f0f2f5;
+  background: #f5f5f5;
 }
 
 .index-news-top {
@@ -204,4 +204,7 @@
   width: 32rpx;
   height: 34rpx;
   margin: 0 0 0 20rpx;
+}
+page{
+  background: #f5f5f5;
 }

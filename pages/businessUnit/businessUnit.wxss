@@ -90,7 +90,7 @@ margin-top: 10rpx;
 }
 
 .tar-bottom-image{
-  width: 306rpx;
-  height: 78rpx;
+  width: 200rpx;
   margin-right: 30rpx;
 }
+

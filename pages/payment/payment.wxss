@@ -98,18 +98,23 @@ page {
 .payment-h1 {
   text-align: center;
   color: white;
-  font-size: 30rpx;
+  font-size: 40rpx;
 }
 
 .payment-h2 {
   text-align: center;
   color: white;
-  font-size: 24rpx;
-  margin-top: 4px;
+  font-size: 30rpx;
+  margin-top: 8px;
 }
-
+.payment-h2s {
+  text-align: center;
+  color: white;
+  font-size: 30rpx;
+  margin-top: 12px;
+}
 .payment-h3 {
-  padding: 52rpx 0 80rpx 0;
+  padding: 52rpx 0 52rpx 0;
   text-align: center;
   color: #FF4343;
   font-size: 48rpx;

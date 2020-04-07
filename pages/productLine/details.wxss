@@ -28,7 +28,7 @@
   color: white;
   text-align: center;
   line-height: 78rpx;
-  border-radius: 19px 0  0 19px ;
+  border-radius: 19px 0 0 19px ;
 }
 .tar-bottoms{
   width: 200rpx;

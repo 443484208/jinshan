@@ -1,6 +1,9 @@
 {
   "usingComponents": {
-    "swipers": "../swiper/tabbar"
+    "swipers": "../swiper/tabbar",
+    "tabbar" : "../tabr/tabbar",
+    "floatingwindow": "../tabr/floatingwindow"
+
   },
   "navigationBarTitleText": "施工详情"
 }

@@ -1,0 +1,42 @@
+.tabr{
+  position: fixed;
+  bottom: 0;
+  padding: 10rpx 0;
+  background: white;
+  width: 100%;
+}
+.tar-list image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.tar-h1{
+  color:#666666;
+  font-size:24rpx;
+  
+}
+.tar-list{
+  width: 100rpx;
+  margin-left: 30rpx;
+  text-align: center;
+}
+.index-flex-between{
+  justify-content: space-between;
+}
+.index-flex {
+  display: flex;
+
+}
+
+.index-center {
+  align-items: center;
+}
+
+
+.tar-bottom-image{
+  width: 200rpx;
+  margin-right: 30rpx;
+}
+.tarbababa-view{
+  height: 70rpx;
+}
+

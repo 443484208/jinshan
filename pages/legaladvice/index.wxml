@@ -21,5 +21,7 @@
     <view class="tar-h4">￥668.00</view>
 		<image class="tar-bottom-image" src="../../image/Immediatepurchase.png"></image>
 	</view>
+<floatingwindow winData="winData"></floatingwindow>
+
 	<!-- <image style="width:100%;" mode="widthFix" src="../../image/sss.png"></image> -->
 	<view style="width:100%;height:700px;background:white"></view>

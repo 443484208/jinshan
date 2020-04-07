@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    winData:{},
+
     sideBarI: 0,
     sideI: 0,
     sideBarList: [{

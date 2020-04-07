@@ -1,0 +1,25 @@
+.float-view{
+  position: fixed;
+  right: 0;
+  top: 70%;
+}
+.float-view-icon{
+  width: 151rpx!important;
+  height: 151rpx!important;
+  padding: 0!important;
+  margin: 0!important;
+}
+.float-view-icons{
+  width: 151rpx!important;
+  height: 151rpx!important;
+  padding: 0!important;
+  margin: 0!important;
+  background: none!important;
+  border: none!important;
+}
+button::after{
+  background: none!important;
+  border: none!important;
+}
+
+

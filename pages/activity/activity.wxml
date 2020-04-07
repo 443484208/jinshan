@@ -20,8 +20,5 @@
 		<view class="activity-list-h2 index-margin">动态：企业300 | 需求20089 | 供应商1890</view>
 		<view class="activity-list-h2 index-margin">规模：689家企业</view>
 	</view>
-
-
-
-
 </view>
+<floatingwindow winData="winData"></floatingwindow>

@@ -1,6 +1,9 @@
 {
-  "pages": ["pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/setup/logon",
     "pages/activity/salesman",
+    "pages/setup/setup",
 
     
     

@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container  index-white">
 	<!-- 轮播 -->
 	<swipers swiperData="{{swiperData}}"></swipers>
 	<!-- 搜索 -->
@@ -81,4 +81,5 @@
 		</view>
 	</view>
 <tabbar tabbar="{{tabbar}}"></tabbar>
+<floatingwindow winData="winData"></floatingwindow>
 </view>

@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "swipers": "../swiper/tabbar"
+    "swipers": "../swiper/tabbar",
+    "floatingwindow": "../tabr/floatingwindow"
+
   },
   "navigationBarTitleText": "法律咨询"
 }

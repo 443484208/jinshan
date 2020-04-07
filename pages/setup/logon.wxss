@@ -1,0 +1,70 @@
+/* pages/setup/logon.wxss */
+.logon-bk{
+  width: 100%;
+}
+.logon-icon-view{
+  width: 168rpx;
+  height: 168rpx;
+  margin-left: calc(50% - 84rpx);
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  margin-top: -109rpx;
+  position: absolute;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.logon-icon{
+height: 106rpx;
+width: 106rpx;
+}
+.logon-list{
+  margin-top: 30rpx;
+}
+.logon-list-view{
+  margin-left: 80rpx;
+  width: calc(100% - 160rpx);
+  padding:30rpx 0;
+  border-bottom: 1px #EEEEEE solid;
+}
+
+.logon-code-icon{
+  width: 34rpx;
+  margin-right: 36rpx;
+}
+.logon-list-right{
+  
+}
+.logon-list-h2{
+  width: 50%;
+  border-right: 1px  #EEEEEE solid;
+  font-size: 30rpx;
+}
+.logon-list-h3{
+  width: 50%;
+  padding-left:30rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #028FFB;
+}
+.logon-bt{
+  margin-top: 128rpx;
+  width: 600rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background:  #028FFB;
+  color: white;
+  font-size: 30rpx;
+  border-radius:25px ;
+  text-align: center;
+  margin-left: calc(50% - 300rpx);
+}
+.logon-h1{
+  margin-left: 100rpx;
+  margin-top: 100rpx;
+  font-size: 48rpx;
+  color: #028FFB;
+}

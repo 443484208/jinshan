@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    winData:{},
     swiperData:{
         list:[{
           src:'./../../image/bk-1.jpg'

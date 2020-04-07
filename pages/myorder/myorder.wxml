@@ -16,7 +16,7 @@
 <view class="myorder-content" wx:for="{{[0,1,2,3,4,5,6]}}" wx:key="*this">
 	<!-- 订单号 -->
 	<view class="index-flex index-center index-flex-between myorder-content-head">
-		<view class="myorder-content-h1">订单号：14526867369864</view>
+		<view class="myorder-content-h1">备注：14526867369864</view>
 		<view class="myorder-content--h2">等待付款</view>
 	</view>
 	<view class="index-flex index-center index-flex-between">
@@ -33,6 +33,4 @@
     </view>
   <view  class="myorder-content-h6 myorder-content-h7">立即付款</view>
   <view  class="myorder-content-h6">取消订单</view>
-
-
 </view>

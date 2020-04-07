@@ -91,6 +91,7 @@
 	</view>
 	<view  class="index-flex">
 		<view class="tar-bottom" bindtap="jumpWriteorder">立即购买</view>
-		<view class="tar-bottoms">在线咨询</view>
+		<view class="tar-bottoms" bindtap="jumpPhone">立即拨打</view>
 	</view>
 </view>
+<floatingwindow winData="winData"></floatingwindow>

@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    winData:{},
+
+    tarData:{},
     swiperData:{
       list:[{
         src:'./../../image/bk-1.jpg'
@@ -25,8 +28,8 @@ Page({
     })
   },
   jump(){
-    wx.switchTab({
-      url: 'details'
+    wx.navigateTo({
+      url: '../productLine/details'
     })
   },
   /**

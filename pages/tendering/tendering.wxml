@@ -30,4 +30,5 @@
 		</view>
 		<view class="tendering-title-h1">{{item.date}}</view>
 	</view>
+	<floatingwindow winData="{{winData}}"></floatingwindow>
 </view>

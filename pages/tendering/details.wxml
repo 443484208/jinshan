@@ -22,3 +22,4 @@
     招标单位：石家庄鹿泉区获鹿镇北海山村村民委员会
     </view>
 </view>
+	<floatingwindow winData="{{winData}}"></floatingwindow>

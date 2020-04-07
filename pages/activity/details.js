@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    winData:{},
+
     sideI:null,
     detailsI:0,
   },

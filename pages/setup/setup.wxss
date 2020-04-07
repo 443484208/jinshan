@@ -1,0 +1,40 @@
+/* pages/setup/setup.wxss */
+.setup-list {
+  padding: 30rpx 40rpx;
+  background: white;
+}
+
+.setup-list-icon {
+  width: 87rpx;
+  height: 87rpx;
+  border-radius: 50%;
+}
+
+.setup-list-right {
+  width: 14rpx;
+  height: 25rpx;
+}
+
+.setup-list-border {
+  border-bottom: 1px #EEEEEE solid;
+}
+
+.setup-right {
+  margin-right: 26rpx;
+}
+
+.setup-list-h3 {
+  font-size: 24rpx;
+  color: #959595
+}
+
+page {
+  background: #f5f5f5;
+}
+
+.setup-bt {
+  padding: 40rpx;
+  text-align: center;
+  background: white;
+  font-size: 30rpx;
+}

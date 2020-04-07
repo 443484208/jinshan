@@ -16,3 +16,4 @@
 	<view class="salesman-view-h1">联系方式</view>
 	<view class="salesman-view-h2">180XXXX0999</view>
 </view>
+<floatingwindow winData="winData"></floatingwindow>

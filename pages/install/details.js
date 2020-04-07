@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    winData:{},
+
+    tarData:{},
     swiperData:{
       list:[{
         src:'./../../image/bk-1.jpg'

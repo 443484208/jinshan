@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "swipers": "../swiper/tabbar"
+    "swipers": "../swiper/tabbar",
+    "floatingwindow": "../tabr/floatingwindow"
   },
   "navigationBarTitleText": "招标信息"
 }

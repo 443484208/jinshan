@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    winData:{},
+
     swiperData: {
       list: [{
         src: './../../image/bk-1.jpg'
@@ -53,13 +55,6 @@ Page({
       url:'../../image/fenglengmokuai.jpg',
       name:'小型水（地）源热泵机组'
     }]
-  },
-  start(){
-    wx.showToast({
-      title: '收藏成功！', // 标题
-      icon: 'success',  // 图标类型，默认success
-      duration: 3000  // 提示窗停留时间，默认1500ms
-    })
   },
   jump(){
     wx.switchTab({

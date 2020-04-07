@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "tabbar": "../../tabbarComponent/tabbar",
-    "swipers": "../swiper/tabbar"
+    "swipers": "../swiper/tabbar",
+    "floatingwindow": "../tabr/floatingwindow"
   }
 }

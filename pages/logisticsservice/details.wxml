@@ -26,6 +26,9 @@
 			</view>
 		</view>
 	</view>
+<floatingwindow winData="winData"></floatingwindow>
+
+	<tabbar tarData="{{tarData}}"></tabbar>
 	<!-- <view class="tabr index-flex index-flex-between index-center">
 		<view class="index-flex index-center">
 			<view class="tar-list" bindtap="jump">

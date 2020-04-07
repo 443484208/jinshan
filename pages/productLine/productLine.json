@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "floatingwindow": "../tabr/floatingwindow"
+
+  },
   "navigationBarTitleText": "产品分类"
 }

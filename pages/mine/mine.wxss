@@ -4,6 +4,7 @@ page{
 }
 .user_mine {
   padding-bottom: 150rpx;
+  position: relative;
 }
 
 .user_mine_head {
@@ -98,4 +99,17 @@ border-bottom:2rpx solid #EEEEEE;
   width: 12rpx;
   height: 22rpx;
   margin-left: auto;
+}
+.user-mine{
+background: #82b0ff!important;
+border-radius: 17.5px 0 0 17.5px;
+position: absolute;
+right: 0;
+top: 110rpx;
+padding: 0 10px 0 20px;
+height: 70rpx;
+line-height: 70rpx;
+text-align: center;
+color: white;
+z-index: 2;
 }

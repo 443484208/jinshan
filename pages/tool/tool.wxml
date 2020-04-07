@@ -1,14 +1,22 @@
 <!--pages/tool/tool.wxml-->
-<view class="container tool">
-  <!-- 轮播 -->
-  <swipers swiperData="{{swiperData}}"></swipers>
+<view class="index-margin">
+<view style="padding-bottom:30rpx">实用工具</view>
+<image mode="widthFix" style="width:100%;" src="../../image/tool-1.png"></image>
+<view style="padding:10rpx 0 30rpx 0;font-size:24rpx;color:#FF4343;">
+注：焊接钢管（m/kg）=（外径-壁厚）*壁厚*0.02466，外径与壁厚根据设计要求修改
+</view>
+<image mode="widthFix" style="width:100%;" src="../../image/tool-2.png"></image>
+<view style="padding:10rpx 0 30rpx 0;font-size:24rpx;color:#FF4343;">
+注：镀锌钢管（m/kg）=（外径-壁厚）*壁厚*0.02466*1.06。，外径与壁厚根据设计要求修改
+</view>
+<image mode="widthFix" style="width:100%;" src="../../image/tool-3.png"></image>
+<view style="padding:10rpx 0 30rpx 0;font-size:24rpx;color:#FF4343;">
+注：焊接钢管（m/kg）=（外径-壁厚）*壁厚*0.02466，外径与壁厚根据设计要求修改
+</view>
+</view>
 
 
-
-
-
-
-  <!-- // 活动 -->
+<!-- <view class="container tool" wx:if="1==2">
   <view class="bulletin">
     <view class="bulletin_left">
       <text class="bulletin_left_word">活动</text>
@@ -26,7 +34,6 @@
       </view>
     </view>
   </view>
-  <!-- //系统 -->
   <view class="tool_system">
     <view class="index-statistics-header index-flex index-center" style="width:calc(100% - 60rpx);">
       <image class="index-statistics-header-image" mode="scaleToFill" src="./../../image/system.png"></image>
@@ -54,10 +61,6 @@
         </li>
       </ul>
       <ul></ul>
-      <!-- <view class="tool_system_ul_word">
-        <view class="tool_system_ul_wen">消息1消息1消息1消息1消息1消息1消息1消息1消息1</view>
-        <view class="tool_system_ul_time">2020-03-15</view>
-      </view>
       <view class="tool_system_ul_word">
         <view class="tool_system_ul_wen">消息1消息1消息1消息1消息1消息1消息1消息1消息1</view>
         <view class="tool_system_ul_time">2020-03-15</view>
@@ -65,11 +68,14 @@
       <view class="tool_system_ul_word">
         <view class="tool_system_ul_wen">消息1消息1消息1消息1消息1消息1消息1消息1消息1</view>
         <view class="tool_system_ul_time">2020-03-15</view>
-      </view> -->
+      </view>
+      <view class="tool_system_ul_word">
+        <view class="tool_system_ul_wen">消息1消息1消息1消息1消息1消息1消息1消息1消息1</view>
+        <view class="tool_system_ul_time">2020-03-15</view>
+      </view>
 
     </view>
   </view>
-  <!-- //每日推荐 -->
   <view class="tool_promote">
     <view class="index-statistics-header index-flex index-center" style="width:calc(100% - 60rpx);">
       <image class="index-statistics-header-image" mode="scaleToFill" src="./../../image/promote.png"></image>
@@ -108,5 +114,5 @@
       </view>
     </view>
   </view>
-</view>
+</view> -->
 <tabbar tabbar="{{tabbar}}"></tabbar>

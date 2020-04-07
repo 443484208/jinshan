@@ -4,16 +4,19 @@
 		<image class="user_mine_head_img" mode="scaleToFill" src="./../../image/user_mine.png"></image>
 		<view class="user_mine_nav">
 			<view class="user_mine_avac">
-				<image src="https://pic1.zhimg.com/50/v2-fe28c2ec4751fc25627642c845c2b48e_hd.jpg"></image>
+				<image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'https://pic1.zhimg.com/50/v2-fe28c2ec4751fc25627642c845c2b48e_hd.jpg'}}"></image>
 			</view>
 			<view class="user_mine_name">
-				<view class="user_mine_username">用户昵称</view>
+				<view class="user_mine_username">{{userInfo.nickName?userInfo.nickName:'用户昵称'}}</view>
 				<view class="user_mine_Character">业务员</view>
 			</view>
 		</view>
 	</view>
+	 <button wx:if="{{!loginBlooean}}" class="user-mine" type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="jumpLogin">
+  登录/注册
+ </button>
 	<view class="user_mine_center" wx:for="{{list}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemList">
-		<view class="user_mine_center_title">{{itemList.name}}</view>
+		<!-- <view class="user_mine_center_title">{{itemList.name}}</view> -->
 		<view class="user_mine_center_na user_mine_center_na_bo" wx:for="{{itemList.list}}" wx:key="*this" data-index="{{item}}" bindtap="jump">
 			<image class="user_mine_center_img" mode="widthFix" src="{{item.icon}}"></image>
 			<view class="user_mine_center_word">{{item.name}}</view>

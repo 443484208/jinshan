@@ -1,5 +1,7 @@
 {
   "usingComponents": {
+    "floatingwindow": "../tabr/floatingwindow"
+
   },
   "navigationBarTitleText": "供应商详情"
 }

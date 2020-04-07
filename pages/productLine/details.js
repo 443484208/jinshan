@@ -6,6 +6,8 @@ Page({
    */
   data: {
     list:null,
+    winData:{},
+
   },
   jump(){
     console.log("??")
@@ -30,6 +32,11 @@ Page({
       title: '收藏成功！', // 标题
       icon: 'success',  // 图标类型，默认success
       duration: 3000  // 提示窗停留时间，默认1500ms
+    })
+  },
+  jumpPhone(){
+    wx.makePhoneCall({
+      phoneNumber: '1340000' //仅为示例，并非真实的电话号码
     })
   },
   /**

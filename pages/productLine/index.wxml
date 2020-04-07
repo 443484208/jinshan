@@ -33,3 +33,4 @@
 		</view>
 	</view>
 </view>
+<floatingwindow winData="winData"></floatingwindow>

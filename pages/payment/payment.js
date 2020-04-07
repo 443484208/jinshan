@@ -48,7 +48,7 @@ Page({
     }else{
       wx.showToast({
         icon:'none',
-        title: '支付失败',
+        title: '尚未支付',
         duration: 2000,
       });
       this.setData({

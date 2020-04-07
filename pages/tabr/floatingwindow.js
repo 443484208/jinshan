@@ -1,0 +1,39 @@
+// tabBarComponent/tabBar.js
+const app = getApp();
+Component({
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+    swiperData: {
+      type: Object,
+        list:[{
+          src:'./../../image/bk-1.jpg'
+        },{
+          src:'./../../image/bk-2.jpg'
+        },{
+          src:'./../../image/bk-3.jpg'
+        },{
+          src:'./../../image/bk-4.jpg'
+        }],
+      
+    }
+  },
+  
+  /**
+   * 组件的初始数据
+   */
+  data: {
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    jumpSwiper(){
+      wx.navigateTo({
+        url: '../productLine/details'
+      })
+    },
+  }
+})

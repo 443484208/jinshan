@@ -24,8 +24,6 @@
 .sideBar-h1{
 color: #333333;
 font-size: 30rpx;
-text-align: center;
-margin-bottom: 15rpx;
 }
 .sideBar-h2{
   color:#333333;
@@ -44,4 +42,17 @@ margin-bottom: 15rpx;
   position: fixed;
   left: 0 ;
   top: 0;
+}
+.sideBar-content-icon{
+width: 56rpx;
+height: 55rpx;
+margin-right: 14rpx;
+border-radius: 50%;
+}
+.sideBar-content-conter{
+justify-content: center;
+align-items: center;
+width: 100%;
+margin-bottom: 15rpx;
+
 }
