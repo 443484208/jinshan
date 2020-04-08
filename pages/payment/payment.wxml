@@ -1,7 +1,7 @@
-<view class="payment-header index-white">
+<!-- <view class="payment-header index-white">
 	<view class="payment-header-h1">{{hour>0?hour+'小时':''}}{{min>0?min+'分':''}}{{second>0?second+'秒':''}}</view>
 	<view class="payment-header-h2">请尽快支付，订单超时会自动取消</view>
-</view>
+</view> -->
 <view class="index-bk"></view>
 <!-- <view class="write-input index-flex index-center index-flex-between write-input-border">
 	<view class="write-input-left">订单编号</view>

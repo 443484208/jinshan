@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    winData:{},
+    winData:{
+		list:{
+			booleam:true
+		}
+	},
 
     swiperData: {
       list: [{
@@ -74,6 +78,11 @@ Page({
       icon: 'success',  // 图标类型，默认success
       duration: 3000  // 提示窗停留时间，默认1500ms
     })
+  },
+  jumpPhone(){
+	  wx.makePhoneCall({
+	    phoneNumber: '1340000' //仅为示例，并非真实的电话号码
+	  })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -1,6 +1,6 @@
 <view class="float-view">
-
-<button class="float-view-icons" open-type="contact" session-from="weapp">
-<image class="float-view-icon" src="../../image/kf.png"></image>
-</button>
+	<button class="float-view-icons" open-type="contact" session-from="weapp">
+		<image class="float-view-icon" wx-if="{{winData.list.booleam==true}}"  src="../../image/zixun.png"></image>
+		<image class="float-view-icon" wx:else src="../../image/kf.png"></image>
+	</button>
 </view>

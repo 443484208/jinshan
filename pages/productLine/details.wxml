@@ -94,4 +94,4 @@
 		<view class="tar-bottoms" bindtap="jumpPhone">立即拨打</view>
 	</view>
 </view>
-<floatingwindow winData="winData"></floatingwindow>
+<floatingwindow winData="{{winData}}"></floatingwindow>

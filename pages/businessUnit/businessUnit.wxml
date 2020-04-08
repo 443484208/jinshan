@@ -44,6 +44,6 @@
 				<view class="tar-h1">分享</view>
 			</view>
 		</view>
-		<image class="tar-bottom-image" mode="widthFix" src="../../image/dial.png"></image>
+		<image class="tar-bottom-image" bindtap="jumpPhone" mode="widthFix" src="../../image/dial.png"></image>
 	</view>
-<floatingwindow winData="winData"></floatingwindow>
+<floatingwindow winData="{{winData}}"></floatingwindow>
