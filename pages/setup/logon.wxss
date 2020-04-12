@@ -51,7 +51,7 @@ width: 106rpx;
   color: #028FFB;
 }
 .logon-bt{
-  margin-top: 128rpx;
+  margin-top: 40rpx;
   width: 600rpx;
   height: 100rpx;
   line-height: 100rpx;

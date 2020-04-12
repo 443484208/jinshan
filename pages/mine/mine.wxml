@@ -12,7 +12,8 @@
 			</view>
 		</view>
 	</view>
-	 <button wx:if="{{!loginBlooean}}" class="user-mine" type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="jumpLogin">
+	 <!-- <button wx:if="{{!loginBlooean}}" class="user-mine" type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="jumpLogin"> -->
+	 <button wx:if="{{!loginBlooean}}" class="user-mine" bindtap="jumpLogin">
   登录/注册
  </button>
 	<view class="user_mine_center" wx:for="{{list}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemList">

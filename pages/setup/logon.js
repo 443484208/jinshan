@@ -1,4 +1,5 @@
 // pages/setup/logon.js
+const api = require("../../utils/api-wx-1001-v2.js");
 Page({
 
   /**
@@ -22,16 +23,26 @@ Page({
     }, 1000)
   },
   jumpCode() {
+    var that = this;
     var phone = this.data.phone;
     let str = /^1\d{10}$/
     if (str.test(phone)) {
       if (this.data.codeI == 60) {
-        this.getCode();
-        wx.showToast({
-          title: '已发送验证码！', // 标题
-          icon: 'success', // 图标类型，默认success
-          duration: 3000 // 提示窗停留时间，默认1500ms
-        })
+        console.log("resresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresres:")
+        api.jinguang.sendCodeByPhone({
+          phone: '18900000000',
+          success: function (res) {
+            console.log("resresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresresres:")
+            that.getCode();
+            wx.showToast({
+              title: '已发送验证码！', // 标题
+              icon: 'success', // 图标类型，默认success
+              duration: 3000 // 提示窗停留时间，默认1500ms
+            })
+          },
+          failure: function (resultCode, resultText) {
+          }
+        });
       }
     } else {
       wx.showToast({
@@ -41,18 +52,32 @@ Page({
       })
     }
   },
-  login(){
+  login() {
     var phone = this.data.phone;
-    let str = /^1\d{10}$/
+    let str = /^1\d{10}$/;
     if (str.test(phone)) {
-      wx.showToast({
-        title: '登录成功！', // 标题
-        icon: 'none', // 图标类型，默认success
-        duration: 3000 // 提示窗停留时间，默认1500ms
-      })
-      wx.navigateBack({
-        delta: 1
-      })
+      api.jinguang.registerByPhone({
+        phone: '18900000000',
+        password: '123456',
+        code: '123456',
+        success: function (res) {
+          console.log({res});
+          wx.showToast({
+            title: '登录成功！', // 标题
+            icon: 'none', // 图标类型，默认success
+            duration: 3000 // 提示窗停留时间，默认1500ms
+          })
+          wx.navigateBack({
+            delta: 1
+          })
+        },
+        failure: function (resultCode, resultText) {}
+      });
+
+
+
+
+
     } else {
       wx.showToast({
         title: '请输入正确的手机号码', // 标题

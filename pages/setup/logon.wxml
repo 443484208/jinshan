@@ -10,8 +10,12 @@
 		<image class="logon-code-icon" mode="widthFix" src="../../image/phonecode.png"></image>
 		<input placeholder="请输入你的手机号码" maxlength="18" bindinput="inputPhone" type="tel"></input>
 	</view>
-  <view class="logon-list-view index-flex index-center ">
+	<view class="logon-list-view  index-flex index-center ">
 		<image class="logon-code-icon" mode="widthFix" src="../../image/phonecode.png"></image>
+		<input placeholder="请输入你的密码" maxlength="20" type="password"></input>
+	</view>
+  <view class="logon-list-view index-flex index-center ">
+		<image class="logon-code-icon" mode="widthFix" src="../../image/smscode.png"></image>
 		<view class="logon-list-right index-flex index-center">
     <input class="logon-list-h2"  maxlength="6" bindinput="inputCode"  placeholder="输入验证码" type="tel"></input>
     <view class="logon-list-h3" bindtap="jumpCode"> 获取验证码({{codeI}})</view>

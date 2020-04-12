@@ -83,22 +83,28 @@ Page({
   },
   jumpLogin() {
     var that = this;
-    wx.login({
-      success: function (res) {
-        console.log(res)
-        wx.setStorage({
-          key: "loginBlooean",
-          data: "true"
-        })
-        that.getUserInfo();
-        that.setData({
-          loginBlooean: true
-        })
-        //获取登录的临时凭证
-        var code = res.code;
-        //调用后端，获取微信的session_key,secret
-      }
-    })
+      wx.navigateTo({
+        url: '../setup/logon' 
+      })
+
+
+
+    // wx.login({
+    //   success: function (res) {
+    //     console.log(res)
+    //     wx.setStorage({
+    //       key: "loginBlooean",
+    //       data: "true"
+    //     })
+    //     that.getUserInfo();
+    //     that.setData({
+    //       loginBlooean: true
+    //     })
+    //     //获取登录的临时凭证
+    //     var code = res.code;
+    //     //调用后端，获取微信的session_key,secret
+    //   }
+    // })
   },
   getUserInfo(){
     var that=this;
