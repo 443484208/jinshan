@@ -1,4 +1,6 @@
 // pages/install/details.js
+const api = require("../../utils/api-wx-1001-v2.js");
+
 Page({
 
   /**
@@ -35,8 +37,27 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  getValidADList(){
+    var that=this;
+    // 参数：type=1，page 1：首页，2：招标信息，
+    // 3：在线活动，4：系列产品，5：安装施工，6：物流信息
+    api.jinguang.getValidADList({
+      type:1,
+      page:5,
+      success: function (res) {
+        that.setData({
+          'swiperData.list':res
+        })
+      },
+      failure: function (resultCode, resultText) {
 
+      }
+    })
+  },
+  onLoad: function (options) {
+    if(options.id){
+      
+    }
   },
 
   /**

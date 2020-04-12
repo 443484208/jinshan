@@ -1,10 +1,13 @@
 // pages/install/install.js
+const api = require("../../utils/api-wx-1001-v2.js");
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    list:[],
     swiperData:{
       list:[{
         src:'./../../image/bk-1.jpg'
@@ -24,11 +27,47 @@ Page({
     })
    console.log(e.currentTarget.dataset['index'])
   },
+  getValidADList(){
+    var that=this;
+    // 参数：type=1，page 1：首页，2：招标信息，
+    // 3：在线活动，4：系列产品，5：安装施工，6：物流信息
+    api.jinguang.getValidADList({
+      type:1,
+      page:7,
+      success: function (res) {
+        that.setData({
+          'swiperData.list':res
+        })
+      },
+      failure: function (resultCode, resultText) {
+
+      }
+    })
+  },
+  getCategoryCompanyList(){
+    var that=this;
+    // 参数：type2，
+    // page 0 size 10
+    api.jinguang.getCategoryCompanyList({
+      type:4, 
+      page:0,
+      size:10,
+      success: function (res) {
+        that.setData({
+          list:res.data
+        })
+      },
+      failure: function (resultCode, resultText) {
+
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCategoryCompanyList();
+    this.getValidADList();
   },
 
   /**

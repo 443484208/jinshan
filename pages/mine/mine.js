@@ -7,6 +7,9 @@ Page({
   data: {
     userInfo:{},
     loginBlooean: false,
+    token: null,
+    account: null,
+    sessionId: null,
     list: [{
       name: '我的服务',
       list: [{
@@ -121,10 +124,13 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      loginBlooean: wx.getStorageSync('loginBlooean')
+      sessionId: wx.getStorageSync('sessionId'),
+      token: wx.getStorageSync('token'),
     })
-    if(this.data.loginBlooean){
-      this.getUserInfo()
+    if(wx.getStorageSync('token')&&wx.getStorageSync('sessionId')){
+      this.setData({
+        loginBlooean:true
+      })
     }
   },
 
@@ -139,7 +145,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      sessionId: wx.getStorageSync('sessionId'),
+      token: wx.getStorageSync('token'),
+      account: wx.getStorageSync('account'),
+    })
+    if(wx.getStorageSync('token')&&wx.getStorageSync('sessionId')){
+      this.setData({
+        loginBlooean:true
+      })
+    }
   },
 
   /**

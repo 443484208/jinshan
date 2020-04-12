@@ -1,10 +1,9 @@
 var API_APP_ID= 1001;
-var API_CREATE_TIME= 1586662473066;
+var API_CREATE_TIME= 1586705426733;
 var API_KEY= "1q2w3e4r5t6y7u8i";
-// var BASE_PATH_DEV= "https://dev.jinguang.cn/jinguang";
 var BASE_PATH_DEV= "https://dev.youdashi.cn/jinguang";
 var BASE_PATH_RELEASE= "https://renzibu.cn";
-var WEBSOCKET_URL_DEV= "wss://dev.jinguang.cn/jinguang/websocket";
+var WEBSOCKET_URL_DEV= "wss://dev.youdashi.cn/jinguang/websocket";
 var WEBSOCKET_URL_RELEASE= "wss://renzibu.cn/websocket";
 
 var base64 = require('./base64.js');
@@ -279,274 +278,219 @@ var RESULT_COMMENT_NOT_FOUND=56;
 var jinguangResultCode = {"45":"名称已存在","46":"不存在","-10":"服务器链接失败","10":"密码格式不正确","11":"绑定手机错误","55":"分享错误","12":"用户资料不正确","56":"评论不存在","13":"用户资料不存在","14":"邮箱不合法","-1":"签名错误","15":"存储资源不存在","-2":"JSON解析错误","16":"身份证信息有误","-3":"没有找到基础参数","17":"不支持的账号角色","-4":"参数错误","18":"账号信息需要验证","-5":"服务器异常","19":"短信发送失败","-6":"API路径不存在","-7":"API版本不支持","-8":"未知的AppId","-9":"高并发","1":"成功","2":"失败","3":"发送邮件错误","4":"账号已存在","5":"权限不足","6":"账号验证失败","7":"账号不存在","8":"手机号不合法","9":"验证码错误","20":"WebSocket没有打开","21":"用户资料已经存在","22":"订单异常","23":"账号Token错误","24":"已经是实名","25":"已被其他账号使用","26":"重复绑定第三方账号","27":"地址不合法","28":"支付错误","29":"申请了更多的订单","30":"金额异常","31":"订单已过期","32":"存在广告","33":"短信发送过于频发","34":"旧密码不正确","35":"超出最大允许的订单数","36":"第三方应用错误","37":"第三方授权出错","38":"微信小程序会话秘钥不存在","39":"余额不足","40":"未绑定银行卡","41":"广告已被激活过了","42":"发送消息错误","43":"银行卡卡号错误"}
 var jinguang = {appId:1001,
 setBasePath : function(basePath) {this.basePath = basePath;},
-__callback : function(res, resolve, reject) {var resultCode = res.resultCode;var resultText = res.resultText;if (resultCode == RESULT_SUCCESS) {	resolve&&resolve(res.data)} else {	reject&&reject(resultCode, resultText) }}
-,getSettingConfig: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/common/config",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getCityByIp: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/common/iptocity",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getViewCount: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/common/view",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getQrCodeBase64Data: function(param={}){
-return new Promise((resolve, reject) => { 
+__callback : function(res, param) {var resultCode = res.resultCode;var resultText = res.resultText;if (resultCode == RESULT_SUCCESS) {	if (param && param.success) {		param.success(res.data);	}} else {	if (param && param.failure) {		param.failure(resultCode, resultText);	}}}
+,getQrCodeBase64Data: function(param){
 getApiRequestJson("/api/common/qrcode",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-addViewInfo: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/view/add",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getViewLogList: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/view/list",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getShowViewLog: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/view/show",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-saveView: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/view/view/save",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getPoi: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/lbs/poi",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getPoiByAddressInfo: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/lbs/poi/address",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getValidADList: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/ad/list",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-activeAD: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/ad/active",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-clickAD: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/ad/click",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-deleteAD: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/ad/delete",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getAD: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/ad/detail",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-saveAD: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/ad/save",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getPrivateDownloadUrl: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/storage/url",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getUploadPolicy: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/storage/policy",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-addFromUrl: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/storage/from/url",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-updatePasswordByPhone: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/password/phone/update",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getAndBindWeixinPhoneNumber: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/weixin/phone/bind",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-isAccountExistByPhone: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/phone/exist",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getRoleList: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/role/list",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getAuthUser: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/detail",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-sendCodeByPhone: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/phone/code/send",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-verifyByPhone: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/phone/code/verify",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-decryptWxData: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/third/wx/data/decrypt",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-bindPhone: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/phone/bind",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getRoleTypeList: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/type/role/list",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-setPaymentComplete: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/payment/complete",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getPaymentStatus: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/payment/status",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-generatePayParam: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/payment/param",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getPaymentList: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/payment/getpaymentlist",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-addShare: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/share/add",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-updateUserProfileIfNotNull: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+getSettingConfig: function(param){
+getApiRequestJson("/api/common/config",param,function(res) {
+jinguang.__callback(res, param);});},
+getCityByIp: function(param){
+getApiRequestJson("/api/common/iptocity",param,function(res) {
+jinguang.__callback(res, param);});},
+getViewCount: function(param){
+getApiRequestJson("/api/common/view",param,function(res) {
+jinguang.__callback(res, param);});},
+updateUserProfileIfNotNull: function(param){
 getApiRequestJson("/api/userprofile/update/notnull",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getUserProfileDetail: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+getUserProfileDetail: function(param){
 getApiRequestJson("/api/userprofile/detail",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getUserProfileByPhone: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+getUserProfileByPhone: function(param){
 getApiRequestJson("/api/userprofile/phone",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getChildCategory: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/category/child/category",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-deleteCategory: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/category/delete",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-saveCategory: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/category/save",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getCategoryTree: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/category/tree",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getParentIsNullList: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/category/list/parentnull",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-logout: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/logout",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getCountInfo: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/count/info",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-loginByPhoneAndPassword: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/login/phone",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-loginByToken: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/login/token",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-loginByThird: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/account/login/third",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-updateOrderCancel: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+getPoi: function(param){
+getApiRequestJson("/api/lbs/poi",param,function(res) {
+jinguang.__callback(res, param);});},
+getPoiByAddressInfo: function(param){
+getApiRequestJson("/api/lbs/poi/address",param,function(res) {
+jinguang.__callback(res, param);});},
+getValidADList: function(param){
+getApiRequestJson("/api/ad/list",param,function(res) {
+jinguang.__callback(res, param);});},
+activeAD: function(param){
+getApiRequestJson("/api/ad/active",param,function(res) {
+jinguang.__callback(res, param);});},
+clickAD: function(param){
+getApiRequestJson("/api/ad/click",param,function(res) {
+jinguang.__callback(res, param);});},
+deleteAD: function(param){
+getApiRequestJson("/api/ad/delete",param,function(res) {
+jinguang.__callback(res, param);});},
+getAD: function(param){
+getApiRequestJson("/api/ad/detail",param,function(res) {
+jinguang.__callback(res, param);});},
+saveAD: function(param){
+getApiRequestJson("/api/ad/save",param,function(res) {
+jinguang.__callback(res, param);});},
+addShare: function(param){
+getApiRequestJson("/api/share/add",param,function(res) {
+jinguang.__callback(res, param);});},
+getRoleList: function(param){
+getApiRequestJson("/api/account/role/list",param,function(res) {
+jinguang.__callback(res, param);});},
+getAuthUser: function(param){
+getApiRequestJson("/api/account/detail",param,function(res) {
+jinguang.__callback(res, param);});},
+sendCodeByPhone: function(param){
+getApiRequestJson("/api/account/phone/code/send",param,function(res) {
+jinguang.__callback(res, param);});},
+verifyByPhone: function(param){
+getApiRequestJson("/api/account/phone/code/verify",param,function(res) {
+jinguang.__callback(res, param);});},
+decryptWxData: function(param){
+getApiRequestJson("/api/account/third/wx/data/decrypt",param,function(res) {
+jinguang.__callback(res, param);});},
+bindPhone: function(param){
+getApiRequestJson("/api/account/phone/bind",param,function(res) {
+jinguang.__callback(res, param);});},
+getRoleTypeList: function(param){
+getApiRequestJson("/api/account/type/role/list",param,function(res) {
+jinguang.__callback(res, param);});},
+updatePasswordByPhone: function(param){
+getApiRequestJson("/api/account/password/phone/update",param,function(res) {
+jinguang.__callback(res, param);});},
+getAndBindWeixinPhoneNumber: function(param){
+getApiRequestJson("/api/account/weixin/phone/bind",param,function(res) {
+jinguang.__callback(res, param);});},
+isAccountExistByPhone: function(param){
+getApiRequestJson("/api/account/phone/exist",param,function(res) {
+jinguang.__callback(res, param);});},
+updateOrderCancel: function(param){
 getApiRequestJson("/api/order/update/cancel",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-updateOrderWaitRefund: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+updateOrderWaitRefund: function(param){
 getApiRequestJson("/api/order/update/refund/wait",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-updateOrderRefund: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+updateOrderRefund: function(param){
 getApiRequestJson("/api/order/update/refund",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-updateRefundFailure: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+updateRefundFailure: function(param){
 getApiRequestJson("/api/order/update/refund/failure",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-updateOrderProcess: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+updateOrderProcess: function(param){
 getApiRequestJson("/api/order/update/process",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-updateOrderComplete: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+updateOrderComplete: function(param){
 getApiRequestJson("/api/order/update/complete",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-generateRechargeOrder: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+generateRechargeOrder: function(param){
 getApiRequestJson("/api/order/generate/recharge/order",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getOrderList: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+getOrderList: function(param){
 getApiRequestJson("/api/order/list",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-addOrDeleteCollection: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/collection/addordelete",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getCollectionList: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/collection/list",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-registerByPhone: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+registerByPhone: function(param){
 getApiRequestJson("/api/account/register/phone",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-deleteCompany: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/company/delete",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getCompanyDetail: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/company/detail",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-saveCompany: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/company/save",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-deleteCompanyProduct: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/company/product/delete",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getCompanyProductDetail: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/company/product/detail",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getCompanyProductList: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/company/product/list",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getCompanyTypeProductList: function(param={}){
-return new Promise((resolve, reject) => { 
-getApiRequestJson("/api/company/product/type/list",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-getCategoryCompanyList: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+getPrivateDownloadUrl: function(param){
+getApiRequestJson("/api/storage/url",param,function(res) {
+jinguang.__callback(res, param);});},
+getUploadPolicy: function(param){
+getApiRequestJson("/api/storage/policy",param,function(res) {
+jinguang.__callback(res, param);});},
+addFromUrl: function(param){
+getApiRequestJson("/api/storage/from/url",param,function(res) {
+jinguang.__callback(res, param);});},
+getParentIsNullList: function(param){
+getApiRequestJson("/api/category/list/parentnull",param,function(res) {
+jinguang.__callback(res, param);});},
+getChildCategory: function(param){
+getApiRequestJson("/api/category/child/category",param,function(res) {
+jinguang.__callback(res, param);});},
+deleteCategory: function(param){
+getApiRequestJson("/api/category/delete",param,function(res) {
+jinguang.__callback(res, param);});},
+saveCategory: function(param){
+getApiRequestJson("/api/category/save",param,function(res) {
+jinguang.__callback(res, param);});},
+getCategoryTree: function(param){
+getApiRequestJson("/api/category/tree",param,function(res) {
+jinguang.__callback(res, param);});},
+logout: function(param){
+getApiRequestJson("/api/account/logout",param,function(res) {
+jinguang.__callback(res, param);});},
+getCountInfo: function(param){
+getApiRequestJson("/api/count/info",param,function(res) {
+jinguang.__callback(res, param);});},
+addViewInfo: function(param){
+getApiRequestJson("/api/view/add",param,function(res) {
+jinguang.__callback(res, param);});},
+getViewLogList: function(param){
+getApiRequestJson("/api/view/list",param,function(res) {
+jinguang.__callback(res, param);});},
+getShowViewLog: function(param){
+getApiRequestJson("/api/view/show",param,function(res) {
+jinguang.__callback(res, param);});},
+saveView: function(param){
+getApiRequestJson("/api/view/view/save",param,function(res) {
+jinguang.__callback(res, param);});},
+loginByToken: function(param){
+getApiRequestJson("/api/account/login/token",param,function(res) {
+jinguang.__callback(res, param);});},
+loginByThird: function(param){
+getApiRequestJson("/api/account/login/third",param,function(res) {
+jinguang.__callback(res, param);});},
+loginByPhoneAndPassword: function(param){
+getApiRequestJson("/api/account/login/phone",param,function(res) {
+jinguang.__callback(res, param);});},
+saveNeed: function(param){
+getApiRequestJson("/api/need/save",param,function(res) {
+jinguang.__callback(res, param);});},
+updateStatus: function(param){
+getApiRequestJson("/api/need/update/status",param,function(res) {
+jinguang.__callback(res, param);});},
+getNeedDetail: function(param){
+getApiRequestJson("/api/need/detail",param,function(res) {
+jinguang.__callback(res, param);});},
+getNeedList: function(param){
+getApiRequestJson("/api/need/list",param,function(res) {
+jinguang.__callback(res, param);});},
+addOrDeleteCollection: function(param){
+getApiRequestJson("/api/collection/addordelete",param,function(res) {
+jinguang.__callback(res, param);});},
+getCollectionList: function(param){
+getApiRequestJson("/api/collection/list",param,function(res) {
+jinguang.__callback(res, param);});},
+setPaymentComplete: function(param){
+getApiRequestJson("/api/payment/complete",param,function(res) {
+jinguang.__callback(res, param);});},
+getPaymentStatus: function(param){
+getApiRequestJson("/api/payment/status",param,function(res) {
+jinguang.__callback(res, param);});},
+generatePayParam: function(param){
+getApiRequestJson("/api/payment/param",param,function(res) {
+jinguang.__callback(res, param);});},
+getPaymentList: function(param){
+getApiRequestJson("/api/payment/getpaymentlist",param,function(res) {
+jinguang.__callback(res, param);});},
+getCategoryCompanyList: function(param){
 getApiRequestJson("/api/company/list",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})},
-saveCompanyProduct: function(param={}){
-return new Promise((resolve, reject) => { 
+jinguang.__callback(res, param);});},
+saveCompanyProduct: function(param){
 getApiRequestJson("/api/company/product/save",param,function(res) {
-jinguang.__callback(res, resolve, reject);});})}}
+jinguang.__callback(res, param);});},
+saveCompany: function(param){
+getApiRequestJson("/api/company/save",param,function(res) {
+jinguang.__callback(res, param);});},
+deleteCompany: function(param){
+getApiRequestJson("/api/company/delete",param,function(res) {
+jinguang.__callback(res, param);});},
+getCompanyDetail: function(param){
+getApiRequestJson("/api/company/detail",param,function(res) {
+jinguang.__callback(res, param);});},
+deleteCompanyProduct: function(param){
+getApiRequestJson("/api/company/product/delete",param,function(res) {
+jinguang.__callback(res, param);});},
+getCompanyProductDetail: function(param){
+getApiRequestJson("/api/company/product/detail",param,function(res) {
+jinguang.__callback(res, param);});},
+getCompanyProductList: function(param){
+getApiRequestJson("/api/company/product/list",param,function(res) {
+jinguang.__callback(res, param);});},
+getCompanyTypeProductList: function(param){
+getApiRequestJson("/api/company/product/type/list",param,function(res) {
+jinguang.__callback(res, param);});}}
 exports.jinguang = jinguang;
 exports.jinguangResultCode = jinguangResultCode;

@@ -1,19 +1,20 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+const api = require("../../utils/api-wx-1001-v2.js");
 Page({
   data: {
+    newList:[],
     winData:{},
     swiperData:{
         list:[{
-          src:'./../../image/bk-1.jpg'
+          coverUrl:'./../../image/bk-1.jpg'
         },{
-          src:'./../../image/bk-2.jpg'
+          coverUrl:'./../../image/bk-2.jpg'
         },{
-          src:'./../../image/bk-3.jpg'
+          coverUrl:'./../../image/bk-3.jpg'
         },{
-          src:'./../../image/bk-4.jpg'
+          coverUrl:'./../../image/bk-4.jpg'
         }]
     } ,
     list:[{
@@ -90,6 +91,45 @@ Page({
       }
     }
   },
+  // 广告
+  getValidADList(){
+    var that=this;
+    // 参数：type=1，page 1：首页，2：招标信息，
+    // 3：在线活动，4：系列产品，5：安装施工，6：物流信息
+    api.jinguang.getValidADList({
+      type:1,
+      page:1,
+      success: function (res) {
+        that.setData({
+          'swiperData.list':res
+        })
+        console.log(res)
+      },
+      failure: function (resultCode, resultText) {
+
+      }
+    })
+  },
+  // 当天浏览量
+ getShowViewLog(){
+    // 浏览量：getShowViewLog 参数：startTime (当天0点),endTime （当天11:59）
+    // let startTime1 = parseInt(new Date(new Date(new Date().toLocaleDateString()).getTime()).getTime()/1000); // 当天0点
+// let endTime1 = parseInt(new Date(new Date(new Date().toLocaleDateString()).getTime() +24 * 60 * 60 * 1000 -1).getTime()/1000);// 当天23:59
+let startTime1 = new Date(new Date(new Date().toLocaleDateString()).getTime()).getTime(); // 当天0点
+let endTime1 =new Date(new Date(new Date().toLocaleDateString()).getTime() +24 * 60 * 60 * 1000 -1).getTime();// 当天23:59
+console.log(startTime1)
+console.log(endTime1)
+    api.jinguang.getShowViewLog({
+      startTime:startTime1,
+      endTime:endTime1,
+      success: function (res) {
+        
+      },
+      failure: function (resultCode, resultText) {
+
+      }
+    })
+  },
   jumpPhone(e){
     wx.makePhoneCall({
       phoneNumber: '13800001111' //仅为示例，并非真实的电话号码
@@ -136,7 +176,44 @@ Page({
       urls:imglist // 需要预览的图片http链接列表  
     })
   } , 
+  // 最新消息
+  getNeedList(){
+    var that=this;
+    // 函数：getNeedList 参数：type=1,source = 1,status = 1
+    api.jinguang.getNeedList({
+      type:9,
+      source:1,
+      status:1,
+      page:0,
+      size:10,
+      success: function (res) {
+      that.setData({
+        newList:res.data
+      })
+      },
+      failure: function (resultCode, resultText) {
+
+      }
+    })
+  },
+  addViewInfo(){
+    // 函数：addViewInfo 参数： targetType =9  targetId = 1
+    api.jinguang.addViewInfo({
+      targetType:9,
+      targetId:1,
+      success: function (res) {
+      
+      },
+      failure: function (resultCode, resultText) {
+
+      }
+    })
+  },
   onLoad: function () {
+    this.getNeedList();
+    this.addViewInfo();
+    this.getValidADList();
+    this.getShowViewLog();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

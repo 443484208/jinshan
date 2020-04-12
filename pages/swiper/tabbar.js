@@ -8,13 +8,13 @@ Component({
     swiperData: {
       type: Object,
         list:[{
-          src:'./../../image/bk-1.jpg'
+          coverUrl:'./../../image/bk-1.jpg'
         },{
-          src:'./../../image/bk-2.jpg'
+          coverUrl:'./../../image/bk-2.jpg'
         },{
-          src:'./../../image/bk-3.jpg'
+          coverUrl:'./../../image/bk-3.jpg'
         },{
-          src:'./../../image/bk-4.jpg'
+          coverUrl:'./../../image/bk-4.jpg'
         }],
       
     }

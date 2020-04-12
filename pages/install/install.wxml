@@ -2,10 +2,14 @@
 	<view style="background: #F8F6F9;height:100%;">
 		<swipers swiperData="{{swiperData}}"></swipers>
 		<view class=" install">
-			<view class="install-list"  wx:for="{{swiperData.list}}" wx:key="*this"  bindtap="jump" data-index="{{index}}">
-				<view class="install-h1">安装公司一 联系电话：13811110000</view>
-				<view class="install-h1">文字介绍：************** </view>
-				<view class="install-h1">工作时间：8:00 - 17:0</view>
+			<view class="install-list"  wx:for="{{list}}" wx:key="*this"  bindtap="jump" data-index="{{index}}">
+				<view class="install-h1">安装公司:{{item.name}} </view>
+				<view class="install-h1 index-flex ">
+				<view style="width:200px;">文字介绍：</view>
+				<view>{{item.description}}</view>
+				</view>
+				<view class="install-h1">工作时间：{{item.workTime}}</view>
+					<view class="install-h1">联系电话：{{item.servicePhone}}</view>
       <image class="install-image" src="../../image/back-right.png"></image>
 			</view>
 		</view>

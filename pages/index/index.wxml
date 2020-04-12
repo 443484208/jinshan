@@ -45,7 +45,7 @@
 			<image class="index-statistics-header-image" mode="scaleToFill" src="./../../image/news.png"></image>
 			<view>最新消息</view>
 		</view>
-		<view class="index-news" wx:for="{{[1,2,3,4]}}" wx:key="*this">
+		<view class="index-news" wx:for="{{newList}}" wx:key="*this">
 			<view class="index-news-top index-center index-flex">
 				<view class="index-flex"  bindtap="jumpDetails">
 					<view class="index-news-icon"></view>

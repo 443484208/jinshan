@@ -12,7 +12,7 @@
 	</view>
 	<view class="logon-list-view  index-flex index-center ">
 		<image class="logon-code-icon" mode="widthFix" src="../../image/phonecode.png"></image>
-		<input placeholder="请输入你的密码" maxlength="20" type="password"></input>
+		<input placeholder="请输入你的密码" maxlength="20" type="password" bindinput="inpassword"></input>
 	</view>
   <view class="logon-list-view index-flex index-center ">
 		<image class="logon-code-icon" mode="widthFix" src="../../image/smscode.png"></image>
