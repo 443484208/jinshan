@@ -54,6 +54,25 @@ Page({
       url: 'details'
     })
   },
+  getNeedList(){
+	// 函数：getNeedList 参数：type=1,source = 1,status = 1  
+	api.jinguang.getNeedList({
+	  type:1,
+	  source:1,
+	  status:1,
+	  page:0,
+	  size:10,
+	  success: function (res) {
+	    that.setData({
+	      list:res
+	    })
+	    console.log(res)
+	  },
+	  failure: function (resultCode, resultText) {
+	
+	  }
+	})
+  },
   /**
    * 生命周期函数--监听页面加载
    */

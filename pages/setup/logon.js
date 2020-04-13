@@ -146,7 +146,13 @@ Page({
           icon: 'none', // 图标类型，默认success
           duration: 3000 // 提示窗停留时间，默认1500ms
         })
-      }else{
+      }else if(code==null||code==''){
+        wx.showToast({
+          title: '请输入验证码', // 标题
+          icon: 'none', // 图标类型，默认success
+          duration: 3000 // 提示窗停留时间，默认1500ms
+        })
+      } else{
         wx.showToast({
           title: '请输入正确的手机号码', // 标题
           icon: 'none', // 图标类型，默认success
