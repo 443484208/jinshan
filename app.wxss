@@ -146,7 +146,7 @@
 .index-news-content image {
   height: 200rpx;
   width: 200rpx;
-  border: 1px solid #DCDCDC;
+  /* border: 1px solid #DCDCDC; */
   border-radius: 5px;
 }
 

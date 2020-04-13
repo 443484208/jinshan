@@ -4,7 +4,10 @@ const app = getApp()
 const api = require("../../utils/api-wx-1001-v2.js");
 Page({
   data: {
-    newList:[],
+    name:null,
+    allCount:'',
+    todayCount: '',
+    newList:[1,2,3],
     winData:{},
     swiperData:{
         list:[{
@@ -91,6 +94,12 @@ Page({
       }
     }
   },
+  inname(e) {
+    let name = e.detail.value;
+    this.setData({
+      name: name
+    })
+  },
   // 广告
   getValidADList(){
     var that=this;
@@ -112,6 +121,7 @@ Page({
   },
   // 当天浏览量
  getShowViewLog(){
+   var that=this;
     // 浏览量：getShowViewLog 参数：startTime (当天0点),endTime （当天11:59）
     // let startTime1 = parseInt(new Date(new Date(new Date().toLocaleDateString()).getTime()).getTime()/1000); // 当天0点
 // let endTime1 = parseInt(new Date(new Date(new Date().toLocaleDateString()).getTime() +24 * 60 * 60 * 1000 -1).getTime()/1000);// 当天23:59
@@ -123,7 +133,10 @@ console.log(endTime1)
       startTime:startTime1,
       endTime:endTime1,
       success: function (res) {
-        
+        that.setData({
+          allCount: res.allCount,
+          todayCount: res.todayCount
+        })
       },
       failure: function (resultCode, resultText) {
 
@@ -131,8 +144,9 @@ console.log(endTime1)
     })
   },
   jumpPhone(e){
+    var phone=this.data.newList[e.currentTarget.dataset['index']].servicePhone;
     wx.makePhoneCall({
-      phoneNumber: '13800001111' //仅为示例，并非真实的电话号码
+      phoneNumber: phone //仅为示例，并非真实的电话号码
     })
   },
  
@@ -176,17 +190,77 @@ console.log(endTime1)
       urls:imglist // 需要预览的图片http链接列表  
     })
   } , 
+  getDifferTime(getDate) {
+    const nowDate = new Date();
+    const targetDate =   new Date(getDate);
+
+    const differTime = new Date(nowDate.getTime() - targetDate.getTime());
+    const differDays = parseInt(differTime / (1000 * 60 * 60 * 24));
+    const differYear = parseInt(differDays / 365);
+    const differMonth = parseInt(differDays / 30);
+    const differHours = nowDate.getHours() - targetDate.getHours();
+    const differMinutes = Math.abs(nowDate.getMinutes() - targetDate.getMinutes());
+    const differAry = [{
+      dateDes: `${differYear}年前`,
+      dateVal: differYear
+    }, {
+      dateDes: `${differMonth}月前`,
+      dateVal: differMonth
+    }, {
+      dateDes: `${differDays}日前`,
+      dateVal: differDays
+    }, {
+      dateDes: `${differHours==1&&differMinutes==0?`${differHours}小时前`:`${differHours}小时前`}`,
+      dateVal: (differHours == 1 && differMinutes == 0) ? differHours : 0
+    }, {
+      dateDes: `${differHours>=1?`${differHours}小时${differMinutes}分前`:`${differMinutes}分钟前`}`,
+      dateVal: differHours >= 1 ? differHours : differMinutes
+    }];
+    console.log(differAry)
+    for(var i=0;i<differAry.length;i++){
+      if(differAry[i].dateVal > 0){
+        return differAry[i].dateDes
+      }
+    }
+  },
+  // 最新消息
+  getNeedLists(){
+    var that=this;
+    // 函数：getNeedList 参数：type=1,source = 1,status = 1
+    api.jinguang.getNeedList({
+      type:1,
+      source:1,
+      status:2,
+      page:0,
+      size:10,
+      keyword:that.data.name,
+      success: function (res) {
+        for(var i =0;i<res.data.length;i++){
+          res.data[i].createTime =that.getDifferTime(res.data[i].createTime);
+        }
+      that.setData({
+        newList:res.data
+      })
+      },
+      failure: function (resultCode, resultText) {
+
+      }
+    })
+  },
   // 最新消息
   getNeedList(){
     var that=this;
     // 函数：getNeedList 参数：type=1,source = 1,status = 1
     api.jinguang.getNeedList({
-      type:9,
+      type:1,
       source:1,
-      status:1,
+      status:2,
       page:0,
       size:10,
       success: function (res) {
+        for(var i =0;i<res.data.length;i++){
+          res.data[i].createTime =that.getDifferTime(res.data[i].createTime);
+        }
       that.setData({
         newList:res.data
       })

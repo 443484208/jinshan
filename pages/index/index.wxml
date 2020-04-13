@@ -6,10 +6,10 @@
 
 	<view class="index-search">
 		<image class="index-search-left" src="./../../image/searchs.png"></image>
-		<input placeholder="搜索">
+		<input placeholder="搜索" bindinput="name">
 
 		</input>
-		<image class="index-search-right" src="./../../image/search.png"></image>
+		<image bindtap="getNeedLists" class="index-search-right" src="./../../image/search.png"></image>
 	</view>
 
 	<!-- 列表 -->
@@ -30,11 +30,11 @@
 		</view>
 		<view class="index-statistics-bottom index-flex">
 			<view class="index-statistics-view index-statistics-border">
-				<view class="index-statistics-h1">1089</view>
+				<view class="index-statistics-h1">{{todayCount}}</view>
 				<view class="index-statistics-h2">今日浏览数</view>
 			</view>
 			<view class="index-statistics-view">
-				<view class="index-statistics-h3">12390</view>
+				<view class="index-statistics-h3">{{allCount}}</view>
 				<view class="index-statistics-h2">总浏览数</view>
 			</view>
 		</view>
@@ -48,24 +48,24 @@
 		<view class="index-news" wx:for="{{newList}}" wx:key="*this">
 			<view class="index-news-top index-center index-flex">
 				<view class="index-flex"  bindtap="jumpDetails">
-					<view class="index-news-icon"></view>
+					<image class="index-news-icon" src="{{item.userProfile.avatar.url}}"></image>
 					<view style="width:calc(100% - 100rpx);">
-						<view class="index-news-h1">广胜机电13800001111</view>
-						<view class="index-news-h2">1分钟前</view>
+						<view class="index-news-h1">{{item.serviceName}}</view>
+						<view class="index-news-h2">{{item.createTime}}</view>
 					</view>
 				</view>
 				<image bindtap="jumpPhone" data-index="{{index}}" mode="scaleToFill" class="index-news-image" src="./../../image/dial.png"></image>
 			</view>
 			<view class="index-news-h3"  bindtap="jumpDetails">
-				机翼型叶轮，防爆风机，最大30号，最小2号，角度可以调整，风量风压随时改变，手机微信同步：13800001111
+				{{item.content}}
 			</view>
 			<view class="index-news-content index-center index-flex">
-				<image bindtap="previewImage" data-index="./../../image/caigou-bk.png" mode="scaleToFill" src="./../../image/caigou-bk.png"></image>
+				<image bindtap="previewImage" data-index="./../../image/caigou-bk.png" mode="scaleToFill"  src="./../../image/caigou-bk.png"></image>
 				<image mode="scaleToFill" bindtap="previewImage" data-index="./../../image/caigou-bk.png" class="index-news-left" src="./../../image/caigou-bk.png"></image>
 				<image mode="scaleToFill" bindtap="previewImage" data-index="./../../image/caigou-bk.png" class="index-news-left" src="./../../image/caigou-bk.png"></image>
 			</view>
 			<view class="index-news-footer  index-flex">
-				<view class="index-news-h4">浏览次数1115次</view>
+				<view class="index-news-h4">浏览次数{{item.viewLogCount}}次</view>
 				<view class="index-flex index-center">
 					<view class="index-flex index-center" bindtap="jumpFabulous" data-index="{{index}}">
 						<image mode="scaleToFill" src="./../../image/Fabulous.png"></image>
@@ -73,7 +73,7 @@
 					</view>
 					<view class="index-flex index-center"  bindtap="jumpForwarde" data-index="{{index}}">
 						<image mode="scaleToFill" src="./../../image/Forward.png"></image>
-						<view class="index-news-h4">21</view>
+						<view class="index-news-h4">{{item.shareCount}}</view>
 					</view>
 				</view>
 			</view>

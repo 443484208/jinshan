@@ -30,3 +30,6 @@ align-items: flex-start;
   right: 15rpx;
   top: calc(50% - 20rpx);
 }
+.install-h1-s{
+  width: calc(100% - 100px);
+}

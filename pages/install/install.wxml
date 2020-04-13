@@ -2,16 +2,19 @@
 	<view style="background: #F8F6F9;height:100%;">
 		<swipers swiperData="{{swiperData}}"></swipers>
 		<view class=" install">
-			<view class="install-list"  wx:for="{{list}}" wx:key="*this"  bindtap="jump" data-index="{{index}}">
-				<view class="install-h1">安装公司:{{item.name}} </view>
+			<view class="install-list" wx:for="{{list}}" wx:key="*this" bindtap="jump" data-index="{{index}}">
 				<view class="install-h1 index-flex ">
-				<view style="width:200px;">文字介绍：</view>
-				<view>{{item.description}}</view>
+					<view style="width:80px;">安装公司:</view>
+					<view>{{item.name}}</view>
+				</view>
+				<view class="install-h1 index-flex ">
+					<view style="width:80px;">文字介绍：</view>
+					<view class="install-h1-s">{{item.description}}</view>
 				</view>
 				<view class="install-h1">工作时间：{{item.workTime}}</view>
-					<view class="install-h1">联系电话：{{item.servicePhone}}</view>
-      <image class="install-image" src="../../image/back-right.png"></image>
+				<view class="install-h1">联系电话：{{item.servicePhone}}</view>
+				<image class="install-image" src="../../image/back-right.png"></image>
 			</view>
 		</view>
 	</view>
-<floatingwindow winData="winData"></floatingwindow>
+	<floatingwindow winData="winData"></floatingwindow>

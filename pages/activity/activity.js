@@ -1,4 +1,6 @@
 // pages/activity/activity.js
+const api = require("../../utils/api-wx-1001-v2.js");
+var that;
 Page({
 
   /**
@@ -45,11 +47,50 @@ Page({
     })
     
   },
+  // 广告
+  getValidADList(){
+    var that=this;
+    // 参数：type=1，page 1：首页，2：招标信息，
+    // 3：在线活动，4：系列产品，5：安装施工，6：物流信息
+    api.jinguang.getValidADList({
+      type:1,
+      page:3,
+      success: function (res) {
+        that.setData({
+          'swiperData.list':res
+        })
+        console.log(res)
+      },
+      failure: function (resultCode, resultText) {
+
+      }
+    })
+  },
+  getNeedList(){
+    // 函数：getNeedList 参数：type=1,source = 1,status = 1  
+    api.jinguang.getNeedList({
+      type:1,
+      source:1,
+      status:1,
+      page:3,
+      size:10,
+      success: function (res) {
+        that.setData({
+          list:res
+        })
+        console.log(res)
+      },
+      failure: function (resultCode, resultText) {
+    
+      }
+    })
+    },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    that=this;
+    this.getValidADList();
   },
 
   /**

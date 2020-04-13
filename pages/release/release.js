@@ -1,4 +1,6 @@
 // pages/release/release.js
+const api = require("../../utils/api-wx-1001-v2.js");
+var that;
 Page({
 
   /**
@@ -9,6 +11,8 @@ Page({
     content: null,
     name: null,
     phone: null,
+    accounts:null,
+    accountBoolean:true,
   },
   jumpPhone(e) {
     var type = e.currentTarget.dataset['type'];
@@ -23,7 +27,13 @@ Page({
     })
   },
   jumpUp() {
-    if (!this.data.title) {
+    if(this.data.accountBoolean){
+      wx.showToast({
+        title: '请登录再发布', //标题
+        icon: 'none',
+        duration: 2000
+      })
+    }else if (!this.data.title) {
       wx.showToast({
         title: '请输入标题!', //标题
         icon: 'none',
@@ -48,16 +58,38 @@ Page({
         duration: 2000
       })
     }else{
-      wx.showToast({
-        title: '发布成功，等待审核通过',
-        icon: 'success',
-        duration: 2000,
-      });
-      setTimeout(() => {
-        wx.switchTab({
-          url: '../index/index'
-        })
-      }, 2000)
+      console.log(that.title);
+      console.log(that.name);
+      console.log(that.phone);
+      console.log(that.content);
+
+    //发布需求：saveNeed  参数：title type serviceName servicePhone content source = 2   objectKeys图片地址  startTime    endTime  , userProfileId
+    api.jinguang.saveNeed ({
+      title:that.data.title,
+      type:1,
+      serviceName:that.data.name,
+      servicePhone:that.data.phone,
+      content:that.data.content,
+      source:1,
+      objectKeys:'acDN7tAJyy.jpg',
+      userProfileId:wx.getStorageSync('account').userProfile.id,
+      success: function (res) {
+        wx.showToast({
+          title: '发布成功，等待审核通过',
+          icon: 'success',
+          duration: 2000,
+        });
+        setTimeout(() => {
+          wx.switchTab({
+            url: '../index/index'
+          })
+        }, 2000)
+      },
+      failure: function (resultCode, resultText) {
+
+      }
+    })
+      
     }
   },
   formName(e){
@@ -84,7 +116,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    that=this;
+    if(wx.getStorageSync('account')){
+      this.setData({
+        accountBoolean:false
+      })
+    }
+   
   },
 
   /**

@@ -149,7 +149,7 @@
 .index-news-content image {
   height: 200rpx;
   width: 200rpx;
-  border: 1px solid #DCDCDC;
+  /* border: 1px solid #DCDCDC; */
   border-radius: 5px;
 }
 
@@ -157,6 +157,7 @@
   margin-left: 45rpx;
   margin-top: 26rpx;
   margin-bottom: 26rpx;
+  
 }
 
 .index-news-footer {
