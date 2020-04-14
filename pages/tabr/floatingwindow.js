@@ -23,9 +23,12 @@ Component({
 	 */
 	methods: {
 		jumpSwiper() {
-			wx.navigateTo({
-				url: '../productLine/details'
+			
+					wx.navigateTo({
+				url: '../chat/chat'
 			})
+				
+		
 		},
 	}
 })

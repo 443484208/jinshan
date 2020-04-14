@@ -3,7 +3,7 @@
 	<view class="logon-icon-view">
 		<image class="logon-icon" mode="widthFix	" src="../../image/code-user.png"></image>
 	</view>
-		<view class="logon-h1">登录</view>
+		<view class="logon-h1">注册</view>
 </view>
 <view class="logon-list">
 	<view class="logon-list-view  index-flex index-center ">
@@ -14,14 +14,13 @@
 		<image class="logon-code-icon" mode="widthFix" src="../../image/smscode.png"></image>
 		<input placeholder="请输入你的密码" maxlength="20" type="password" bindinput="inpassword"></input>
 	</view>
-  <!-- <view class="logon-list-view index-flex index-center ">
+  <view class="logon-list-view index-flex index-center ">
 		<image class="logon-code-icon" mode="widthFix" src="../../image/smscode.png"></image>
 		<view class="logon-list-right index-flex index-center">
     <input class="logon-list-h2"  maxlength="6" bindinput="inputCode"  placeholder="输入验证码" type="tel"></input>
     <view class="logon-list-h3" bindtap="jumpCode"> 获取验证码({{codeI}})</view>
     </view>
-	</view> -->
+	</view>
 </view>
-<view class="logon-bt" bindtap="login">登录</view>
-<!-- <view class="logon-bt" bindtap="redirectTo">登录</view> -->
-<view class="login-h5" bindtap="redirectTo">立即注册</view>
+<view class="logon-bt" bindtap="login">注册</view>
+<view class="login-h5" bindtap="redirectTo">已有帐号？登录</view>

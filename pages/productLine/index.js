@@ -39,7 +39,8 @@ Page({
       src:'./../../image/Installationandconstruction.png',
       title:'其他产品'
     }],
-    lists:[{
+    lists:[],
+    listss:[{
       url:'../../image/dikongqi.jpg',
       name:'低温空气源热泵'
     },{
@@ -79,7 +80,7 @@ Page({
   },
   jumpTo(e){
     wx.navigateTo({
-      url: 'productLine?url='+this.data.list[e.currentTarget.dataset['index']].title+'&key='+e.currentTarget.dataset['index']
+      url: 'productLine?url='+this.data.list[e.currentTarget.dataset['index']].name+'&id='+this.data.list[e.currentTarget.dataset['index']].id
     })
     // e.currentTarget.dataset['index']
   },
@@ -94,7 +95,6 @@ Page({
     wx.navigateTo({
       url: '../productLine/details?list='+JSON.stringify(list)
     })
-  
     // e.currentTarget.dataset['index']
   },
   //事件处理函数
@@ -102,6 +102,23 @@ Page({
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  getCategoryCompanyList(){
+    api.jinguang.getCategoryCompanyList({
+      type:1,
+      page:0,
+      size:10,
+      success: function (res) {
+        that.setData({
+          lists:res
+        })
+        console.log(res)
+        
+      },
+      failure: function (resultCode, resultText) {
+      }
+    })
+    // 函数名称：getCategoryCompanyList 参数 type=1,page,size
   },
   // 广告
   getValidADList(){
@@ -115,6 +132,24 @@ Page({
           'swiperData.list':res
         })
         console.log(res)
+        
+      },
+      failure: function (resultCode, resultText) {
+      }
+    })
+  },
+  // 六个东东
+  getParentIsNullList(){
+    // 参数：type3，
+    // page 0 size 10
+    api.jinguang.getParentIsNullList({
+      type:1, 
+      success: function (res) {
+        that.setData({
+          list:res
+        })
+        console.log(that.data.list)
+        console.log(res)
       },
       failure: function (resultCode, resultText) {
 
@@ -124,6 +159,8 @@ Page({
   onLoad: function () {
     that=this;
     this.getValidADList();
+    that.getParentIsNullList();
+    that.getCategoryCompanyList();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

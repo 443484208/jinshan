@@ -6,7 +6,7 @@
 	<view class=" index-white" style="padding:20rpx 0;">
 		<view class="index-search ">
 			<image class="index-search-left" src="./../../image/searchs.png"></image>
-			<input placeholder="搜索">
+			<input value="{{name}}" bindinput="inname" placeholder="搜索">
 
 			</input>
 			<image class="index-search-right" src="./../../image/search.png"></image>
@@ -17,9 +17,9 @@
 		<view class="index-list index-flex  ">
 			<view class="index-list-view" wx:for="{{list}}" data-index="{{index}}" data-index="{{index}}"  wx:key="*this" bindtap="jumpTo">
 				<view class="index-flex index-center index-list-icon">
-					<image mode="scaleToFill" src="{{item.src}}"></image>
+					<image mode="scaleToFill" src="{{item.iconUrl}}"></image>
 				</view>
-				<view class="index-list-text">{{item.title}}</view>
+				<view class="index-list-text">{{item.name}}</view>
 			</view>
 		</view>
 	</view>

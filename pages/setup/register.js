@@ -11,7 +11,7 @@ Page({
     phone: null,
     code: null,
     isPhone: false,
-    password: null
+    password:null
   },
   getCode(getDate) {
     var that = this;
@@ -35,7 +35,7 @@ Page({
     if (str.test(phone)) {
       if (this.data.codeI == 60) {
         api.jinguang.sendCodeByPhone({
-          phone: phone,
+          phone:phone,
           success: function (res) {
             that.getCode();
             wx.showToast({
@@ -57,6 +57,11 @@ Page({
       })
     }
   },
+  redirectTo() {
+    wx.redirectTo({
+      url: 'logon'
+    })
+  },
   loginByPhoneAndPassword() {
     var phone = this.data.phone;
     var code = this.data.code;
@@ -64,19 +69,19 @@ Page({
     api.jinguang.loginByPhoneAndPassword({
       phone: phone,
       password: password,
-      code: code,
+      code:code,
       success: function (res) {
         wx.setStorage({
-          key: "token",
-          data: res.token
+          key:"token",
+          data:res.token
         })
         wx.setStorage({
-          key: "account",
-          data: res.account
+          key:"account",
+          data:res.account
         })
         wx.setStorage({
-          key: "sessionId",
-          data: res.sessionId
+          key:"sessionId",
+          data:res.sessionId
         })
         console.log(res)
         wx.showToast({
@@ -84,11 +89,11 @@ Page({
           icon: 'none', // 图标类型，默认success
           duration: 3000 // 提示窗停留时间，默认1500ms
         })
-        setTimeout(() => {
+        setTimeout(()=>{
           wx.navigateBack({
             delta: 1
           })
-        }, 1000)
+         },1000)
       },
       failure: function (resultCode, resultText) {
         console.log(resultCode)
@@ -102,22 +107,23 @@ Page({
     var code = this.data.code;
     var password = this.data.password;
     let str = /^1\d{10}$/;
-    if (str.test(phone) && password != null) {
-      api.jinguang.loginByPhoneAndPassword({
+    if (str.test(phone)&&password!=null) {
+      api.jinguang.registerByPhone({
         phone: phone,
+        code: code,
         password: password,
         success: function (res) {
           wx.setStorage({
-            key: "token",
-            data: res.token
+            key:"token",
+            data:res.token
           })
           wx.setStorage({
-            key: "account",
-            data: res.account
+            key:"account",
+            data:res.account
           })
           wx.setStorage({
-            key: "sessionId",
-            data: res.sessionId
+            key:"sessionId",
+            data:res.sessionId
           })
           console.log(res)
           wx.showToast({
@@ -125,46 +131,33 @@ Page({
             icon: 'none', // 图标类型，默认success
             duration: 3000 // 提示窗停留时间，默认1500ms
           })
-          setTimeout(() => {
-            wx.navigateBack({
-              delta: 1
-            })
-          }, 1000)
+         setTimeout(()=>{
+          wx.navigateBack({
+            delta: 1
+          })
+         },1000)
         },
         failure: function (resultCode, resultText) {
-            wx.showToast({
-              title: '请先注册，即将跳转注册页面...', // 标题
-              icon: 'none', // 图标类型，默认success
-              duration: 3000 // 提示窗停留时间，默认1500ms
-            })
-            setTimeout(() => {
-              wx.redirectTo({
-                url: 'register'
-              })
-            }, 1000)
+          if (resultCode == 4) {
+          }
         }
       })
 
     } else {
-      if (password == null || password == '') {
+      if(password==null||password==''){
         wx.showToast({
           title: '请输入你的密码', // 标题
           icon: 'none', // 图标类型，默认success
           duration: 3000 // 提示窗停留时间，默认1500ms
         })
-      } else {
+      }else{
         wx.showToast({
           title: '请输入正确的手机号码', // 标题
           icon: 'none', // 图标类型，默认success
           duration: 3000 // 提示窗停留时间，默认1500ms
         })
-      }
+      } 
     }
-  },
-  redirectTo() {
-    wx.redirectTo({
-      url: 'register'
-    })
   },
   inputPhone(e) {
     let phoneNumber = e.detail.value;

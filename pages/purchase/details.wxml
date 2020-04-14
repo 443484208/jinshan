@@ -1,4 +1,5 @@
 <view class="index-bk"></view>
+<textarea></textarea>
 <view class="index-center index-flex index-margin" style="padding:30rpx 0 ;">
 	<view class="index-news-icon"></view>
 	<view style="">

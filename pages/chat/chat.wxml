@@ -1,0 +1,18 @@
+<view wx:for="{{list}}" wx:key="*this">
+	<view class="chat-kf" wx:if="{{item.type==0}}">
+		<image class="chat-kf-icon" src="../../image/user-jq.png"></image>
+		<view class="chat-kf-view">{{item.content}}</view>
+	</view>
+	<view class="chat-user" wx:else>
+		<view class="chat-user-view">{{item.content}}</view>
+		<image class="chat-user-icon" src="../../image/user-kf.png"></image>
+	</view>
+</view>
+ 
+<view class="chat-footer index-flex index-center">
+	<view style="width:calc(100% - 80rpx)">
+		<input class="chat-footer-input" bindconfirm="searchSubmit" placeholder="请输入您想说的话…" value="{{name}}" bindinput="inname"></input>
+
+	</view>
+	<image class="chat-footer-icon" src="../../image/chat-add.png" bindtap="add"></image>
+</view>

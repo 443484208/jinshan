@@ -1,10 +1,14 @@
 {
   "pages": [
+
     "pages/index/index",
+    "pages/chat/chat",
+
     "pages/setup/logon",
     "pages/activity/salesman",
     "pages/setup/setup",
-
+    "pages/setup/register",
+    
     
     
     "pages/collection/collection",

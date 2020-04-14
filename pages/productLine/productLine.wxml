@@ -3,7 +3,7 @@
 <view class="">
 	<view class="sideBar-list">
 		<view class="sideBar-list-abslotue">
-			<view wx:for="{{sideBarList[sideI].list}}" class="sideBar-list {{sideBarI==index?'sideBar-active':''}}" data-index="{{index}}" wx:key="*this" bindtap="sideBar">
+			<view wx:for="{{sideBarList}}" class="sideBar-list {{sideBarI==index?'sideBar-active':''}}" data-index="{{item}}" wx:key="*this" bindtap="sideBar">
 				{{item.name}}
 			</view>
 		</view>

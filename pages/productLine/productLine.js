@@ -1,4 +1,6 @@
 // pages/productLine/productLine.js
+const api = require("../../utils/api-wx-1001-v2.js");
+var that;
 Page({
 
   /**
@@ -6,7 +8,7 @@ Page({
    */
   data: {
     winData:{},
-
+    parentIds:null,
     sideBarI: 0,
     sideI: 0,
     sideBarList: [{
@@ -131,8 +133,40 @@ Page({
   },
   //导航处理
   sideBar(e) {
-    this.setData({
-      sideBarI: e.currentTarget.dataset['index']
+    that.getCompanyCategoryList(e.currentTarget.dataset['index']);
+  },
+   // 左边
+   getChildCategory(){
+    api.jinguang.getChildCategory({
+      parentIds :that.data.parentIds,
+      success: function (res) {
+        that.setData({
+          sideBarList:res
+        })
+        that.getCompanyCategoryList(res[0].id)
+        
+      },
+      failure: function (resultCode, resultText) {
+      }
+    })
+  },
+  // list
+  getCompanyCategoryList(id){
+    console.log(id)
+
+    api.jinguang.getCompanyCategoryList({
+      categoryId :id,
+      page :0,
+      size :10,
+      success: function (res) {
+        that.setData({
+          list:res
+        })
+        console.log(res)
+        
+      },
+      failure: function (resultCode, resultText) {
+      }
     })
   },
   jump(e) {
@@ -148,13 +182,15 @@ wx.navigateTo({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    that=this;
     console.log(options)
     wx.setNavigationBarTitle({
       title: options.url+'分类'
     })
     this.setData({
-      sideI:options.key
+      parentIds:options.id
     })
+    that.getChildCategory();
   },
 
   /**
