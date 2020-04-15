@@ -14,7 +14,7 @@
 		<view class="index-margin index-flex index-center">
 			<view class="{{activityI==2?'activity-list-h4':'activity-list-h3'}}">{{activityI==2?'待举办':'进行中'}}</view>
 			<!-- <view class="{{item.i==0?'activity-list-h3':'activity-list-h4'}}">{{item.i==0?'进行中':'待举办'}}</view> -->
-			<view class="activity-list-h1">第一届金光线上采销大会</view>
+			<view class="activity-list-h1">{{item.title}}</view>
 		</view>
 		<view class="activity-list-h2 index-margin">时间：2020-03-15 至 2020-04-15 18:00 </view>
 		<view class="activity-list-h2 index-margin">动态：企业300 | 需求20089 | 供应商1890</view>

@@ -90,12 +90,11 @@ Page({
     })
   },
   jumpTolist(e){
-    var list=this.data.list[e.currentTarget.dataset['index']];
-    list.i=e.currentTarget.dataset['index'];
+    var list=e.currentTarget.dataset['index'];
+    wx.setStorageSync('list', list)
     wx.navigateTo({
-      url: '../productLine/details?list='+JSON.stringify(list)
+      url: '../productLine/details?id='+list.id
     })
-    // e.currentTarget.dataset['index']
   },
   //事件处理函数
   bindViewTap: function() {

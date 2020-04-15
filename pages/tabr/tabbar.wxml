@@ -9,10 +9,10 @@
 				<image src="../../image/start.png"></image>
 				<view class="tar-h1">收藏</view>
 			</view>
-			<view class="tar-list" bindtap="zhuanfa">
+			<button class="tar-list" bindtap="zhuanfa" open-type="share">
 				<image src="../../image/zhuanfa.png"></image>
 				<view class="tar-h1">分享</view>
-			</view>
+			</button>
 		</view>
 		<image class="tar-bottom-image" mode="widthFix" src="../../image/dial.png"></image>
 	</view>

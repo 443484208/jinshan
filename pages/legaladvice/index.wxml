@@ -1,11 +1,13 @@
 <view class="index-bk"></view>
 <view class="index-center index-flex index-margin" style="padding:30rpx 0 ;">
-	<view class="index-news-icon"></view>
+	<image src="{{itemData.logo.url}}" class="index-news-icon"></image>
 	<view style="">
-		<view class="legaladvice-h1">AVC律师事务所</view>
-		<view class=" legaladvice-h2">联系电话：18911110000</view>
+		<view class="legaladvice-h1">{{itemData.serviceName}}</view>
+		<view class=" legaladvice-h2">联系电话：{{itemData.servicePhone}}</view>
 	</view>
+
 </view>
+<view style="margin:30rpx;">{{itemData.description}}</view>
 
 <view class="tabr index-flex index-flex-between index-center">
 		<view class="index-flex index-center">

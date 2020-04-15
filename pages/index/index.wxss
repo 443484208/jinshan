@@ -209,3 +209,6 @@
 page{
   background: #f5f5f5;
 }
+.bottom-share{
+  background: white;
+}

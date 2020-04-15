@@ -324,5 +324,13 @@ console.log(endTime1)
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onShareAppMessage: function (res) {
+    return {
+      title: '金光集团小程序',
+      path: "/pages/index/index",
+    };
   }
+
+  
 })

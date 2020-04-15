@@ -23,9 +23,12 @@ Page({
   jump(e){
     // var url=this.data.list[e.currentTarget.dataset['index']].url;
     wx.navigateTo({
-      url: 'index'
+      url: 'index?id='+e.currentTarget.dataset['index'].id
     })
-   console.log(e.currentTarget.dataset['index'])
+    wx.setStorage({
+      key:"leg",
+      data:e.currentTarget.dataset['index']
+    })
   },
   getValidADList(){
     var that=this;

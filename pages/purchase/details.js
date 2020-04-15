@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    list:{}
   },
   start(){
     wx.showToast({
@@ -18,12 +19,22 @@ Page({
       url: '../index/index'
     })
   },
+  jumpPhone() {
+		var phone=this.data.list.servicePhone;
+		wx.makePhoneCall({
+			phoneNumber: phone //仅为示例，并非真实的电话号码
+		})
+	},
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
+  onLoad: function(options) {
+		if (wx.getStorageSync('list')) {
+			this.setData({
+				list: wx.getStorageSync('list')
+			})
+		}
+	},
 
   /**
    * 生命周期函数--监听页面初次渲染完成

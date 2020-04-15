@@ -58,6 +58,39 @@ Page({
       }
     }
   },
+  getDifferTime(getDate) {
+    const nowDate = new Date();
+    const targetDate =   new Date(getDate);
+
+    const differTime = new Date(nowDate.getTime() - targetDate.getTime());
+    const differDays = parseInt(differTime / (1000 * 60 * 60 * 24));
+    const differYear = parseInt(differDays / 365);
+    const differMonth = parseInt(differDays / 30);
+    const differHours = nowDate.getHours() - targetDate.getHours();
+    const differMinutes = Math.abs(nowDate.getMinutes() - targetDate.getMinutes());
+    const differAry = [{
+      dateDes: `${differYear}年前`,
+      dateVal: differYear
+    }, {
+      dateDes: `${differMonth}月前`,
+      dateVal: differMonth
+    }, {
+      dateDes: `${differDays}日前`,
+      dateVal: differDays
+    }, {
+      dateDes: `${differHours==1&&differMinutes==0?`${differHours}小时前`:`${differHours}小时前`}`,
+      dateVal: (differHours == 1 && differMinutes == 0) ? differHours : 0
+    }, {
+      dateDes: `${differHours>=1?`${differHours}小时${differMinutes}分前`:`${differMinutes}分钟前`}`,
+      dateVal: differHours >= 1 ? differHours : differMinutes
+    }];
+    console.log(differAry)
+    for(var i=0;i<differAry.length;i++){
+      if(differAry[i].dateVal > 0){
+        return differAry[i].dateDes
+      }
+    }
+  },
   // 广告
   getValidADList(){
     // 参数：type=1，page 1：首页，2：招标信息，
@@ -86,6 +119,9 @@ Page({
       page:0,
       size:30,
       success: function (res) {
+        for(var i=0;i<res.data.length;i++){
+          res.data[i].createTime=that.getDifferTime(res.data[i].createTime)
+        }
         that.setData({
           list:res.data
         })
@@ -106,6 +142,9 @@ Page({
       page:0,
       size:30,
       success: function (res) {
+        for(var i=0;i<res.data.length;i++){
+          res.data[i].createTime=that.getDifferTime(res.data[i].createTime)
+        }
         that.setData({
           list:res.data
         })
@@ -120,8 +159,10 @@ Page({
     // this.setData({
     //   detailsI:e.currentTarget.dataset['index']
     // })
+    console.log(e.currentTarget.dataset['index'])
+    wx.setStorageSync('list', e.currentTarget.dataset['index'])
     wx.navigateTo({
-      url: 'details'
+      url: 'details?id='+e.currentTarget.dataset['index'].id
     })
   },
   jumpTo(e){

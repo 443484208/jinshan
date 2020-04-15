@@ -60,7 +60,7 @@ Page({
     //   url: 'details'
     // })
 wx.navigateTo({
-      url: '../businessUnit/businessUnit?id='+e.currentTarget.dataset['item']
+      url: '../businessUnit/businessUnit?id='+e.currentTarget.dataset['item'].company.name
     })
   },
 

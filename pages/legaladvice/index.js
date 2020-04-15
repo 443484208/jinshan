@@ -1,10 +1,16 @@
 // pages/install/details.js
+const api = require("../../utils/api-wx-1001-v2.js");
+var that;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    itemData:{},
+    lists:[],
+
   },
   start(){
     wx.showToast({
@@ -18,11 +24,14 @@ Page({
       url: '../index/index'
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    that=this;
+    if(wx.getStorageSync('leg')){
+      that.setData({
+        itemData:wx.getStorageSync('leg')
+      })
+      console.log(this.data.itemData);
+    }
   },
 
   /**

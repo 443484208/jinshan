@@ -97,8 +97,17 @@
     width: 100rpx;
     margin-left: 30rpx;
     text-align: center;
+    background: white;
+    padding: 0!important;
+    line-height: 1!important;
+border:0px solid ;
   }
   
+  button::after{
+    border:0px solid ;
+
+  }
+ 
   .tar-bottom-image{
     width: 240rpx;
     height: 78rpx;
@@ -108,4 +117,5 @@
     font-size: 36rpx;
     color: #FF4343;
   }
+  
   

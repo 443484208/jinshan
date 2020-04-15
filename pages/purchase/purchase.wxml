@@ -9,8 +9,8 @@
 	<view bindtap="jumpI" data-index="2" class="details-bt-view {{detailsI==2?'details-avtive':''}}">个人发布</view>
 </view>
 
-<view class="purchase-list" wx:for="{{list}}" wx:key="*this"  dada-index="{{index}}" bindtap="jump">
-XXX集团业务李先旺求购1000台暖风系统 要求机翼型叶轮，防爆风机，最大30号，最小2 号，角度可以调整，风量风压随时改变 
+<view class="purchase-list" wx:for="{{list}}" wx:key="*this"  data-index="{{item}}" bindtap="jump">
+{{item.serviceName}}  {{item.content}} 
 </view>
 
 <tabbar tabbar="{{tabbar}}"></tabbar>

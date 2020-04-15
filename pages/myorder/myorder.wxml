@@ -13,7 +13,7 @@
 		<view class="{{headI==3?'myorder-header-active':''}} myorder-header-h2">已取消</view>
 	</view>
 </view>
-<view class="myorder-content" wx:for="{{[0,1,2,3,4,5,6]}}" wx:key="*this">
+<view class="myorder-content" wx:for="{{}}" wx:key="*this">
 	<!-- 订单号 -->
 	<view class="index-flex index-center index-flex-between myorder-content-head">
 		<view class="myorder-content-h1">备注：14526867369864</view>

@@ -1,7 +1,7 @@
 <view class="integral-header">
 	<view class="integral-header-h1">我的积分</view>
 	<view class="index-flex index-flex-between index-center">
-		<view class="integral-header-h2">6005</view>
+		<view class="integral-header-h2">0</view>
 		<view>
 			<view class="integral-header-h3">兑换</view>
 		</view>
@@ -14,7 +14,7 @@
 		<view class="integral-choice-view {{choiceI==0?' integral-choice-active':''}}" bindtap="jumpChoice" data-i="0">积分明细</view>
 		<view class="integral-choice-view {{choiceI==1?' integral-choice-active':''}}" bindtap="jumpChoice" data-i="1">兑换记录</view>
 	</view>
-	<view class="index-flex  index-flex-between index-center integral-list"   wx:for="{{[1,2,3,4,5,5,6,7,8]}}" wx:key="*this">
+	<view class="index-flex  index-flex-between index-center integral-list"   wx:for="{{}}" wx:key="*this">
 		<view style="width:75%;">
 			<view class="integral-list-h1">发布需求</view>
 			<view class="integral-list-h2">2020-11-07 18:00</view>

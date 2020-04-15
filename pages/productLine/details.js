@@ -39,18 +39,18 @@ Page({
 		})
 	},
 	jumpPhone() {
+		var phone=this.data.list.company.servicePhone;
 		wx.makePhoneCall({
-			phoneNumber: '1340000' //仅为示例，并非真实的电话号码
+			phoneNumber: phone //仅为示例，并非真实的电话号码
 		})
 	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
-		console.log(options.list)
-		if (options.list) {
+		if (wx.getStorageSync('list')) {
 			this.setData({
-				list: JSON.parse(options.list)
+				list: wx.getStorageSync('list')
 			})
 		}
 	},
@@ -100,7 +100,10 @@ Page({
 	/**
 	 * 用户点击右上角分享
 	 */
-	onShareAppMessage: function() {
-
-	}
+	onShareAppMessage: function (res) {
+    return {
+      title: '产品详情',
+      path: "/pages/productLine/details",
+    };
+  }
 })

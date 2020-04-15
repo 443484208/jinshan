@@ -66,11 +66,11 @@ Page({
     //发布需求：saveNeed  参数：title type serviceName servicePhone content source = 2   objectKeys图片地址  startTime    endTime  , userProfileId
     api.jinguang.saveNeed ({
       title:that.data.title,
-      type:1,
+      type:2,
       serviceName:that.data.name,
       servicePhone:that.data.phone,
       content:that.data.content,
-      source:1,
+      source:2,
       objectKeys:'acDN7tAJyy.jpg',
       userProfileId:wx.getStorageSync('account').userProfile.id,
       success: function (res) {

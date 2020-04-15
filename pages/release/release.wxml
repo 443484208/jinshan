@@ -1,10 +1,10 @@
 <view class="release">
 	<input bindinput='formTitle' value="{{title}}" class="release-title release-radius index-white" placeholder="在此输入标题"></input>
 	<textarea bindinput='formContent' value="{{content}}" class="release-radius release-textarea index-white" placeholder="输入通告内容"></textarea>
-	<view class="release-image index-white">
+	<!-- <view class="release-image index-white">
 		<image src="../../image/phone.png" bindtap="jumpPhone" data-type="camera"></image>
 		<image src="../../image/pitivcu.png" bindtap="jumpPhone" data-type="album"></image>
-	</view>
+	</view> -->
 		<view class="release-list index-flex index-white release-radius-top">
 			<view class="release-list-h1">联系人：</view>
 			<input bindinput='formName' value="{{name}}" class="release-list-input" placeholder="请输入联系人姓名"></input>

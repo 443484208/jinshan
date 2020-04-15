@@ -30,10 +30,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    jumpSwiper(){
-      wx.navigateTo({
-        url: '../productLine/details'
-      })
+    jumpSwiper(e){
+      if(e.currentTarget.dataset['index']){
+        wx.navigateTo({
+          url: '../productLine/details'
+        })
+      }else{
+
+      }
+      
     },
   }
 })
