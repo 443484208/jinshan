@@ -18,6 +18,7 @@ Page({
             icon: 'success',
             duration: 2000
           })
+          wx.clearStorage()
           setTimeout(() => {
             wx.navigateBack({
               delta: 1

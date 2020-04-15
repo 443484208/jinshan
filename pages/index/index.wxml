@@ -6,7 +6,7 @@
 
 	<view class="index-search">
 		<image class="index-search-left" src="./../../image/searchs.png"></image>
-		<input placeholder="搜索" bindinput="name">
+		<input placeholder="搜索" bindinput="inname">
 
 		</input>
 		<image bindtap="getNeedLists" class="index-search-right" src="./../../image/search.png"></image>

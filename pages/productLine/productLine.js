@@ -133,7 +133,11 @@ Page({
   },
   //导航处理
   sideBar(e) {
-    that.getCompanyCategoryList(e.currentTarget.dataset['index']);
+    that.getCompanyCategoryList(e.currentTarget.dataset['item'].id);
+    that.setData({
+      sideBarI: e.currentTarget.dataset['index']
+    })
+
   },
    // 左边
    getChildCategory(){
@@ -152,7 +156,7 @@ Page({
   },
   // list
   getCompanyCategoryList(id){
-    console.log(id)
+    console.log(id);
 
     api.jinguang.getCompanyCategoryList({
       categoryId :id,
