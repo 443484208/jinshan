@@ -1,4 +1,6 @@
 // pages/activity/details.js
+const api = require("../../utils/api-wx-1001-v2.js");
+var that;
 Page({
 
   /**

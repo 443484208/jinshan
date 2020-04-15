@@ -1,12 +1,15 @@
 // pages/activity/details.js
+const api = require("../../utils/api-wx-1001-v2.js");
+var that;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    list:[],
     sideI:null,
-    detailsI:0,
+    detailsI:1,
     swiperData:{
       list:[{
         src:'./../../image/bk-1.jpg'
@@ -55,6 +58,64 @@ Page({
       }
     }
   },
+  // 广告
+  getValidADList(){
+    // 参数：type=1，page 1：首页，2：招标信息，
+    // 3：在线活动，4：系列产品，5：安装施工，6：物流信息
+    api.jinguang.getValidADList({
+      type:1,
+      page:8,
+      success: function (res) {
+        that.setData({
+          'swiperData.list':res
+        })
+        console.log(res)
+        
+      },
+      failure: function (resultCode, resultText) {
+      }
+    })
+  },
+  // 列表
+  getNeedLists(i){
+    // 参数source (1:平台， 2：用户)
+    api.jinguang.getNeedList({
+      type:2,
+      source:i,
+      status:2,
+      page:0,
+      size:30,
+      success: function (res) {
+        that.setData({
+          list:res.data
+        })
+        console.log(res)
+        
+      },
+      failure: function (resultCode, resultText) {
+      }
+    })
+  },
+  // 列表
+  getNeedList(){
+    // 参数source (1:平台， 2：用户)
+    api.jinguang.getNeedList({
+      type:2,
+      source:1,
+      status:2,
+      page:0,
+      size:30,
+      success: function (res) {
+        that.setData({
+          list:res.data
+        })
+        console.log(res)
+        
+      },
+      failure: function (resultCode, resultText) {
+      }
+    })
+  },
   jump(e){
     // this.setData({
     //   detailsI:e.currentTarget.dataset['index']
@@ -72,12 +133,15 @@ Page({
     this.setData({
       detailsI:e.currentTarget.dataset['index']
     })
+    that.getNeedLists(e.currentTarget.dataset['index'])
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+   that=this;
+   that.getValidADList();
+   that.getNeedList();
   },
 
   /**

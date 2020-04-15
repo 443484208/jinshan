@@ -21,15 +21,7 @@ Page({
       }]
   } ,
     activityI:0,
-    list:[{
-      i:0,
-    },
-    {
-      i:1,
-    },
-    {
-      i:0,
-    }]
+    list:[]
   },
   jumpSwiper(){
     wx.navigateTo({
@@ -40,6 +32,7 @@ Page({
     this.setData({
       activityI:e.currentTarget.dataset['index']
     })
+    this.getActivityLists(e.currentTarget.dataset['index'])
   },
   jumpTo(e){
     wx.navigateTo({
@@ -66,17 +59,33 @@ Page({
       }
     })
   },
-  getNeedList(){
-    // 函数：getNeedList 参数：type=1,source = 1,status = 1  
-    api.jinguang.getNeedList({
-      type:1,
-      source:1,
-      status:1,
-      page:3,
+  getActivityLists(i){
+    var arr=[4,2,1]
+    // getActivityList 参数：type=1,source = 1,status = 1  
+    api.jinguang.getActivityList({
+      statuses:arr[i],
+      page:0,
       size:10,
       success: function (res) {
         that.setData({
-          list:res
+          list:res.data
+        })
+        console.log(res)
+      },
+      failure: function (resultCode, resultText) {
+    
+      }
+    })
+    },
+  getActivityList(){
+    // 1,2     进行中：2， 带举办 ：2
+    api.jinguang.getActivityList({
+      status:4,
+      page:0,
+      size:30,
+      success: function (res) {
+        that.setData({
+          list:res.data
         })
         console.log(res)
       },
@@ -91,6 +100,7 @@ Page({
   onLoad: function (options) {
     that=this;
     this.getValidADList();
+    this.getActivityList()
   },
 
   /**

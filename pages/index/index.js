@@ -144,7 +144,7 @@ console.log(endTime1)
     })
   },
   jumpPhone(e){
-    var phone=this.data.newList[e.currentTarget.dataset['index']].servicePhone;
+    var phone=e.currentTarget.dataset['index'].userProfile.phoneNumber.phone;
     wx.makePhoneCall({
       phoneNumber: phone //仅为示例，并非真实的电话号码
     })
@@ -185,6 +185,8 @@ console.log(endTime1)
   previewImage (e) {
     var current = e.currentTarget.dataset['index'];//获取data-src
     var imglist = [e.currentTarget.dataset['index']];//获取data-list
+    console.log(current)
+    console.log(imglist)
     wx.previewImage({
       current: current, // 当前显示图片的http链接  
       urls:imglist // 需要预览的图片http链接列表  
@@ -224,10 +226,10 @@ console.log(endTime1)
     }
   },
   // 最新消息
-  getNeedLists(){
+  getNewNoteLists(){
     var that=this;
     // 函数：getNeedList 参数：type=1,source = 1,status = 1
-    api.jinguang.getNeedList({
+    api.jinguang.getNewNoteList({
       type:1,
       source:1,
       status:2,
@@ -248,10 +250,10 @@ console.log(endTime1)
     })
   },
   // 最新消息
-  getNeedList(){
+  getNewNoteList(){
     var that=this;
     // 函数：getNeedList 参数：type=1,source = 1,status = 1
-    api.jinguang.getNeedList({
+    api.jinguang.getNewNoteList({
       type:1,
       source:1,
       status:2,
@@ -284,7 +286,7 @@ console.log(endTime1)
     })
   },
   onLoad: function () {
-    this.getNeedList();
+    this.getNewNoteList();
     this.addViewInfo();
     this.getValidADList();
     this.getShowViewLog();

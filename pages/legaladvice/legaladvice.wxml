@@ -4,7 +4,7 @@
 		<view class=" install">
 			<view class="install-list"  wx:for="{{list}}" wx:key="*this"  bindtap="jump" data-index="{{index}}">
 				<view class="install-h1 index-flex ">
-					<view style="width:80px;">物流公司:</view>
+					<view style="width:80px;">法律顾问:</view>
 					<view>{{item.name}}</view>
 				</view>
 				<view class="install-h1 index-flex ">

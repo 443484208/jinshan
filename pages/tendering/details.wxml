@@ -1,25 +1,25 @@
 <view class="index-margin">
-	<view class="details-h1">时间：2020-03-30 至 2020-05-22
+	<view class="details-h1">时间：{{list.startTime}} 至 {{list.endTime}}
 	</view>
   <view class="details-bottom"></view>
 	<view class="details-h1">
-		项目产品：通风工程
+		项目产品：{{list.productName}}
 	</view>
 	<view  class="details-h1">
-		项目地址：石家庄
+		项目地址：{{list.productAddress}}
 	</view>
 	<view  class="details-h1 details-h1-bottom">
-		15#、16#工程单位已确定
+		{{list.content}}
 	</view>
 	<view  class="details-h2">
-		联系人：胡小姐 </view>
+		联系人：{{list.serviceName}} </view>
 	<view class="details-h2">
-		联系电话：0311-83990988</view>
+		联系电话：{{list.servicePhone}}</view>
 	<view class="details-h2">
-		了解项目详情请拨打：0534-50198625</view>
+		了解项目详情请拨打：{{list.servicePhone}}</view>
       <view class="details-bottom"></view>
     <view class="details-h3">
-    招标单位：石家庄鹿泉区获鹿镇北海山村村民委员会
+    招标单位：{{list.productCompany}}
     </view>
 </view>
 	<floatingwindow winData="{{winData}}"></floatingwindow>

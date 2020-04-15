@@ -103,14 +103,14 @@ Page({
       url: '../logs/logs'
     })
   },
-  getCategoryCompanyList(){
-    api.jinguang.getCategoryCompanyList({
-      type:1,
+  getCompanyTypeProductList (){
+    api.jinguang.getCompanyTypeProductList ({
+      companyType:1,
       page:0,
       size:10,
       success: function (res) {
         that.setData({
-          lists:res
+          lists:res.data
         })
         console.log(res)
         
@@ -148,8 +148,6 @@ Page({
         that.setData({
           list:res
         })
-        console.log(that.data.list)
-        console.log(res)
       },
       failure: function (resultCode, resultText) {
 
@@ -160,7 +158,7 @@ Page({
     that=this;
     this.getValidADList();
     that.getParentIsNullList();
-    that.getCategoryCompanyList();
+    that.getCompanyTypeProductList ();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

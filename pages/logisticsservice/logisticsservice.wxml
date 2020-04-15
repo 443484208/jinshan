@@ -2,7 +2,7 @@
 	<view style="background: #F8F6F9;height:100%;">
 		<swipers swiperData="{{swiperData}}"></swipers>
 		<view class=" install">
-			<view class="install-list"  wx:for="{{list}}" wx:key="*this"  bindtap="jump" data-index="{{index}}">
+			<view class="install-list"  wx:for="{{list}}" wx:key="*this"  bindtap="jump" data-index="{{item}}">
 				<view class="install-h1 index-flex ">
 					<view style="width:80px;">物流公司:</view>
 					<view>{{item.name}}</view>

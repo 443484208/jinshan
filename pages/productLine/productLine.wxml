@@ -9,17 +9,14 @@
 		</view>
 	</view>
 	<view style="height: 100%;margin-top:-100rpx">
-		<view class="sideBar-content" wx:for="{{list}}" wx:key="*this" data-item="{{sideBarList[sideI].list[sideBarI].name}}" bindtap="jump">
+		<view class="sideBar-content" wx:for="{{list}}" wx:key="*this" data-item="{{item}}" bindtap="jump">
 			<view class="sideBar-content-conter index-flex">
-				<image class="sideBar-content-icon" src="../../image/user-icon.png"></image>
-				<view class="sideBar-h1">主机事业部{{sideBarList[sideI].list[sideBarI].name}}</view>
+				<image class="sideBar-content-icon" src="{{item.company.logo.url}}"></image>
+				<view class="sideBar-h1">{{item.company.name}}</view>
 			</view>
-			<view class="sideBar-h2">主机事业部部产品涵盖空调主机全系列产品，拥有第三方认证的超低温实验室。</view>
+			<view class="sideBar-h2">{{item.company.description}}</view>
 			<view class="index-flex index-center">
-				<image src="{{item.url}}" class="sideBar-view sideBar-view-right"></image>
-				<image src="{{item.url}}" class="sideBar-view sideBar-view-right"></image>
-				<image src="{{item.url}}" class="sideBar-view sideBar-view-right"></image>
-				<image src="{{item.url}}" class="sideBar-view sideBar-view-right"></image>
+				<image  src="{{itemName.cover.url}}" wx:for="{{item.companyProductList}}" wx:for-index="idx" wx:for-item="itemName" class="sideBar-view sideBar-view-right"></image>
 				<!-- <view class="sideBar-view sideBar-view-right"></view>
 					<view class="sideBar-view sideBar-view-right"></view>
 					<view class="sideBar-view sideBar-view-right"></view>

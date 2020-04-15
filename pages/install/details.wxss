@@ -37,6 +37,7 @@ margin-top: 20rpx;
   border-radius: 22.5px;
   background: white;
   margin-bottom: 30rpx;
+  padding-bottom: 10px;
 }
 .details-list image{
 height: 294rpx;

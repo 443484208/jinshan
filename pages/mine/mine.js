@@ -123,13 +123,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      sessionId: wx.getStorageSync('sessionId'),
-      token: wx.getStorageSync('token'),
-    })
+    
     if(wx.getStorageSync('token')&&wx.getStorageSync('sessionId')){
       this.setData({
+        sessionId: wx.getStorageSync('sessionId'),
+        token: wx.getStorageSync('token'),
+      })
+      this.setData({
         loginBlooean:true
+      })
+    }else{
+      this.setData({
+        loginBlooean:false
       })
     }
   },
@@ -145,14 +150,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      sessionId: wx.getStorageSync('sessionId'),
-      token: wx.getStorageSync('token'),
-      account: wx.getStorageSync('account'),
-    })
+    
     if(wx.getStorageSync('token')&&wx.getStorageSync('sessionId')){
       this.setData({
         loginBlooean:true
+      })
+      this.setData({
+        sessionId: wx.getStorageSync('sessionId'),
+        token: wx.getStorageSync('token'),
+        account: wx.getStorageSync('account'),
+      })
+    }else{
+      this.setData({
+        loginBlooean:false
       })
     }
   },

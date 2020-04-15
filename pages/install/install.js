@@ -22,11 +22,15 @@ Page({
   } ,
   },
   jump(e){
-    var url=this.data.list[e.currentTarget.dataset['index']].url;
-    wx.navigateTo({
-      url: 'details?id='
+    wx.setStorage({
+      key:"install",
+      data:e.currentTarget.dataset['index']
     })
-   console.log(e.currentTarget.dataset['index'])
+    
+    wx.navigateTo({
+      url: 'details'
+    })
+
   },
   getValidADList(){
     var that=this;

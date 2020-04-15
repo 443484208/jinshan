@@ -23,7 +23,7 @@
 		</view>
 	</view>
 	<!-- 列表 -->
-	<view bindtap="jump" data-index="{{index}}" class="index-flex index-center index-margin index-flex-between tendering-title"  wx:for="{{list}}" wx:key="*this">
+	<view bindtap="jump" data-index="{{item}}" class="index-flex index-center index-margin index-flex-between tendering-title"  wx:for="{{list}}" wx:key="*this">
 		<view class="tendering-title-view">
 			<view>{{item.content}}</view>
 			<view> （{{item.title}}）</view>

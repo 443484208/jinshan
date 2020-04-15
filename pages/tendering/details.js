@@ -1,4 +1,6 @@
 // pages/tendering/details.js
+const api = require("../../utils/api-wx-1001-v2.js");
+var that;
 Page({
 
   /**
@@ -6,14 +8,40 @@ Page({
    */
   data: {
     winData:{},
-
+    list:{}
   },
+  dateNew(data){
+    var date=new Date(data);
+    return date.getFullYear()+'-'+((date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1))+'-'+((date.getDate()<10?'0'+(date.getDate()):date.getDate()))
+  },
+// 
+getNeedDetail(id){
+  // 参数：type=1，page 1：首页，2：招标信息，
+  // 3：在线活动，4：系列产品，5：安装施工，6：物流信息
+  api.jinguang.getNeedDetail({
+    needId:id,
+    success: function (res) {
+      res.startTime=that.dateNew(res.startTime);
+      res.endTime=that.dateNew(res.endTime);
+      
+      that.setData({
+        list:res
+      })
+      console.log(res)
+    },
+    failure: function (resultCode, resultText) {
 
+    }
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-if(options.url){
+    that=this;
+if(options.id){
+  this.getNeedDetail(options.id);
+
   wx.setNavigationBarTitle({
     title: '发布详情',
   }) 

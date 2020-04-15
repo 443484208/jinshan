@@ -23,6 +23,10 @@ Page({
   },
   jump(e){
     // var url=this.data.list[e.currentTarget.dataset['index']].url;
+    wx.setStorage({
+      key:"logi",
+      data:e.currentTarget.dataset['index']
+    })
     wx.navigateTo({
       url: 'details'
     })
@@ -45,29 +49,10 @@ Page({
       }
     })
   },
-  getCategoryCompanyList(){
-    var that=this;
-    // 参数：type3，
-    // page 0 size 10
-    api.jinguang.getCategoryCompanyList({
-      type:3, 
-      page:0,
-      size:10,
-      success: function (res) {
-        that.setData({
-          list:res.data
-        })
-      },
-      failure: function (resultCode, resultText) {
-
-      }
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getCategoryCompanyList();
     this.getValidADList();
   },
 

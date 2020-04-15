@@ -1,14 +1,15 @@
 // pages/install/details.js
 const api = require("../../utils/api-wx-1001-v2.js");
-
+var that;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    lists:[],
     winData:{},
-
+    itemData:{},
     tarData:{},
     swiperData:{
       list:[{
@@ -54,9 +55,34 @@ Page({
       }
     })
   },
+  // 列表
+  getCompanyTypeProductList (){
+    api.jinguang.getCompanyTypeProductList ({
+      companyType:2,
+      page:0,
+      size:10,
+      success: function (res) {
+        that.setData({
+          lists:res.data
+        })
+        console.log(res)
+        
+      },
+      failure: function (resultCode, resultText) {
+      }
+    })
+    // 函数名称：getCategoryCompanyList 参数 type=1,page,size
+  },
   onLoad: function (options) {
-    if(options.id){
-      
+    that=this;
+    that.getValidADList();
+    that.getCompanyTypeProductList()
+    if(wx.getStorageSync('install')){
+      that.setData({
+        itemData:wx.getStorageSync('install')
+      })
+      console.log(this.data.itemData);
+
     }
   },
 

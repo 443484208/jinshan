@@ -27,9 +27,9 @@
 	<view class="index-flex purchase-list">
 
 		<view class="purchase-list-view {{(index+1)%3!=0?'purchase-list-right':''}}" bindtap="jumpTolist" data-index="{{index}}" wx:for="{{lists}}" wx:key="*this">
-			<image class="" src="../../image/{{index+1}}.jpg"></image>
+			<image class="" src="{{item.cover.url}}"></image>
 			<view class="purchase-list-h2">{{item.name}}</view>
-			<view class="purchase-list-h3">￥{{index}}669</view>
+			<view class="purchase-list-h3">￥{{item.price.current}}</view>
 		</view>
 	</view>
 </view>

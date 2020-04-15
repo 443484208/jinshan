@@ -21,31 +21,7 @@ Page({
         src:'./../../image/bk-4.jpg'
       }]
   } ,
-    list:[{
-      name:'石家庄北海山城中村改造项目',
-      tips:'回迁楼项目',
-      date:'2010-03-12'
-    },{
-      name:'石家庄北海山城中村改造项目',
-      tips:'回迁楼项目',
-      date:'2010-03-12'
-    },{
-      name:'石家庄北海山城中村改造项目',
-      tips:'回迁楼项目',
-      date:'2010-03-12'
-    },{
-      name:'石家庄北海山城中村改造项目',
-      tips:'回迁楼项目',
-      date:'2010-03-12'
-    },{
-      name:'石家庄北海山城中村改造项目',
-      tips:'回迁楼项目',
-      date:'2010-03-12'
-    },{
-      name:'石家庄北海山城中村改造项目',
-      tips:'回迁楼项目',
-      date:'2010-03-12'
-    }]
+    list:[]
   },
   inname(e) {
     let name = e.detail.value;
@@ -63,9 +39,8 @@ Page({
     })
   },
   jump(e){
-    var url=this.data.list[e.currentTarget.dataset['index']].url;
     wx.navigateTo({
-      url: 'details'
+      url: 'details?id='+e.currentTarget.dataset['index'].id
     })
   },
   getNeedLists(){

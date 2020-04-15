@@ -5,11 +5,11 @@
 	</view>
 <!-- 选择 -->
 <view class="details-bt index-flex">
-	<view bindtap="jumpI" data-index="0" class="details-bt-view {{detailsI==0?'details-avtive':''}} ">平台发布</view>
-	<view bindtap="jumpI" data-index="1" class="details-bt-view {{detailsI==1?'details-avtive':''}}">个人发布</view>
+	<view bindtap="jumpI" data-index="1" class="details-bt-view {{detailsI==1?'details-avtive':''}} ">平台发布</view>
+	<view bindtap="jumpI" data-index="2" class="details-bt-view {{detailsI==2?'details-avtive':''}}">个人发布</view>
 </view>
 
-<view class="purchase-list" wx:for="{{[1,2,3,4,5,2]}}" wx:key="*this"  dada-index="{{index}}" bindtap="jump">
+<view class="purchase-list" wx:for="{{list}}" wx:key="*this"  dada-index="{{index}}" bindtap="jump">
 XXX集团业务李先旺求购1000台暖风系统 要求机翼型叶轮，防爆风机，最大30号，最小2 号，角度可以调整，风量风压随时改变 
 </view>
 
